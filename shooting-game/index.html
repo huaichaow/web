@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Circle Survivor</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#f2f2f0">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #f2f2f0;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    overscroll-behavior: none;
+  }
+  canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<script>
+(() => {
+  'use strict';
+
+  const canvas = document.getElementById('game');
+  const ctx = canvas.getContext('2d');
+
+  let viewW = 0, viewH = 0;
+
+  // Re-checked every frame: resize events can fire while viewport metrics
+  // are still transitioning (orientation change, DPR change), so trusting
+  // them alone leaves the canvas at a stale size.
+  function syncCanvasSize() {
+    const dpr = window.devicePixelRatio || 1;
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const bw = Math.round(w * dpr);
+    const bh = Math.round(h * dpr);
+    if (viewW !== w || viewH !== h || canvas.width !== bw || canvas.height !== bh) {
+      viewW = w;
+      viewH = h;
+      canvas.width = bw;
+      canvas.height = bh;
+      // CSS size must match the same metrics the buffer was sized from.
+      // 100vw/100vh can differ from innerWidth/innerHeight on mobile (URL
+      // bar), which scales the buffer non-uniformly and distorts sprites.
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+    }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  syncCanvasSize();
+
+  // ---------- Game state ----------
+
+  const STATE_PLAYING = 0, STATE_GAME_OVER = 1, STATE_CHOOSING = 2;
+
+  const HERO_RADIUS = 14;
+  const HERO_SPEED = 100;          // px/s
+  const BULLET_SPEED = 100;
+  const BULLET_LIFETIME = 1.5;
+  const BURST_INTERVAL = 0.08;     // s between volleys of one burst
+  const MONSTER_CAP = 120;
+  const CONTACT_COOLDOWN = 0.5;    // s between hits from the same monster
+  const MAX_TOTAL_PICKS = 10;      // card selections allowed per run
+
+  let state, hero, monsters, bullets, particles, pops;
+  let elapsed, score, kills, spawnTimer, gameOverAt;
+  let pendingChoices, cards, cardRects, cardPicks;
+  let animTime = 0; // always advances, even while paused — drives wing flapping
+
+  // Hero portrait — drawn instead of the red circle once loaded.
+  // The source is a JPEG (no alpha), so near-white background pixels are
+  // keyed out into an offscreen canvas at load time.
+  const heroImg = new Image();
+  let heroSprite = null;
+  heroImg.onload = () => {
+    try {
+      const off = document.createElement('canvas');
+      off.width = heroImg.width;
+      off.height = heroImg.height;
+      const octx = off.getContext('2d');
+      octx.drawImage(heroImg, 0, 0);
+      const img = octx.getImageData(0, 0, off.width, off.height);
+      const p = img.data;
+      for (let i = 0; i < p.length; i += 4) {
+        if (p[i] > 235 && p[i + 1] > 235 && p[i + 2] > 235) p[i + 3] = 0;
+      }
+      octx.putImageData(img, 0, 0);
+      heroSprite = off;
+    } catch (e) {
+      heroSprite = heroImg; // canvas tainted (file://) — draw as-is
+    }
+  };
+  heroImg.onerror = () => { heroSprite = null; };
+  heroImg.src = 'hero.png';
+
+  function reset() {
+    state = STATE_PLAYING;
+    const spawn = safeSpawnPoint();
+    hero = {
+      x: spawn.x, y: spawn.y,
+      maxHp: 1000, hp: 1000,
+      speed: HERO_SPEED,
+      fireInterval: 0.35,
+      fireTimer: 0,
+      bulletDamage: 10,
+      bulletSpeed: BULLET_SPEED,
+      projectiles: 1,
+      pierce: 0,          // extra monsters a bullet can pass through
+      burst: 1,           // volleys fired per trigger
+      burstShotsLeft: 0,  // follow-up volleys pending
+      burstTimer: 0,      // countdown to next follow-up volley
+      range: 100,
+      armor: 0,      // damage reduction fraction, set by Armor cards
+      damageMult: 1, // dealt-damage multiplier, set by Accuracy cards
+      xp: 0, level: 1,
+    };
+    monsters = [];
+    bullets = [];
+    particles = [];
+    pops = [];
+    pendingChoices = 0;
+    cards = [];
+    cardRects = [];
+    cardPicks = new Array(CARD_TYPES.length).fill(0);
+    elapsed = 0;
+    score = 0;
+    kills = 0;
+    spawnTimer = 0;
+    gameOverAt = 0;
+  }
+
+  function xpToNext() { return 5 + hero.level * 5; }
+
+  // Floating combat text above the hero's head (world coordinates).
+  // Slight x-jitter keeps simultaneous pops from stacking exactly.
+  function popText(text, color) {
+    pops.push({
+      text, color,
+      x: hero.x + (Math.random() - 0.5) * 16,
+      y: hero.y - 28,
+      life: 0.9, maxLife: 0.9,
+    });
+  }
+
+  // ---------- Level-up card draft ----------
+
+  const CARD_TYPES = [
+    { icon: '\u{1F4CF}', title: 'Range',        desc: '+30 attack range',
+      avail: () => true,                    apply: () => { hero.range += 30; } },
+    { icon: '\u{1F4A5}', title: 'Damage',       desc: '+10 bullet damage',
+      avail: () => true,                    apply: () => { hero.bulletDamage += 10; } },
+    { icon: '⚡',    title: 'Attack Speed', desc: '12% faster firing',
+      avail: () => hero.fireInterval > 0.1, apply: () => { hero.fireInterval = Math.max(0.1, hero.fireInterval * 0.88); } },
+    { icon: '➕',    title: 'Projectile',   desc: '+1 projectile',
+      avail: () => hero.projectiles < 8,    apply: () => { hero.projectiles += 1; } },
+    { icon: '\u{1F680}', title: 'Bullet Speed', desc: '+75 bullet speed',
+      avail: () => true,                    apply: () => { hero.bulletSpeed += 75; } },
+    { icon: '❤️', title: 'Max HP',    desc: '+250 max health',
+      avail: () => true,                    apply: () => { hero.maxHp += 250; hero.hp += 250; popText('+250', '#3aa845'); } },
+    { icon: '✨',    title: 'Heal',         desc: 'Restore 33% HP',
+      avail: () => hero.hp < hero.maxHp,    apply: () => {
+        const gained = Math.min(hero.maxHp, hero.hp + Math.ceil(hero.maxHp / 3)) - hero.hp;
+        hero.hp += gained;
+        if (gained > 0) popText('+' + Math.round(gained), '#3aa845');
+      } },
+    { icon: '\u{1F45F}', title: 'Move Speed',   desc: '+10% move speed',
+      avail: () => true,                    apply: () => { hero.speed *= 1.10; } },
+    { icon: '\u{1F6E1}️', title: 'Armor',
+      desc: ['10% damage reduction', '20% damage reduction', '50% damage reduction'],
+      avail: () => true,
+      apply: picks => { hero.armor = TIER_VALUES[picks]; } },
+    { icon: '\u{1F3AF}', title: 'Accuracy',
+      desc: ['+10% damage', '+20% damage', '+50% damage'],
+      avail: () => true,
+      apply: picks => { hero.damageMult = 1 + TIER_VALUES[picks]; } },
+    { icon: '\u{1F3F9}', title: 'Piercing',     desc: 'Bullets pierce +1 monster',
+      avail: () => true,                    apply: () => { hero.pierce += 1; } },
+    { icon: '\u{1F525}', title: 'Burst',        desc: '+1 volley per shot',
+      avail: () => true,                    apply: () => { hero.burst += 1; } },
+  ];
+
+  const TIER_VALUES = [0.10, 0.20, 0.50];
+
+  function totalCardPicks() { return cardPicks.reduce((a, b) => a + b, 0); }
+
+  function openCardChoice() {
+    const pool = totalCardPicks() >= MAX_TOTAL_PICKS
+      ? []
+      : CARD_TYPES.filter((c, i) => c.avail() && cardPicks[i] < 3);
+    if (pool.length === 0) {
+      // run's pick budget spent or everything maxed — skip the draft entirely
+      pendingChoices = 0;
+      cards = [];
+      cardRects = [];
+      state = STATE_PLAYING;
+      return;
+    }
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    cards = pool.slice(0, 3);
+    cardRects = [];
+    // release a held joystick so the hero doesn't run on a stale touch after resume
+    joystick.active = false;
+    joystick.id = null;
+    joystick.dx = 0;
+    joystick.dy = 0;
+    state = STATE_CHOOSING;
+  }
+
+  function applyCard(i) {
+    if (state !== STATE_CHOOSING || i < 0 || i >= cards.length) return;
+    const typeIdx = CARD_TYPES.indexOf(cards[i]);
+    cards[i].apply(cardPicks[typeIdx]); // pre-increment count = tier being granted (0-based)
+    cardPicks[typeIdx]++;
+    pendingChoices--;
+    if (pendingChoices > 0) {
+      openCardChoice(); // queued level-ups draft again immediately
+    } else {
+      cards = [];
+      cardRects = [];
+      state = STATE_PLAYING;
+    }
+  }
+
+  // ---------- Sound (Web Audio, synthesized — no files) ----------
+
+  let audioCtx = null, masterGain = null;
+  const sfxLast = { shoot: 0, hit: 0, hurt: 0 };
+
+  // Browsers keep audio suspended until a user gesture — called from the
+  // input handlers so the first touch/key/click unlocks it.
+  function ensureAudio() {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    if (!audioCtx) {
+      audioCtx = new AC();
+      masterGain = audioCtx.createGain();
+      masterGain.gain.value = 0.25;
+      masterGain.connect(audioCtx.destination);
+    }
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+  }
+
+  function beep(name, type, freqStart, freqEnd, dur, vol) {
+    if (!audioCtx || audioCtx.state !== 'running') return;
+    const now = audioCtx.currentTime;
+    if (now - sfxLast[name] < 0.04) return; // avoid gain stacking at high fire rates
+    sfxLast[name] = now;
+    const osc = audioCtx.createOscillator();
+    const g = audioCtx.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(freqStart, now);
+    osc.frequency.exponentialRampToValueAtTime(Math.max(1, freqEnd), now + dur);
+    g.gain.setValueAtTime(0.0001, now);
+    g.gain.exponentialRampToValueAtTime(vol, now + 0.005);
+    g.gain.exponentialRampToValueAtTime(0.001, now + dur);
+    osc.connect(g);
+    g.connect(masterGain);
+    osc.start(now);
+    osc.stop(now + dur + 0.02);
+  }
+
+  const sfxShoot = () => beep('shoot', 'triangle', 880, 440, 0.06, 0.5);
+  const sfxHit = () => beep('hit', 'square', 220, 160, 0.05, 0.6);
+  const sfxHurt = () => beep('hurt', 'sawtooth', 200, 70, 0.18, 1.0);
+
+  // ---------- Input ----------
+
+  const keys = {};
+  window.addEventListener('keydown', e => {
+    ensureAudio();
+    keys[e.code] = true;
+    if (state === STATE_GAME_OVER && e.code === 'Enter' && elapsed - gameOverAt > 0.5) reset();
+    if (state === STATE_CHOOSING) {
+      const m = e.code.match(/^(?:Digit|Numpad)([1-3])$/);
+      if (m) applyCard(parseInt(m[1], 10) - 1);
+    }
+  });
+  window.addEventListener('keyup', e => { keys[e.code] = false; });
+
+  // Dynamic virtual joystick: anchors wherever the thumb lands.
+  const joystick = { active: false, id: null, baseX: 0, baseY: 0, dx: 0, dy: 0 };
+  const JOY_RADIUS = 60;
+
+  function hitCard(px, py) {
+    for (let i = 0; i < cardRects.length; i++) {
+      const r = cardRects[i];
+      if (px >= r.x && px <= r.x + r.w && py >= r.y && py <= r.y + r.h) return i;
+    }
+    return -1;
+  }
+
+  canvas.addEventListener('click', e => {
+    ensureAudio();
+    if (state !== STATE_CHOOSING) return;
+    const i = hitCard(e.clientX, e.clientY);
+    if (i >= 0) applyCard(i);
+  });
+
+  canvas.addEventListener('touchstart', e => {
+    e.preventDefault();
+    ensureAudio();
+    if (state === STATE_GAME_OVER) {
+      if (elapsed - gameOverAt > 0.5) reset();
+      return;
+    }
+    if (state === STATE_CHOOSING) {
+      for (const t of e.changedTouches) {
+        const i = hitCard(t.clientX, t.clientY);
+        if (i >= 0) { applyCard(i); break; }
+      }
+      return;
+    }
+    for (const t of e.changedTouches) {
+      if (!joystick.active) {
+        joystick.active = true;
+        joystick.id = t.identifier;
+        joystick.baseX = t.clientX;
+        joystick.baseY = t.clientY;
+        joystick.dx = 0;
+        joystick.dy = 0;
+      }
+    }
+  }, { passive: false });
+
+  canvas.addEventListener('touchmove', e => {
+    e.preventDefault();
+    if (!joystick.active) return;
+    for (const t of e.changedTouches) {
+      if (t.identifier !== joystick.id) continue;
+      let dx = t.clientX - joystick.baseX;
+      let dy = t.clientY - joystick.baseY;
+      const len = Math.hypot(dx, dy);
+      if (len > JOY_RADIUS) {
+        dx = dx / len * JOY_RADIUS;
+        dy = dy / len * JOY_RADIUS;
+      }
+      joystick.dx = dx;
+      joystick.dy = dy;
+    }
+  }, { passive: false });
+
+  function endTouch(e) {
+    e.preventDefault();
+    for (const t of e.changedTouches) {
+      if (joystick.active && t.identifier === joystick.id) {
+        joystick.active = false;
+        joystick.id = null;
+        joystick.dx = 0;
+        joystick.dy = 0;
+      }
+    }
+  }
+  canvas.addEventListener('touchend', endTouch, { passive: false });
+  canvas.addEventListener('touchcancel', endTouch, { passive: false });
+
+  function moveVector() {
+    if (joystick.active) {
+      const len = Math.hypot(joystick.dx, joystick.dy);
+      if (len < 8) return { x: 0, y: 0 }; // dead zone
+      const mag = Math.min(len / JOY_RADIUS, 1);
+      return { x: joystick.dx / len * mag, y: joystick.dy / len * mag };
+    }
+    let x = 0, y = 0;
+    if (keys['KeyW'] || keys['ArrowUp']) y -= 1;
+    if (keys['KeyS'] || keys['ArrowDown']) y += 1;
+    if (keys['KeyA'] || keys['ArrowLeft']) x -= 1;
+    if (keys['KeyD'] || keys['ArrowRight']) x += 1;
+    const len = Math.hypot(x, y);
+    if (len > 0) { x /= len; y /= len; }
+    return { x, y };
+  }
+
+  // ---------- Spawning & difficulty ----------
+
+  function spawnInterval() {
+    return Math.max(0.15, 0.8 * Math.pow(0.90, elapsed / 15));
+  }
+
+  // Later in the run, each spawn tick releases several monsters at once
+  function spawnBurst() {
+    return 1 + Math.floor(elapsed / 60);
+  }
+
+  function rollLevel() {
+    const maxLevel = Math.min(10, 1 + Math.floor(elapsed / 25));
+    return 1 + Math.floor(Math.random() * maxLevel);
+  }
+
+  function spawnDistance(radius) {
+    return Math.hypot(viewW, viewH) / 2 + 60 + radius;
+  }
+
+  function spawnMonster() {
+    if (monsters.length >= MONSTER_CAP) return;
+    const level = rollLevel();
+    const radius = 8 + level * 2.5;
+    const dist = spawnDistance(radius);
+    const angle = Math.random() * Math.PI * 2;
+    monsters.push({
+      x: hero.x + Math.cos(angle) * dist,
+      y: hero.y + Math.sin(angle) * dist,
+      level,
+      radius,
+      hp: level * 20,
+      maxHp: level * 20,
+      speed: HERO_SPEED * (0.8 - level * 0.05),  // lvl1 ~75% of hero, lvl10 ~30%
+      damage: 40 + level * 20,
+      hitCooldown: 0,
+      flash: 0,
+      wingPhase: Math.random() * Math.PI * 2,
+      flapSpeed: 11 - level * 0.6,   // small bats flap fast, big bats slow
+      xpValue: level,
+      scoreValue: level * 10,
+    });
+  }
+
+  // ---------- Update ----------
+
+  // Fire one fan of projectiles at the nearest monster in range.
+  // Returns false (without firing) when no monster is in range.
+  function fireVolley() {
+    let nearest = null, nearestDist = Infinity;
+    for (const m of monsters) {
+      const d = Math.hypot(m.x - hero.x, m.y - hero.y);
+      if (d < nearestDist) { nearestDist = d; nearest = m; }
+    }
+    if (!nearest || nearestDist > hero.range) return false;
+    // Fan of projectiles centered on the target
+    const base = Math.atan2(nearest.y - hero.y, nearest.x - hero.x);
+    const n = hero.projectiles;
+    const spread = 0.18; // rad between neighboring shots
+    for (let i = 0; i < n; i++) {
+      const a = base + (i - (n - 1) / 2) * spread;
+      bullets.push({
+        x: hero.x, y: hero.y,
+        vx: Math.cos(a) * hero.bulletSpeed,
+        vy: Math.sin(a) * hero.bulletSpeed,
+        life: BULLET_LIFETIME,
+        pierce: hero.pierce,
+        hit: new Set(),
+      });
+    }
+    sfxShoot();
+    return true;
+  }
+
+  function update(dt) {
+    animTime += dt;
+
+    if (state === STATE_GAME_OVER) { elapsed += dt; return; } // keeps restart debounce ticking
+    if (state === STATE_CHOOSING) return;                     // world (and difficulty) frozen
+    if (pendingChoices > 0) { openCardChoice(); return; }
+    elapsed += dt;
+
+    // Hero movement. Each axis resolves against ponds independently so the
+    // hero slides along shorelines instead of sticking. If somehow already
+    // in water, moves are allowed so the hero can walk out.
+    const mv = moveVector();
+    const stuck = heroBlockedAt(hero.x, hero.y);
+    const nx = hero.x + mv.x * hero.speed * dt;
+    if (stuck || !heroBlockedAt(nx, hero.y)) hero.x = nx;
+    const ny = hero.y + mv.y * hero.speed * dt;
+    if (stuck || !heroBlockedAt(hero.x, ny)) hero.y = ny;
+
+    // Spawning
+    spawnTimer -= dt;
+    if (spawnTimer <= 0) {
+      const burst = spawnBurst();
+      for (let i = 0; i < burst; i++) spawnMonster();
+      spawnTimer = spawnInterval();
+    }
+
+    // Monsters chase hero
+    for (const m of monsters) {
+      let dx = hero.x - m.x;
+      let dy = hero.y - m.y;
+      let d = Math.hypot(dx, dy) || 1;
+
+      // Stragglers left too far behind teleport to a fresh spawn point
+      // around the hero, so the cap never fills with unreachable monsters.
+      if (d > spawnDistance(m.radius) * 1.8) {
+        const angle = Math.random() * Math.PI * 2;
+        const dist = spawnDistance(m.radius);
+        m.x = hero.x + Math.cos(angle) * dist;
+        m.y = hero.y + Math.sin(angle) * dist;
+        dx = hero.x - m.x;
+        dy = hero.y - m.y;
+        d = dist;
+      }
+      m.x += dx / d * m.speed * dt;
+      m.y += dy / d * m.speed * dt;
+      if (m.hitCooldown > 0) m.hitCooldown -= dt;
+      if (m.flash > 0) m.flash -= dt;
+
+      // Contact damage
+      if (m.hitCooldown <= 0 && d < m.radius + HERO_RADIUS) {
+        const dmg = m.damage * (1 - hero.armor);
+        hero.hp -= dmg;
+        popText('-' + Math.round(dmg), '#d43030');
+        sfxHurt();
+        m.hitCooldown = CONTACT_COOLDOWN;
+        if (hero.hp <= 0) {
+          hero.hp = 0;
+          state = STATE_GAME_OVER;
+          gameOverAt = elapsed;
+          return;
+        }
+      }
+    }
+
+    // Auto-fire at nearest monster within range
+    hero.fireTimer -= dt;
+    if (hero.fireTimer <= 0 && monsters.length > 0) {
+      if (fireVolley()) {
+        hero.fireTimer = hero.fireInterval;
+        hero.burstShotsLeft = hero.burst - 1;
+        hero.burstTimer = BURST_INTERVAL;
+      }
+    }
+    // Burst follow-up volleys (re-aim at the current nearest monster)
+    if (hero.burstShotsLeft > 0) {
+      hero.burstTimer -= dt;
+      if (hero.burstTimer <= 0) {
+        if (fireVolley()) {
+          hero.burstShotsLeft--;
+          hero.burstTimer += BURST_INTERVAL;
+        } else {
+          hero.burstShotsLeft = 0; // target left range — drop the rest of the burst
+        }
+      }
+    }
+
+    // Bullets
+    for (let i = bullets.length - 1; i >= 0; i--) {
+      const b = bullets[i];
+      b.x += b.vx * dt;
+      b.y += b.vy * dt;
+      b.life -= dt;
+      if (b.life <= 0) { bullets.splice(i, 1); continue; }
+
+      for (let j = monsters.length - 1; j >= 0; j--) {
+        const m = monsters[j];
+        if (Math.hypot(m.x - b.x, m.y - b.y) < m.radius + 3) {
+          if (b.hit.has(m)) continue; // already pierced this monster
+          m.hp -= hero.bulletDamage * hero.damageMult;
+          m.flash = 0.08;
+          sfxHit();
+          if (m.hp <= 0) {
+            particles.push({ x: m.x, y: m.y, r: m.radius, life: 0.3, maxLife: 0.3 });
+            score += m.scoreValue;
+            kills++;
+            gainXp(m.xpValue);
+            monsters.splice(j, 1);
+          }
+          if (b.pierce > 0) {
+            b.pierce--;
+            b.hit.add(m); // keep flying; may hit another monster this same frame
+          } else {
+            bullets.splice(i, 1);
+            break;
+          }
+        }
+      }
+    }
+
+    // Death-pop particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      particles[i].life -= dt;
+      if (particles[i].life <= 0) particles.splice(i, 1);
+    }
+
+    // Floating combat text drifts up and expires
+    for (let i = pops.length - 1; i >= 0; i--) {
+      const p = pops[i];
+      p.y -= 40 * dt;
+      p.life -= dt;
+      if (p.life <= 0) pops.splice(i, 1);
+    }
+  }
+
+  function gainXp(amount) {
+    hero.xp += amount;
+    while (hero.xp >= xpToNext()) {
+      hero.xp -= xpToNext();
+      hero.level++;
+      const gained = Math.min(hero.maxHp, hero.hp + 100) - hero.hp; // free heal; all other growth via cards
+      hero.hp += gained;
+      if (gained > 0) popText('+' + Math.round(gained), '#3aa845');
+      pendingChoices++;
+    }
+  }
+
+  // ---------- Terrain (procedural, deterministic per world tile) ----------
+
+  const TILE = 80;
+  const POND_LEVEL = 0.72; // noise above this is water; also tunes map water density
+
+  // Stateless hash of integer tile coords → [0,1). Math.imul keeps the
+  // mixing in 32-bit space so far-away tiles don't lose entropy to float
+  // precision.
+  function hash2(x, y) {
+    let n = (Math.imul(x, 374761393) + Math.imul(y, 668265263)) | 0;
+    n = Math.imul(n ^ (n >>> 13), 1274126177);
+    return ((n ^ (n >>> 16)) >>> 0) / 4294967296;
+  }
+
+  // Smooth 2D value noise: lattice values every 6 tiles, smoothstep-blended.
+  // Smoothness is what makes ponds cluster into blobs and the trail contour
+  // wind instead of scattering single tiles.
+  function terrainNoise(tx, ty) {
+    const CELL = 6;
+    const gx = Math.floor(tx / CELL), gy = Math.floor(ty / CELL);
+    const fx = tx / CELL - gx, fy = ty / CELL - gy;
+    const sx = fx * fx * (3 - 2 * fx), sy = fy * fy * (3 - 2 * fy);
+    const a = hash2(gx, gy), b = hash2(gx + 1, gy);
+    const c = hash2(gx, gy + 1), d = hash2(gx + 1, gy + 1);
+    return a + (b - a) * sx + (c - a) * sy + (a - b - c + d) * sx * sy;
+  }
+
+  // Ponds are solid ground for the hero (monsters fly over them).
+  function isPondTile(tx, ty) {
+    return terrainNoise(tx, ty) > POND_LEVEL;
+  }
+
+  // Would the hero's circle at (x, y) overlap any pond tile? The circle's
+  // AABB spans at most 4 tiles (TILE ≫ HERO_RADIUS), so this stays cheap.
+  function heroBlockedAt(x, y) {
+    const r = HERO_RADIUS;
+    const tx0 = Math.floor((x - r) / TILE), tx1 = Math.floor((x + r) / TILE);
+    const ty0 = Math.floor((y - r) / TILE), ty1 = Math.floor((y + r) / TILE);
+    for (let ty = ty0; ty <= ty1; ty++) {
+      for (let tx = tx0; tx <= tx1; tx++) {
+        if (!isPondTile(tx, ty)) continue;
+        // Circle vs tile rect: clamp center to the rect, compare distance
+        const cx = Math.max(tx * TILE, Math.min(x, (tx + 1) * TILE));
+        const cy = Math.max(ty * TILE, Math.min(y, (ty + 1) * TILE));
+        if ((x - cx) ** 2 + (y - cy) ** 2 < r * r) return true;
+      }
+    }
+    return false;
+  }
+
+  // Nearest on-land spawn point to the origin, scanning outward ring by ring.
+  // Noise is deterministic, so this always resolves to the same spot.
+  function safeSpawnPoint() {
+    for (let ring = 0; ring < 64; ring++) {
+      for (let ty = -ring; ty <= ring; ty++) {
+        for (let tx = -ring; tx <= ring; tx++) {
+          if (Math.max(Math.abs(tx), Math.abs(ty)) !== ring) continue;
+          const x = (tx + 0.5) * TILE, y = (ty + 0.5) * TILE;
+          if (!heroBlockedAt(x, y)) return { x, y };
+        }
+      }
+    }
+    return { x: 0, y: 0 }; // unreachable unless the whole map is water
+  }
+
+  function drawTerrain(camX, camY) {
+    const tx0 = Math.floor(camX / TILE), ty0 = Math.floor(camY / TILE);
+    const tx1 = Math.floor((camX + viewW) / TILE), ty1 = Math.floor((camY + viewH) / TILE);
+    for (let ty = ty0; ty <= ty1; ty++) {
+      for (let tx = tx0; tx <= tx1; tx++) {
+        const sx = tx * TILE - camX, sy = ty * TILE - camY;
+        const n = terrainNoise(tx, ty);
+        const h = hash2(tx, ty);
+        if (n > POND_LEVEL) {
+          // Pond: blue base + ripple arcs
+          ctx.fillStyle = '#a9cfe4';
+          ctx.fillRect(sx, sy, TILE + 1, TILE + 1);
+          ctx.strokeStyle = '#8fbcd6';
+          ctx.lineWidth = 1.5;
+          const rx = sx + 20 + h * 40, ry = sy + 20 + ((h * 7) % 1) * 40;
+          ctx.beginPath();
+          ctx.arc(rx, ry, 6 + h * 5, 0.2 * Math.PI, 0.9 * Math.PI);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(rx + 14, ry + 8, 4 + h * 4, 1.1 * Math.PI, 1.9 * Math.PI);
+          ctx.stroke();
+        } else if (Math.abs(n - 0.5) < 0.035) {
+          // Trail: sandy base + pebbles
+          ctx.fillStyle = '#dbc9a4';
+          ctx.fillRect(sx, sy, TILE + 1, TILE + 1);
+          ctx.fillStyle = '#c4b28c';
+          for (let k = 0; k < 3; k++) {
+            const px = sx + ((h * (k + 3) * 97) % 1) * 70 + 5;
+            const py = sy + ((h * (k + 7) * 53) % 1) * 70 + 5;
+            ctx.beginPath();
+            ctx.arc(px, py, 2.2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        } else {
+          // Grass: shade-jittered green base + blade strokes
+          const shade = Math.floor((h - 0.5) * 14);
+          ctx.fillStyle = `rgb(${205 + shade},${226 + shade},${182 + shade})`;
+          ctx.fillRect(sx, sy, TILE + 1, TILE + 1);
+          ctx.strokeStyle = '#9dbf85';
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          for (let k = 0; k < 4; k++) {
+            const px = sx + ((h * (k + 2) * 61) % 1) * 72 + 4;
+            const py = sy + ((h * (k + 5) * 41) % 1) * 72 + 4;
+            ctx.moveTo(px, py);
+            ctx.lineTo(px + 2, py - 5);
+          }
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  // ---------- Render ----------
+
+  // Menacing bat silhouette. r is the collision radius; visuals scale from it
+  // (wingspan extends past r — hitbox stays the body circle). wing is in
+  // [-1, 1]: 1 = wings raised, -1 = wings swept down.
+  function drawBat(x, y, r, wing, flashing) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.fillStyle = flashing ? '#999' : '#111';
+
+    const tipY = (-0.20 - wing * 0.55) * r;
+
+    // Wings (mirrored), jagged scalloped trailing edge
+    for (const s of [-1, 1]) {
+      ctx.beginPath();
+      ctx.moveTo(s * 0.30 * r, -0.30 * r);
+      ctx.quadraticCurveTo(s * 0.80 * r, tipY - 0.50 * r, s * 1.40 * r, tipY);
+      ctx.quadraticCurveTo(s * 1.10 * r, tipY * 0.5 + 0.10 * r, s * 0.95 * r, tipY * 0.4 + 0.35 * r);
+      ctx.quadraticCurveTo(s * 0.75 * r, tipY * 0.2 + 0.05 * r, s * 0.60 * r, 0.30 * r);
+      ctx.quadraticCurveTo(s * 0.45 * r, 0.10 * r, s * 0.28 * r, 0.25 * r);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    // Pointed ears
+    ctx.beginPath();
+    ctx.moveTo(-0.42 * r, -0.55 * r);
+    ctx.lineTo(-0.34 * r, -1.10 * r);
+    ctx.lineTo(-0.05 * r, -0.70 * r);
+    ctx.moveTo(0.42 * r, -0.55 * r);
+    ctx.lineTo(0.34 * r, -1.10 * r);
+    ctx.lineTo(0.05 * r, -0.70 * r);
+    ctx.fill();
+
+    // Body
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 0.55 * r, 0.80 * r, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Glowing red eyes (too small to read below r=12)
+    if (r >= 12) {
+      ctx.fillStyle = '#f33';
+      const er = Math.max(1.3, 0.09 * r);
+      ctx.beginPath();
+      ctx.arc(-0.20 * r, -0.42 * r, er, 0, Math.PI * 2);
+      ctx.moveTo(0.20 * r + er, -0.42 * r);
+      ctx.arc(0.20 * r, -0.42 * r, er, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.restore();
+  }
+
+  function draw() {
+    const camX = hero.x - viewW / 2;
+    const camY = hero.y - viewH / 2;
+
+    drawTerrain(camX, camY);
+
+    // Range circle
+    ctx.strokeStyle = 'rgba(230,50,50,0.15)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(viewW / 2, viewH / 2, hero.range, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Death pops
+    for (const p of particles) {
+      const t = 1 - p.life / p.maxLife;
+      ctx.strokeStyle = `rgba(0,0,0,${0.5 * (1 - t)})`;
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(p.x - camX, p.y - camY, p.r * (1 + t * 1.5), 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    // Monsters (bats) — culling margin covers the wingspan (~1.4r per side)
+    for (const m of monsters) {
+      const sx = m.x - camX, sy = m.y - camY;
+      const cull = m.radius * 1.6 + 20;
+      if (sx < -cull || sx > viewW + cull || sy < -cull || sy > viewH + cull) continue;
+      const wing = Math.sin(animTime * m.flapSpeed + m.wingPhase);
+      drawBat(sx, sy, m.radius, wing, m.flash > 0);
+      // Level number on bigger monsters
+      if (m.radius >= 15) {
+        ctx.fillStyle = '#fff';
+        ctx.font = `bold ${Math.round(m.radius * 0.7)}px sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(m.level, sx, sy + m.radius * 0.15);
+      }
+    }
+
+    // Bullets
+    ctx.fillStyle = '#e6a817';
+    for (const b of bullets) {
+      ctx.beginPath();
+      ctx.arc(b.x - camX, b.y - camY, 4, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Hero — portrait once loaded, red circle as fallback
+    if (heroSprite) {
+      // Sized from the collision radius; portrait is taller than wide
+      const h = HERO_RADIUS * 3.4;
+      const w = h * (heroSprite.width / heroSprite.height);
+      ctx.drawImage(heroSprite, viewW / 2 - w / 2, viewH / 2 - h / 2, w, h);
+    } else {
+      ctx.fillStyle = '#e33';
+      ctx.beginPath();
+      ctx.arc(viewW / 2, viewH / 2, HERO_RADIUS, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Floating combat text
+    if (pops.length > 0) {
+      ctx.font = 'bold 16px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = 'rgba(255,255,255,0.7)';
+      for (const p of pops) {
+        ctx.globalAlpha = Math.max(0, p.life / p.maxLife);
+        ctx.strokeText(p.text, p.x - camX, p.y - camY);
+        ctx.fillStyle = p.color;
+        ctx.fillText(p.text, p.x - camX, p.y - camY);
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    // Joystick
+    if (joystick.active) {
+      ctx.fillStyle = 'rgba(0,0,0,0.10)';
+      ctx.beginPath();
+      ctx.arc(joystick.baseX, joystick.baseY, JOY_RADIUS, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = 'rgba(0,0,0,0.25)';
+      ctx.beginPath();
+      ctx.arc(joystick.baseX + joystick.dx, joystick.baseY + joystick.dy, 26, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    drawHud();
+
+    if (state === STATE_CHOOSING) drawCardChoice();
+    if (state === STATE_GAME_OVER) drawGameOver();
+  }
+
+  function drawCardChoice() {
+    ctx.fillStyle = 'rgba(0,0,0,0.55)';
+    ctx.fillRect(0, 0, viewW, viewH);
+
+    const cw = Math.min(150, (viewW - 64) / 3);
+    const ch = cw * 1.5;
+    const gap = Math.max(10, cw * 0.1);
+    const total = cards.length * cw + (cards.length - 1) * gap;
+    const x0 = (viewW - total) / 2;
+    const y0 = (viewH - ch) / 2;
+
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = '#fff';
+    ctx.font = `bold ${Math.max(16, Math.round(cw * 0.16))}px sans-serif`;
+    ctx.fillText('LEVEL UP — choose an upgrade', viewW / 2, y0 - Math.max(28, ch * 0.18));
+    ctx.font = `${Math.max(12, Math.round(cw * 0.11))}px sans-serif`;
+    ctx.fillStyle = 'rgba(255,255,255,0.75)';
+    ctx.fillText(`Card ${totalCardPicks() + 1} / ${MAX_TOTAL_PICKS}`, viewW / 2, y0 - Math.max(10, ch * 0.07));
+    ctx.fillStyle = '#fff';
+
+    cardRects = [];
+    for (let i = 0; i < cards.length; i++) {
+      const x = x0 + i * (cw + gap);
+      cardRects.push({ x, y: y0, w: cw, h: ch });
+
+      // Tier = which pick this would be (1st/2nd/3rd of this type):
+      // white / blue / purple, rarity-style.
+      const tier = cardPicks[CARD_TYPES.indexOf(cards[i])] + 1;
+      const bg = tier === 3 ? '#8b5cf6' : tier === 2 ? '#3b82f6' : '#fafaf7';
+      const fgTitle = tier === 1 ? '#222' : '#fff';
+      const fgDesc = tier === 1 ? '#555' : 'rgba(255,255,255,0.85)';
+
+      ctx.fillStyle = bg;
+      ctx.strokeStyle = tier === 1 ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.5)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.roundRect(x, y0, cw, ch, 12);
+      ctx.fill();
+      ctx.stroke();
+
+      const cx = x + cw / 2;
+      ctx.font = `${Math.round(cw * 0.36)}px sans-serif`;
+      ctx.fillStyle = fgTitle;
+      ctx.fillText(cards[i].icon, cx, y0 + ch * 0.26);
+      ctx.font = `bold ${Math.round(cw * 0.13)}px sans-serif`;
+      ctx.fillStyle = fgTitle;
+      ctx.fillText(cards[i].title, cx, y0 + ch * 0.55);
+      ctx.font = `${Math.round(cw * 0.1)}px sans-serif`;
+      ctx.fillStyle = fgDesc;
+      // Tiered cards (Armor/Accuracy) carry one desc per tier
+      const desc = Array.isArray(cards[i].desc) ? cards[i].desc[tier - 1] : cards[i].desc;
+      ctx.fillText(desc, cx, y0 + ch * 0.68);
+      ctx.font = `bold ${Math.round(cw * 0.11)}px sans-serif`;
+      ctx.fillStyle = fgDesc;
+      ctx.fillText(`Lv ${tier}`, cx, y0 + ch * 0.88);
+    }
+  }
+
+  function drawHud() {
+    const pad = 14, barW = 180, barH = 14;
+
+    // HP bar
+    ctx.fillStyle = 'rgba(0,0,0,0.15)';
+    ctx.fillRect(pad, pad, barW, barH);
+    const hpFrac = hero.hp / hero.maxHp;
+    ctx.fillStyle = hpFrac > 0.5 ? '#3aa845' : hpFrac > 0.25 ? '#e6a817' : '#d43030';
+    ctx.fillRect(pad, pad, barW * hpFrac, barH);
+    ctx.strokeStyle = 'rgba(0,0,0,0.4)';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(pad, pad, barW, barH);
+
+    // HP numbers, outlined so they read on both the filled and empty bar
+    const hpText = `${Math.max(0, Math.ceil(hero.hp))} / ${hero.maxHp}`;
+    ctx.font = 'bold 11px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = 'rgba(0,0,0,0.55)';
+    ctx.strokeText(hpText, pad + barW / 2, pad + barH / 2 + 1);
+    ctx.fillStyle = '#fff';
+    ctx.fillText(hpText, pad + barW / 2, pad + barH / 2 + 1);
+
+    // XP bar
+    ctx.fillStyle = 'rgba(0,0,0,0.15)';
+    ctx.fillRect(pad, pad + barH + 6, barW, 8);
+    ctx.fillStyle = '#4a7fd4';
+    ctx.fillRect(pad, pad + barH + 6, barW * (hero.xp / xpToNext()), 8);
+
+    ctx.fillStyle = '#333';
+    ctx.font = '13px sans-serif';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'top';
+    const atk = Math.round(hero.bulletDamage * hero.damageMult);
+    ctx.fillText(`Lv ${hero.level}   ATK ${atk}`, pad, pad + barH + 20);
+
+    // Score / kills / time (top-right)
+    const mins = Math.floor(elapsed / 60);
+    const secs = Math.floor(elapsed % 60).toString().padStart(2, '0');
+    ctx.textAlign = 'right';
+    ctx.font = 'bold 16px sans-serif';
+    ctx.fillText(`Score ${score}`, viewW - pad, pad);
+    ctx.font = '13px sans-serif';
+    ctx.fillText(`Kills ${kills}`, viewW - pad, pad + 22);
+    ctx.fillText(`${mins}:${secs}`, viewW - pad, pad + 40);
+  }
+
+  function drawGameOver() {
+    ctx.fillStyle = 'rgba(0,0,0,0.6)';
+    ctx.fillRect(0, 0, viewW, viewH);
+
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.font = 'bold 42px sans-serif';
+    ctx.fillText('GAME OVER', viewW / 2, viewH / 2 - 70);
+
+    const mins = Math.floor(gameOverAt / 60);
+    const secs = Math.floor(gameOverAt % 60).toString().padStart(2, '0');
+    ctx.font = '20px sans-serif';
+    ctx.fillText(`Score: ${score}`, viewW / 2, viewH / 2 - 15);
+    ctx.fillText(`Kills: ${kills}   Survived: ${mins}:${secs}`, viewW / 2, viewH / 2 + 18);
+
+    ctx.font = '16px sans-serif';
+    ctx.fillStyle = 'rgba(255,255,255,0.7)';
+    ctx.fillText('Tap or press Enter to restart', viewW / 2, viewH / 2 + 70);
+  }
+
+  // ---------- Main loop ----------
+
+  let lastTime = performance.now();
+  function frame(now) {
+    const dt = Math.min((now - lastTime) / 1000, 0.05); // clamp huge tab-switch deltas
+    lastTime = now;
+    syncCanvasSize();
+    update(dt);
+    draw();
+    requestAnimationFrame(frame);
+  }
+
+  reset();
+  requestAnimationFrame(frame);
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+})();
+</script>
+</body>
+</html>
