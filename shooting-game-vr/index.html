@@ -11,8 +11,8 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
   <title>Duck Storm — VR Duck Shooter</title>
-  <script type="module" crossorigin src="./assets/index-BG8fQMKY.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DZUtbhiF.css">
+  <script type="module" crossorigin src="./assets/index-DHzEvTzm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BB2kmFp7.css">
 <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
 <body>
   <video id="ar-video" autoplay muted playsinline></video>
@@ -27,7 +27,12 @@
     </div>
     <div id="stats">
       <div id="score">0</div>
-      <div id="wave-time">Wave 1 &middot; 0:00</div>
+      <div id="level-time">Level 1 &middot; 0:00</div>
+    </div>
+    <div id="quota">0 / 17</div>
+    <div id="run-wrap">
+      <div id="run-level">LV 1</div>
+      <div id="run-xp-track"><div id="run-xp-fill"></div></div>
     </div>
     <canvas id="minimap"></canvas>
     <button id="settings-btn" aria-label="Settings">⚙</button>
@@ -54,9 +59,11 @@
     <div class="duck-emoji">🐤</div>
     <h1>Duck Storm</h1>
     <p>Rubber ducks are attacking from every direction!<br />
-       <b>Move your phone</b> to look around &middot; <b>Tap</b> to shoot.<br />
-       Don't let them reach you — you have 100 HP.</p>
+       <b>Move your phone</b> to look around &middot; <b>Tap or hold</b> to shoot.<br />
+       Hit the kill quota to clear the level — don't let them reach you.</p>
+    <div id="start-progress"></div>
     <button id="start-btn">START</button>
+    <button id="levels-btn" class="secondary">LEVELS</button>
     <div class="hint" id="start-hint">On a phone, allow motion access when asked. On desktop, drag to look around.</div>
   </div>
 
@@ -64,7 +71,28 @@
     <div class="duck-emoji">💥</div>
     <h1 id="go-title">GAME OVER</h1>
     <div id="final-stats"></div>
-    <button id="restart-btn">PLAY AGAIN</button>
+    <button id="restart-btn">RETRY LEVEL</button>
+    <button id="gameover-levels-btn" class="secondary">LEVELS</button>
+  </div>
+
+  <div id="card-screen" class="overlay cards hidden">
+    <h2 id="card-title">LEVEL UP</h2>
+    <div id="card-row"></div>
+  </div>
+
+  <div id="complete-screen" class="overlay hidden">
+    <div class="duck-emoji">🏆</div>
+    <h1 id="complete-title">LEVEL CLEAR</h1>
+    <div id="complete-stats"></div>
+    <button id="complete-next-btn">NEXT LEVEL</button>
+    <button id="complete-levels-btn" class="secondary">LEVELS</button>
+  </div>
+
+  <div id="levelselect-screen" class="overlay hidden">
+    <h1>SELECT LEVEL</h1>
+    <p>Replay a cleared level to earn extra experience.</p>
+    <div id="level-grid"></div>
+    <button id="levelselect-back-btn" class="secondary">BACK</button>
   </div>
 
 </body>
