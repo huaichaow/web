@@ -11,8 +11,8 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
   <title>Duck Storm — VR Duck Shooter</title>
-  <script type="module" crossorigin src="./assets/index-BFL3sdhZ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BJ7JNs0g.css">
+  <script type="module" crossorigin src="./assets/index-6jbWzUz4.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BNJ5wHqb.css">
 <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
 <body>
   <video id="ar-video" autoplay muted playsinline></video>
@@ -53,8 +53,21 @@
         <span>Sound effects</span>
         <input type="checkbox" id="sfx-switch" checked />
       </div>
+      <div class="setting-row">
+        <span>Endless mode</span>
+        <input type="checkbox" id="endless-switch" />
+      </div>
+      <div class="setting-row">
+        <span>Bat targets</span>
+        <input type="checkbox" id="bat-switch" />
+      </div>
+      <div class="setting-row" id="landscape-row">
+        <span>Landscape mode</span>
+        <input type="checkbox" id="landscape-switch" />
+      </div>
       <div id="settings-status"></div>
     </div>
+    <div id="rotate-hint"><span>🔄 Rotate your device to landscape</span></div>
     <div id="sensor-warning">
       <span>⚠ Motion sensors unavailable — drag to look instead. On Android this usually
       means the page isn't trusted&#8209;HTTPS. See the README for the fix.</span>
