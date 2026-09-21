@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#05050d" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="One Ring" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+    <title>Find the One Ring</title>
+    <script type="module" crossorigin src="/assets/index-C4FZ2C6W.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Clq4iOoY.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+    <canvas id="gpu"></canvas>
+
+    <div id="vignette" aria-hidden="true"></div>
+
+    <div id="hud" class="hidden">
+      <div class="hud-item"><span class="hud-label">Time</span><span id="hud-time">0:00</span></div>
+      <div class="hud-item"><span class="hud-label">Sense</span><span id="hud-sense">Cold</span></div>
+    </div>
+
+    <div id="toast" class="hidden"></div>
+
+    <div id="update-bar" class="hidden" role="status">
+      A new version is ready. <button id="update-btn" type="button">Reload</button>
+    </div>
+
+    <div id="intro" class="overlay">
+      <div class="panel">
+        <h1>Find the One Ring</h1>
+        <p class="lore">
+          One Ring to rule them all, One Ring to find them,<br />
+          One Ring to bring them all, and in the darkness bind them.
+        </p>
+        <p>
+          The Ring has been lost among the drifting debris of a shattered world. Somewhere in this sphere of
+          rubble a single golden band still glimmers. Seek it out and claim it before it finds a new master.
+        </p>
+        <ul class="controls">
+          <li><b>Drag / pan</b> &mdash; turn your gaze left, right, up and down</li>
+          <li><b>Pinch or scroll</b> &mdash; fly forward and backward</li>
+          <li><b>Tap / click the Ring</b> &mdash; claim it when you are close enough</li>
+        </ul>
+        <p class="hint">The golden glow at the edge of your vision grows warmer as you draw near.</p>
+        <p id="renderer-note" class="hint hidden">
+          Running in WebGL compatibility mode &mdash; WebGPU is not available on this device.
+        </p>
+        <div class="actions">
+          <button id="start-btn" class="btn">Begin the search</button>
+          <button id="install-btn" class="btn btn-secondary hidden" type="button">Install as an app</button>
+        </div>
+        <p class="credit">
+          Ring model: <a href="https://sketchfab.com/3d-models/the-one-ring-a50b517d3c414e7da7911041efa6a9c7" target="_blank" rel="noopener">"The One Ring"</a>
+          by <a href="https://sketchfab.com/berzerkey" target="_blank" rel="noopener">berzerkey</a>,
+          <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+        </p>
+      </div>
+    </div>
+
+    <div id="win" class="overlay hidden">
+      <div class="panel">
+        <h1>The Ring is yours</h1>
+        <p class="lore">"It came to me. My own. My love. My own. My precious."</p>
+        <p>You found the One Ring in <b id="win-time">0:00</b>.</p>
+        <button id="again-btn" class="btn">Search again</button>
+      </div>
+    </div>
+
+    <div id="unsupported" class="overlay hidden">
+      <div class="panel">
+        <h1>Graphics not available</h1>
+        <p id="unsupported-msg">
+          This game needs WebGPU or WebGL2 with hardware acceleration. Please use a recent Chrome, Edge, Firefox or Safari.
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
