@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formula Animator</title>
+<meta name="description" content="Animate a grid of points with LaTeX formulas">
+<meta name="theme-color" content="#0b6b1f">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon-192.png">
+  <script type="module" crossorigin src="./assets/index-BiKeA2r1.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DpiYWu-U.css">
+</head>
+<body>
+<main class="app">
+  <section class="left" aria-label="Formula editor">
+    <header class="bar">
+      <h1>Formula Animator</h1>
+      <label class="preset">Preset
+        <select id="preset"></select>
+      </label>
+      <button id="share" type="button" title="Copy a link that reproduces this animation">Copy link</button>
+    </header>
+
+    <p class="hint">
+      One assignment per line in LaTeX. The inputs are <b>x</b>, <b>y</b> (the grid point) and <b>t</b> (time).
+      Assign <b>X</b> and <b>Y</b>, the translated position. <code>%</code> starts a comment.
+    </p>
+    <details class="ref">
+      <summary>Formula reference</summary>
+      <ul>
+        <li><b>A</b> (optional): the point's opacity, 0–1.</li>
+        <li>A point is hidden wherever X or Y is undefined, e.g. outside every row of a
+          <code>egin{cases} … \end{cases}</code> block. Conditions: <code>&lt; \le = 
+e \land \lor</code>.</li>
+        <li>Sequences: <code>p_0 = …</code> and <code>p_{n+1} = …</code> (may use <code>p_n</code>, earlier
+          <code>q_{n+1}</code>, <code>n</code>, <code>t</code> and constants). Define <code>n = …</code>, then use <code>p_n</code>.</li>
+        <li>Functions: <code>\sin \cos 	an rctan \sqrt \exp \ln \lfloorfloor |x| mod \min \max</code>, and
+          <code>\operatorname{…}</code> for <code>atan2</code>, <code>hypot</code>, <code>noise</code> (p5.js Perlin),
+          <code>prime</code> (k-th prime), <code>isprime</code>.</li>
+      </ul>
+    </details>
+
+    <div class="editor">
+      <div class="gutter" id="gutter" aria-hidden="true"></div>
+      <textarea id="src" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"
+        aria-label="LaTeX formulas"></textarea>
+    </div>
+
+    <div class="status" id="status" role="status"></div>
+
+    <details class="code">
+      <summary>Generated JavaScript</summary>
+      <pre id="code"></pre>
+    </details>
+
+    <div class="controls" role="group" aria-label="Animation controls">
+      <div class="group">
+        <button id="play" type="button">Pause</button>
+        <button id="reset" type="button" title="Reset time to 0">Reset t</button>
+        <button id="grid" type="button" aria-pressed="false">Show original grid</button>
+      </div>
+      <div class="group">
+        <label>Speed <input id="speed" type="range" min="0.1" max="4" step="0.1" value="1"> <output id="speedv">1.0×</output></label>
+        <label>Grid <input id="n" type="range" min="10" max="400" step="1" value="200"> <output id="nv">200 × 200</output></label>
+      </div>
+      <div class="group">
+        <label title="x and y run from 0 to this value">Domain <input id="domain" type="number" min="1" max="10000" step="1" value="200"></label>
+        <label>Dot <input id="dotsize" type="range" min="0.3" max="4" step="0.1" value="1"></label>
+        <label title="Dot opacity">Opacity <input id="alpha" type="range" min="0.05" max="1" step="0.01" value="0.45"></label>
+        <label title="Motion trails: how slowly old frames fade out">Trails <input id="trail" type="range" min="0" max="0.95" step="0.01" value="0"></label>
+        <label>Background <input id="bg" type="color" value="#000000"></label>
+        <label>Dots <input id="dot" type="color" value="#ffffff"></label>
+      </div>
+      <div class="group">
+        <button id="fit" type="button" title="Rescale the shape to fill the canvas">Refit</button>
+        <label><input id="lock" type="checkbox"> Lock bounds</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="right" aria-label="Animation">
+    <div class="stage">
+      <canvas id="canvas" aria-label="Animated point grid"></canvas>
+      <div class="preview" id="preview" aria-label="Rendered formulas"></div>
+      <span class="time" id="time">t = 0.00</span>
+    </div>
+  </section>
+</main>
+</body>
+</html>
