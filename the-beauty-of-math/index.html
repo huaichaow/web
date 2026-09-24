@@ -9,8 +9,8 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" href="./icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="./icon-192.png">
-  <script type="module" crossorigin src="./assets/index-BiKeA2r1.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DpiYWu-U.css">
+  <script type="module" crossorigin src="./assets/index-BhRxiB05.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-De_9geYo.css">
 </head>
 <body>
 <main class="app">
@@ -20,6 +20,8 @@
       <label class="preset">Preset
         <select id="preset"></select>
       </label>
+      <label class="preset" title="Morph to the next preset automatically"><input id="auto" type="checkbox"> Auto</label>
+      <label class="preset" title="How long each preset shows before morphing to the next">Every <input id="hold" type="range" min="1" max="10" step="0.5" value="3"> <output id="holdv">3 s</output></label>
       <button id="share" type="button" title="Copy a link that reproduces this animation">Copy link</button>
     </header>
 
@@ -32,11 +34,10 @@
       <ul>
         <li><b>A</b> (optional): the point's opacity, 0–1.</li>
         <li>A point is hidden wherever X or Y is undefined, e.g. outside every row of a
-          <code>egin{cases} … \end{cases}</code> block. Conditions: <code>&lt; \le = 
-e \land \lor</code>.</li>
+          <code>\begin{cases} … \end{cases}</code> block. Conditions: <code>&lt; \le = \ne \land \lor</code>.</li>
         <li>Sequences: <code>p_0 = …</code> and <code>p_{n+1} = …</code> (may use <code>p_n</code>, earlier
           <code>q_{n+1}</code>, <code>n</code>, <code>t</code> and constants). Define <code>n = …</code>, then use <code>p_n</code>.</li>
-        <li>Functions: <code>\sin \cos 	an rctan \sqrt \exp \ln \lfloorfloor |x| mod \min \max</code>, and
+        <li>Functions: <code>\sin \cos \tan \arctan \sqrt \exp \ln \lfloor\rfloor |x| \bmod \min \max</code>, and
           <code>\operatorname{…}</code> for <code>atan2</code>, <code>hypot</code>, <code>noise</code> (p5.js Perlin),
           <code>prime</code> (k-th prime), <code>isprime</code>.</li>
       </ul>
@@ -64,6 +65,7 @@ e \land \lor</code>.</li>
       <div class="group">
         <label>Speed <input id="speed" type="range" min="0.1" max="4" step="0.1" value="1"> <output id="speedv">1.0×</output></label>
         <label>Grid <input id="n" type="range" min="10" max="400" step="1" value="200"> <output id="nv">200 × 200</output></label>
+        <label title="How long the moon takes to glide to the corner; replays when you let go">Moon <input id="moon" type="range" min="1" max="5" step="0.5" value="2"> <output id="moonv">2 s</output></label>
       </div>
       <div class="group">
         <label title="x and y run from 0 to this value">Domain <input id="domain" type="number" min="1" max="10000" step="1" value="200"></label>
