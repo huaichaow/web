@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <title>My Pond</title>
+  <meta name="description" content="Draw fish, watch them school in a rippling pond, and go fishing.">
+  <meta name="theme-color" content="#0d2a30">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="My Pond">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <script type="module" crossorigin src="./assets/index-DOHKf6mm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DIYSl22w.css">
+</head>
+<body>
+  <canvas id="water"></canvas>
+  <canvas id="surface"></canvas>
+
+  <div id="toolbar">
+    <button id="btn-draw" class="primary">🐟 Draw<span class="more"> a fish</span></button>
+    <button id="btn-presets" aria-expanded="false" aria-controls="presets">🐠 Preset<span class="more"> fish</span></button>
+    <button id="btn-fish" aria-pressed="false">🎣 <span class="more">Go fishing</span><span class="less">Fish</span></button>
+    <button id="btn-clear">Clear<span class="more"> pond</span></button>
+    <span id="count"></span>
+  </div>
+
+  <div id="presets" class="hidden" role="toolbar" aria-label="Preset fish — click to add to the pond"></div>
+
+  <div id="empty">Your pond is empty — draw a fish to bring it to life!</div>
+  <div id="fishing-hud" class="hidden" aria-live="polite">
+    <div id="fishing-msg"></div>
+    <div class="tension" role="meter" aria-label="Line tension" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <span class="tension-label">Tension</span>
+      <div class="tension-track"><div class="tension-fill"></div></div>
+    </div>
+  </div>
+  <div id="hint">Click or drag on the water to make ripples · double-click a fish to scoop it out</div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="panel">
+      <h2 id="modal-title">Draw your fish</h2>
+      <p class="sub">Draw your fish as seen from above (like looking down into the pond), head pointing right. Trace the dotted outline, or hit “Trace it” and fill it in with the bucket.</p>
+      <div class="row template-row">
+        <span class="label">Outline</span>
+        <div id="templates" class="seg"></div>
+        <button id="tool-trace" title="Stamp the outline, then fill it with colour">✨ Trace it</button>
+      </div>
+      <div class="pad-wrap">
+        <canvas id="pad-guide" width="600" height="360"></canvas>
+        <canvas id="pad" width="600" height="360"></canvas>
+        <span class="guide left">← tail</span>
+        <span class="guide right">head →</span>
+      </div>
+      <div class="tools">
+        <div id="palette" class="palette"></div>
+        <div class="row">
+          <div id="sizes" class="seg"></div>
+          <div id="modes" class="seg"></div>
+          <button id="tool-undo" title="Undo (Ctrl+Z)">↶ Undo</button>
+          <button id="tool-clear">Clear</button>
+        </div>
+      </div>
+      <div class="actions">
+        <span id="pad-msg"></span>
+        <button id="btn-cancel">Cancel</button>
+        <button id="btn-release" class="primary">Release into pond</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="catch-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="catch-title">
+    <div class="panel catch">
+      <p class="sub catch-kicker">You caught a fish!</p>
+      <div class="catch-pic"><img id="catch-img" alt=""></div>
+      <h2 id="catch-title"></h2>
+      <span id="catch-best" class="badge hidden">New personal best!</span>
+      <dl class="catch-stats">
+        <div><dt>Species</dt><dd id="catch-species"></dd></div>
+        <div><dt>Length</dt><dd id="catch-length"></dd></div>
+        <div><dt>Weight</dt><dd id="catch-weight"></dd></div>
+        <div><dt>Fight</dt><dd id="catch-time"></dd></div>
+      </dl>
+      <p id="catch-log" class="sub"></p>
+      <div class="actions">
+        <button id="btn-keep">Keep it</button>
+        <button id="btn-release-catch" class="primary">Release back</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
