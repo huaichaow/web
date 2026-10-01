@@ -1,0 +1,30 @@
+{
+  "name": "PS Online",
+  "short_name": "PS Online",
+  "description": "An image editor that runs entirely in the browser.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#222222",
+  "theme_color": "#222222",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "file_handlers": [
+    {
+      "action": "./",
+      "accept": {
+        "image/png": [".png"],
+        "image/jpeg": [".jpg", ".jpeg"],
+        "image/webp": [".webp"],
+        "image/gif": [".gif"],
+        "image/bmp": [".bmp"],
+        "image/svg+xml": [".svg"],
+        "image/vnd.adobe.photoshop": [".psd"],
+        "application/x-ps-online": [".pso"]
+      }
+    }
+  ]
+}
