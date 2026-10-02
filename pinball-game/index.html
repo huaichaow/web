@@ -315,17 +315,21 @@ function dropBall() {
 function pressStart() {
   if (game.gameOver || game.state !== 'IDLE') return;
   if (game.bet < 1) { say('Drop at least 1 ball first!', '#ffd34d'); sfx.buzz(); return; }
-  game.mult = MULTS[Math.floor(Math.random() * MULTS.length)];
-  game.lit = new Set(shuffle([...Array(POCKETS).keys()]).slice(0, LIT_COUNT[game.mult]));
-  game.pocket = -1; game.won = 0; game.wonShown = 0; game.lastWin = false; game.flashT = 0;
+  const mult = MULTS[Math.floor(Math.random() * MULTS.length)];
+  startRound(mult, new Set(shuffle([...Array(POCKETS).keys()]).slice(0, LIT_COUNT[mult])));
   game.startPressT = game.time;
+  sfx.start();
+  say(`×${game.mult}`, '#ffe066', 1200);
+}
+
+function startRound(mult, lit) {
+  game.mult = mult; game.lit = lit;
+  game.pocket = -1; game.won = 0; game.wonShown = 0; game.lastWin = false; game.flashT = 0;
   Object.assign(sim, { active: false, exited: false, pocket: -1, landed: false, stillT: 0 });
   laneGate.on = false;
   cupGate.on = false;                       // release the trigger ball into the lane
   ball.vx = Math.max(ball.vx, 90);
   game.state = 'READY';
-  sfx.start();
-  say(`×${game.mult}`, '#ffe066', 1200);
 }
 
 function releasePlunger() {
@@ -390,6 +394,33 @@ function resetGame() {
 }
 
 function toggleMute() { game.muted = !game.muted; }
+
+// Persist the tray and any balls bet but not yet shot, so a refresh resumes where you left off;
+// after START also the rolled multiplier & lit pockets, so a refresh can't re-roll them.
+// Once the plunger fires the bet is spent: a refresh mid-flight forfeits that round.
+const GAME_KEY = 'pinball.game.v1';
+let savedGame = '';
+function saveGame() {
+  const unshot = game.state === 'IDLE' || game.state === 'READY';
+  const save = { tray: game.tray, bet: unshot ? game.bet : 0 };
+  if (game.state === 'READY') Object.assign(save, { started: true, mult: game.mult, lit: [...game.lit] });
+  const s = JSON.stringify(save);
+  if (s === savedGame) return;
+  savedGame = s;
+  try { localStorage.setItem(GAME_KEY, s); } catch (e) { /* storage unavailable */ }
+}
+(function loadGame() {
+  try {
+    const s = JSON.parse(localStorage.getItem(GAME_KEY));
+    if (!s) return;
+    const tray = Math.max(0, Math.floor(s.tray) || 0), bet = Math.min(MAX_BET, Math.max(0, Math.floor(s.bet) || 0));
+    Object.assign(game, { tray, bet, gameOver: tray <= 0 && bet === 0 });
+    if (s.started && bet > 0 && MULTS.includes(s.mult) && Array.isArray(s.lit)) {
+      const lit = new Set(s.lit.filter(i => Number.isInteger(i) && i >= 0 && i < POCKETS));
+      if (lit.size === LIT_COUNT[s.mult]) startRound(s.mult, lit);
+    }
+  } catch (e) { /* storage unavailable or corrupt: start fresh */ }
+})();
 
 // ============================================================
 // Learning cards: every 50 balls won ejects one card (max 3 per win)
@@ -1211,6 +1242,7 @@ function frame(now) {
   if (game.flashT > 0) game.flashT -= dt;
   if (game.wonShown < game.won) game.wonShown = Math.min(game.won, game.wonShown + Math.max(1, Math.ceil((game.won - game.wonShown) * 0.08)));
   if (banner) { banner.t += dt; if (banner.t > banner.dur) banner = null; }
+  saveGame();
 
   draw();
   requestAnimationFrame(frame);
