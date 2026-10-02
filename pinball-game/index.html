@@ -11,10 +11,12 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<style>html,body{height:100%;margin:0;overflow:hidden}body{background:radial-gradient(#3a1f2b 0%,#140a10 75%);justify-content:center;align-items:center;display:flex}canvas{touch-action:none;-webkit-user-select:none;user-select:none;display:block}</style>
+<style>html,body{height:100%;margin:0;overflow:hidden}body{background:radial-gradient(#3a1f2b 0%,#140a10 75%);justify-content:center;align-items:center;display:flex}canvas{touch-action:none;-webkit-user-select:none;user-select:none;display:block}@property --ang{syntax:"<angle>";inherits:true;initial-value:0deg}[hidden]{display:none!important}#cardLayer{z-index:10;-webkit-backdrop-filter:blur(3px);color:#fff;-webkit-user-select:none;user-select:none;touch-action:manipulation;background:#08040ccc;justify-content:center;align-items:center;font-family:PingFang SC,Microsoft YaHei,Noto Sans SC,system-ui,sans-serif;display:flex;position:fixed;inset:0}.panel{flex-direction:column;align-items:center;gap:14px;max-width:calc(100vw - 32px);display:flex}.mtitle{color:#ffe066;letter-spacing:1px;min-height:22px;font-size:18px;font-weight:800}.mhint{color:#fff9;font-size:12px}.btn{font:inherit;cursor:pointer;color:#7a2d00;background:linear-gradient(#ffe98a,#f2a900);border:0;border-radius:999px;padding:10px 28px;font-size:16px;font-weight:800;box-shadow:0 3px #a55f00}.btn:active{transform:translateY(2px);box-shadow:0 1px #a55f00}.stage{perspective:1200px;transform-origin:50%}.stage.glow-SR{filter:drop-shadow(0 0 16px #a855f7d9)}.stage.glow-SSR{filter:drop-shadow(0 0 18px #ffc400e6)}.stage.glow-UR{filter:drop-shadow(0 0 22px #ff5fd2f2)}.card{--w:min(72vw, 300px, 46vh);width:var(--w);height:calc(var(--w) * 88 / 63);font-size:calc(var(--w) / 16);transform-style:preserve-3d;cursor:pointer;line-height:1.35;transition:transform .55s cubic-bezier(.3,.7,.3,1);position:relative}.card.flipped{transform:rotateY(180deg)}#cardLayer,.zoom{animation:.3s ease-out fadeIn}@keyframes fadeIn{0%{background-color:#08040c00}}.spread{perspective:1400px;justify-content:center;align-items:center;gap:14px;display:flex}.spread .stage{cursor:pointer;will-change:transform}.spread .card{--w:min(calc((100vw - 32px - (var(--n) - 1) * 14px) / var(--n)), 250px, 40vh);font-size:calc(var(--w) / 14)}.zoom{z-index:1;perspective:1400px;background:#08040cb8;flex-direction:column;justify-content:center;align-items:center;gap:14px;display:flex;position:fixed;inset:0}.zoom .card{--w:min(84vw, 340px, 46vh)}@media (height<=460px){.panel{gap:6px}.mtitle{min-height:0;font-size:14px}.mhint{display:none}.btn{padding:6px 20px;font-size:14px}}.face{box-sizing:border-box;border-radius:calc(var(--w) * .06);border:calc(var(--w) * .035) solid transparent;background:var(--inner) padding-box, var(--frame) border-box;backface-visibility:hidden;color:#2a2230;flex-direction:column;padding:.5em .6em;display:flex;position:absolute;inset:0;overflow:hidden}.face.back{transform:rotateY(180deg)}.fx{pointer-events:none;position:absolute;inset:0}.top{justify-content:space-between;align-items:center;font-size:.8em;display:flex}.badge{background:var(--rc);color:#fff;border-radius:.45em;padding:.05em .55em;font-weight:900}.no{opacity:.7;font-family:ui-monospace,Consolas,monospace;font-weight:700}.art{font-size:min(3.1em, calc(8em / var(--al,2)));white-space:nowrap;background:#fff9;border-radius:.55em;flex:1;place-items:center;margin:.4em 0;line-height:1;display:grid;box-shadow:inset 0 0 0 .05em #0000001a}.name{text-align:center;font-size:1.35em;font-weight:900}.meta{justify-content:space-between;align-items:center;margin-top:.2em;font-size:.8em;display:flex}.subj{color:#fff;background:var(--sc);border-radius:.45em;padding:.05em .5em;font-weight:700}.stars{color:var(--rc);letter-spacing:.05em}.new{color:#fff;background:#ff3b30;border-radius:.3em;padding:.1em .7em;font-size:.9em;font-weight:900;position:absolute;top:22%;left:50%;transform:translate(-50%)rotate(-8deg);box-shadow:0 .15em .4em #0000004d}.back .top{border-bottom:.08em solid var(--rc);padding-bottom:.35em;font-size:1em}.back .top b{font-size:1.2em}.back dl{flex-direction:column;flex:1;justify-content:space-evenly;margin:.5em 0 0;display:flex}.back dt{color:var(--rc);font-size:.9em;font-weight:900}.back dd{margin:.15em 0 0;font-size:.92em}.back blockquote{opacity:.85;text-align:center;margin:.4em 0 0;font-size:.72em;font-style:italic}.r-N{--rc:#6f757c;--frame:linear-gradient(135deg, #c3c7cc, #6f757c);--inner:linear-gradient(#f2f3f5, #dfe2e6)}.r-R{--rc:#2563eb;--frame:linear-gradient(135deg, #a5cdfd, #1d4ed8 55%, #60a5fa);--inner:linear-gradient(160deg, #f0f6ff, #c6dbff)}.r-SR{--rc:#7c3aed;--frame:linear-gradient(135deg, #eddcff, #7c3aed 50%, #c084fc);--inner:linear-gradient(160deg, #f8f0ff, #dcc6ff)}.r-SSR{--rc:#b7791f;--frame:linear-gradient(135deg, #fff3b0, #d4a017 35%, #fff7cc 55%, #b8860b);--inner:linear-gradient(160deg, #fffaf0, #ffe6a0)}.r-UR{--rc:#db2777;--inner:linear-gradient(160deg, #fff0fb, #e8f4ff 50%, #efffef)}.r-UR .face{--frame:conic-gradient(from var(--ang), #ff4d4d, #ffb84d, #fff04d, #4dff88, #4dc3ff, #9b6bff, #ff4dd2, #ff4d4d);animation:4s linear infinite urSpin}@keyframes urSpin{to{--ang:360deg}}.r-R .fx{background:radial-gradient(circle at 18% 30%,#fff 0 1.5px,#0000 2.5px),radial-gradient(circle at 78% 18%,#fff 0 1px,#0000 2px),radial-gradient(circle at 62% 72%,#fff 0 1.5px,#0000 2.5px),radial-gradient(circle at 28% 84%,#fff 0 1px,#0000 2px);animation:2.2s ease-in-out infinite twinkle}.r-SR .fx,.r-UR .fx{background:linear-gradient(115deg,#0000 20%,#ff00c838 35%,#00ffff38 50%,#ffff0038 65%,#0000 80%) 0 0/250% 100%;animation:3s linear infinite sweep}.r-SSR .fx{background:linear-gradient(105deg,#0000 42%,#fffc 50%,#0000 58%) 0 0/300% 100%;animation:2.4s linear infinite sweep}@keyframes sweep{0%{background-position:100% 0}to{background-position:0 0}}@keyframes twinkle{50%{opacity:.25}}.album{box-sizing:border-box;background:linear-gradient(#2a1533,#170b1d);border:2px solid #ff8b3d;border-radius:16px;align-items:stretch;gap:10px;width:min(460px,100vw - 32px);max-height:calc(100vh - 32px);padding:12px}.ahead{align-items:center;gap:10px;font-size:16px;display:flex}.ahead b{flex:1}.prog{color:#ffe066;font-weight:800}.x{font:inherit;color:#fff;cursor:pointer;background:#ffffff1f;border:0;border-radius:50%;width:32px;height:32px}.tabs{grid-template-columns:repeat(4,1fr);gap:6px;display:grid}.tab{font:inherit;cursor:pointer;color:#fff;background:#ffffff14;border:1px solid #ffffff26;border-radius:10px;padding:6px 2px;font-size:13px;font-weight:700}.tab small{opacity:.75;font-size:11px;display:block}.tab.on{background:#ff8b3d;border-color:#ffd2b0}.grid{grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px;padding:2px 4px 6px 2px;display:grid;overflow-y:auto}.cell{position:relative;container-type:inline-size}.cell[data-id]{cursor:pointer}.card.mini{--w:100cqw;font-size:calc(var(--w) / 11);cursor:inherit}.card.mini .face{padding:.35em .4em}.card.mini .meta,.card.mini .no{display:none}.card.mini .name{white-space:nowrap;text-overflow:ellipsis;font-size:1em;overflow:hidden}.card.mini .art{font-size:min(2.2em, calc(5.6em / var(--al,2)));margin:.25em 0}.locked-card{box-sizing:border-box;border-radius:calc(var(--w) * .06);color:#8d7fa0;background:repeating-linear-gradient(45deg,#2a2233 0 6px,#231c2b 6px 12px);border:2px dashed #5a4a6a;flex-direction:column;justify-content:space-evenly;align-items:center;font-weight:800;display:flex}.locked-card b{font-size:2.4em}.cnt{color:#fff;background:#ff3b30;border-radius:8px;padding:0 5px;font-size:11px;font-weight:800;position:absolute;bottom:2px;right:2px}.note{color:#fff9;text-align:center;margin:0;font-size:11.5px;line-height:1.5}</style>
 <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
 <body>
 <canvas id="c" aria-label="Pinball multiplier machine game"></canvas>
+<div id="cardLayer" hidden></div>
+<script src="./cards.js"></script>
 <script>
 'use strict';
 
@@ -27,6 +29,7 @@ const R = 8;                   // ball radius
 const GRAVITY = 1400;          // px/s^2 along the tilted board
 const FRICTION = 0.8;          // tangential damping per second of contact
 const MAX_SPEED = 2600;
+const SLOPE_PUSH = 3000, SLOPE_MAX_V = 900;   // extra downhill acceleration on the return slope, and the speed it stops pushing at
 
 const FIELD_L = 28, FIELD_R = 424;
 const POCKETS = 12, POCKET_W = (FIELD_R - FIELD_L) / POCKETS;
@@ -46,6 +49,9 @@ const UI = {
   hole:  { x: 160, y: 856 },
   start: { x: 330, y: 848, r: 38 },
   reset: { x: 166, y: 470, w: 120, h: 36 },
+  album: { x: 28, y: 24, r: 14 },
+  slot:  { x: 116, y: 756, w: 220, h: 6 },
+  cardTap: { x: 110, y: 750, w: 232, h: 48 },
 };
 const DEBUG = /[?&]debug\b/.test(location.search);
 const FONT = "'PingFang SC','Microsoft YaHei','Noto Sans SC',system-ui,sans-serif";
@@ -107,6 +113,7 @@ const pl = { x: 0, v: 0, held: false, pull: 0, w2: 1600 };   // x = pull displac
 // Spring stiffness chosen so the rod snaps back at a speed that grows linearly with the pull
 const springFor = x => (LAUNCH_MIN + (LAUNCH_MAX - LAUNCH_MIN) * x / PULL_MAX) ** 2 / (x * x);
 let impactHook = null;
+let onSlope = false;           // ball touched the return slope during the last physics step
 
 function bounce(nx, ny, e, jitter) {
   const vn = ball.vx * nx + ball.vy * ny;
@@ -138,6 +145,11 @@ function collideSeg(s) {
   nx /= d; ny /= d;
   ball.x = px + nx * min; ball.y = py + ny * min;
   const imp = bounce(nx, ny, s.e, s.kind === 'bar' ? 30 : 0);
+  if (s.kind === 'slope') {
+    onSlope = true;
+    const len = Math.hypot(dx, dy), tx = dx / len, ty = dy / len;   // points downhill, toward the cup
+    if (ball.vx * tx + ball.vy * ty < SLOPE_MAX_V) { ball.vx += tx * SLOPE_PUSH * DT; ball.vy += ty * SLOPE_PUSH * DT; }
+  }
   if (imp > 150 && impactHook) impactHook(s.kind, imp);
 }
 
@@ -185,6 +197,7 @@ function collideTip() {
 
 function physStep(dt) {
   stepPlunger(dt);
+  onSlope = false;
   ball.vy += GRAVITY * dt;
   ball.x += ball.vx * dt;
   ball.y += ball.vy * dt;
@@ -210,6 +223,7 @@ function tickSim(dt, s, emit) {
     s.pocket = Math.max(0, Math.min(POCKETS - 1, Math.floor((ball.x - FIELD_L) / POCKET_W)));
     emit('pocket', s.pocket);
   }
+  if (s.pocket >= 0 && !s.landed && onSlope) { s.landed = true; emit('landed'); }
   const speed = Math.hypot(ball.vx, ball.vy);
   if (s.pocket >= 0 && inCup() && speed < 25) {
     s.active = false; emit('home');
@@ -257,6 +271,9 @@ const sfx = {
   win()    { [784, 988, 1175, 1568, 1175, 1568, 2093].forEach((f, i) => tone(f, 0.12, 'square', 0.05, 1, i * 0.1)); },
   miss()   { tone(330, 0.18, 'triangle', 0.07, 0.7); tone(220, 0.28, 'triangle', 0.07, 0.6, 0.16); },
   buzz()   { tone(110, 0.2, 'sawtooth', 0.05); },
+  card()   { tone(500, 0.12, 'sawtooth', 0.03, 2.4); tone(1500, 0.05, 'square', 0.03, 1, 0.12); },
+  whoosh() { tone(240, 0.25, 'sine', 0.07, 3); },
+  rare()   { [1047, 1319, 1568, 2093].forEach((f, i) => tone(f, 0.14, 'triangle', 0.07, 1, i * 0.06)); },
 };
 impactHook = (kind, imp) => {
   if (kind === 'stop') { if (imp > 200) sfx.thunk(); return; }
@@ -275,7 +292,7 @@ const game = {
   won: 0, wonShown: 0, pocket: -1, lastWin: false,
   flashT: 0, gameOver: false, muted: false, time: 0, startPressT: -1,
 };
-const sim = { active: false, exited: false, pocket: -1, stillT: 0, nudges: 0 };
+const sim = { active: false, exited: false, pocket: -1, landed: false, stillT: 0, nudges: 0 };
 let banner = null;
 const coinAnims = [];
 
@@ -302,7 +319,7 @@ function pressStart() {
   game.lit = new Set(shuffle([...Array(POCKETS).keys()]).slice(0, LIT_COUNT[game.mult]));
   game.pocket = -1; game.won = 0; game.wonShown = 0; game.lastWin = false; game.flashT = 0;
   game.startPressT = game.time;
-  Object.assign(sim, { active: false, exited: false, pocket: -1, stillT: 0 });
+  Object.assign(sim, { active: false, exited: false, pocket: -1, landed: false, stillT: 0 });
   laneGate.on = false;
   cupGate.on = false;                       // release the trigger ball into the lane
   ball.vx = Math.max(ball.vx, 90);
@@ -335,12 +352,15 @@ function onSimEvent(type, idx) {
       game.tray += game.won;
       game.lastWin = true; game.flashT = 2.5;
       sfx.win();
-      say(`WIN +${game.won}!`, '#ffe066', 2200);
+      const got = ejectCards(Math.min(CARD_MAX, Math.floor(game.won / CARD_PER)));
+      say(got.length ? `WIN +${game.won}! 🎴×${got.length}` : `WIN +${game.won}!`, '#ffe066', 2200);
     } else {
       game.won = 0; game.lastWin = false;
       sfx.miss();
       say('So close…', '#9fd3ff', 1500);
     }
+  } else if (type === 'landed') {
+    openBetting();
   } else if (type === 'home') {
     finishRound();
   } else if (type === 'nudge') {
@@ -348,11 +368,18 @@ function onSimEvent(type, idx) {
   }
 }
 
-function finishRound() {
+// Once the trigger ball lands on the return slope the round is settled: open betting for the next one
+// (START works too; the ball then rolls straight on into the lane). The result lamps stay lit until it's home.
+function openBetting() {
   game.state = 'IDLE';
-  game.bet = 0; game.mult = 0; game.lit = new Set(); game.pocket = -1;
+  game.bet = 0; game.mult = 0;
+}
+
+function finishRound() {
+  if (game.state !== 'IDLE') openBetting();
+  game.lit = new Set(); game.pocket = -1;
   sim.active = false; laneGate.on = false;
-  if (game.tray <= 0) { game.gameOver = true; banner = null; sfx.buzz(); }
+  if (game.tray <= 0 && game.bet === 0) { game.gameOver = true; banner = null; sfx.buzz(); }
 }
 
 function resetGame() {
@@ -363,6 +390,56 @@ function resetGame() {
 }
 
 function toggleMute() { game.muted = !game.muted; }
+
+// ============================================================
+// Learning cards: every 50 balls won ejects one card (max 3 per win)
+// ============================================================
+const CARD_PER = 50, CARD_MAX = 3;
+const RANKS = ['N', 'R', 'SR', 'SSR', 'UR'];
+const RARITY = {                       // p = chance per card; UR is never random, it rewards a full 60/60 set
+  N:   { p: 0.60, stars: 1, color: '#9aa0a6' },
+  R:   { p: 0.27, stars: 2, color: '#3b82f6' },
+  SR:  { p: 0.10, stars: 3, color: '#a855f7' },
+  SSR: { p: 0.03, stars: 4, color: '#f5b700' },
+  UR:  { p: 0,    stars: 5, color: '#ff5fd2' },
+};
+const SUBJ = {
+  YW: { label: '语文', icon: '📖', color: '#e5484d' },
+  SX: { label: '数学', icon: '🔢', color: '#3b82f6' },
+  YY: { label: '英语', icon: '🔤', color: '#22a55a' },
+  UR: { label: '全能', icon: '🏆', color: '#db2777' },
+};
+const CARDS = window.CARDS || [];
+const CARD_BY_ID = Object.fromEntries(CARDS.map(c => [c.id, c]));
+const STORE_KEY = 'pinball.cards.v1';
+const collection = (() => { try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch (e) { return {}; } })();
+function saveCollection() { try { localStorage.setItem(STORE_KEY, JSON.stringify(collection)); } catch (e) { /* storage unavailable */ } }
+const ownedCount = () => CARDS.filter(c => collection[c.id]).length;
+const cardQueue = [];                  // ejected, not yet opened: { card, isNew, t } (t < 0 = still waiting to come out)
+
+// Pick subject uniformly, then rarity by weight (at least minRarity), then a card of that subject & rarity
+function rollCard(minRarity = 'N') {
+  const subj = ['YW', 'SX', 'YY'][Math.floor(Math.random() * 3)];
+  const pool = RANKS.slice(RANKS.indexOf(minRarity), 4);
+  let x = Math.random() * pool.reduce((s, r) => s + RARITY[r].p, 0), rarity = pool[pool.length - 1];
+  for (const r of pool) { if ((x -= RARITY[r].p) < 0) { rarity = r; break; } }
+  const cands = CARDS.filter(c => c.subj === subj && c.rarity === rarity);
+  return cands[Math.floor(Math.random() * cands.length)];
+}
+
+function ejectCards(n) {
+  if (!CARDS.length) return [];
+  const got = [];
+  for (let i = 0; i < n; i++) got.push(rollCard(i === 2 ? 'R' : 'N'));   // a 3-card win guarantees one R or better
+  const ur = CARD_BY_ID['UR-01'];
+  if (ur && !collection[ur.id] && CARDS.every(c => c === ur || collection[c.id] || got.includes(c))) got.push(ur);
+  got.forEach((card, i) => {
+    cardQueue.push({ card, isNew: !collection[card.id], t: -0.2 - 0.15 * i });
+    collection[card.id] = (collection[card.id] || 0) + 1;
+  });
+  saveCollection();
+  return got;
+}
 
 // Headless test: fire n shots at random strengths and report where they land.
 function autoTest(n = 300, minPull = 4, maxPull = PULL_MAX) {
@@ -375,7 +452,7 @@ function autoTest(n = 300, minPull = 4, maxPull = PULL_MAX) {
     Object.assign(ball, { x: 440, y: TIP_REST + pull - R, vx: 0, vy: 0 });
     Object.assign(pl, { x: pull, v: 0, held: false, pull: 0, w2: springFor(pull) });
     cupGate.on = true; laneGate.on = false;
-    const s = { active: true, exited: false, pocket: -1, stillT: 0, nudges: 0 };
+    const s = { active: true, exited: false, pocket: -1, landed: false, stillT: 0, nudges: 0 };
     let t = 0, done = false, fell = false;
     const emit = (type, idx) => { if (type === 'pocket') hits[idx]++; if (type === 'home') done = true; };
     while (t < 40 && !done) {
@@ -398,7 +475,8 @@ function autoTest(n = 300, minPull = 4, maxPull = PULL_MAX) {
 // Fast-forward the live game (for testing when the tab isn't animating)
 function advance(sec) { for (let t = 0; t < sec; t += DT) tickSim(DT, sim, onSimEvent); }
 
-Object.assign(game, { autoTest, advance, ball, plunger: pl, sim, dropBall, pressStart });
+Object.assign(game, { autoTest, advance, ball, plunger: pl, sim, dropBall, pressStart,
+                      ejectCards, rollCard, collection, cardQueue, openAlbum });
 window.game = game;
 
 // ============================================================
@@ -423,6 +501,8 @@ cv.addEventListener('pointerdown', e => {
   const p = toLogical(e);
   cv.setPointerCapture(e.pointerId);
   if (inCircle(p, UI.mute, 18)) toggleMute();
+  else if (inCircle(p, UI.album, 18)) openAlbum();
+  else if (cardsOut() && inRect(p, UI.cardTap)) openReveal();
   else if (game.gameOver && inRect(p, UI.reset)) resetGame();
   else if (inRect(p, UI.coin)) {
     dropBall();
@@ -436,8 +516,8 @@ cv.addEventListener('pointermove', e => {
   const p = toLogical(e);
   if (drag) { pl.pull = Math.max(0, Math.min(PULL_MAX, p.y - drag.startY)); return; }
   let cur = 'default';
-  if (inCircle(p, UI.mute, 18) || inRect(p, UI.coin) || inCircle(p, UI.start, UI.start.r + 4) ||
-      (game.gameOver && inRect(p, UI.reset))) cur = 'pointer';
+  if (inCircle(p, UI.mute, 18) || inCircle(p, UI.album, 18) || inRect(p, UI.coin) || inCircle(p, UI.start, UI.start.r + 4) ||
+      (cardsOut() && inRect(p, UI.cardTap)) || (game.gameOver && inRect(p, UI.reset))) cur = 'pointer';
   else if (onKnob(p)) cur = 'grab';
   cv.style.cursor = cur;
 });
@@ -448,6 +528,13 @@ cv.addEventListener('pointercancel', endPointer);
 window.addEventListener('keydown', e => {
   ensureAudio();
   const k = e.key;
+  if (modal) {                              // a card overlay is open: keys drive it, not the machine
+    if (k === ' ' || k === 'Enter') e.preventDefault();
+    if (k === 'Escape') modal.close();
+    else if (k === 'Enter' || k === 'ArrowRight') modal.next();
+    else if (k === ' ' || k === 'f' || k === 'F') modal.flip();
+    return;
+  }
   if (k === ' ' || k === 'ArrowDown') {
     e.preventDefault();
     if (!e.repeat && !pl.held) { keyPull = true; pl.held = true; pl.pull = pl.x; }
@@ -455,11 +542,146 @@ window.addEventListener('keydown', e => {
   else if (k === 'Enter' || k === 's' || k === 'S') pressStart();
   else if (k === 'm' || k === 'M') toggleMute();
   else if ((k === 'r' || k === 'R') && game.gameOver) resetGame();
+  else if (k === 'c' || k === 'C') cardQueue.length ? openReveal() : openAlbum();
 });
 window.addEventListener('keyup', e => {
   if ((e.key === ' ' || e.key === 'ArrowDown') && keyPull) { keyPull = false; releasePlunger(); }
 });
 window.addEventListener('blur', () => { keyPull = false; endPointer(); releasePlunger(); });
+
+// ============================================================
+// Card overlays (DOM): flip viewer for new cards, and the album
+// ============================================================
+const layer = document.getElementById('cardLayer');
+let modal = null;                           // { flip, next, close } of the open overlay
+let albumTab = 'YW';
+const cardsOut = () => cardQueue.some(q => q.t > 0);
+
+// Number of visible symbols in the art (so 3-emoji art is drawn smaller to fit its box)
+const artLen = str => (Intl.Segmenter ? [...new Intl.Segmenter().segment(str)] : [...str]).length;
+
+function cardHTML(c, isNew = false, mini = false) {
+  const s = SUBJ[c.subj];
+  const front = `<div class="face front"><div class="fx"></div>
+      <div class="top"><span class="badge">${c.rarity}</span><span class="no">${c.id}</span></div>
+      <div class="art" style="--al:${artLen(c.art)}">${c.art}</div>
+      <div class="name">${c.name}</div>
+      <div class="meta"><span class="subj" style="--sc:${s.color}">${s.icon} ${s.label}</span><span class="stars">${'★'.repeat(RARITY[c.rarity].stars)}</span></div>
+      ${isNew ? '<div class="new">NEW!</div>' : ''}</div>`;
+  if (mini) return `<div class="card mini r-${c.rarity}">${front}</div>`;
+  const back = `<div class="face back">
+      <div class="top"><b>${c.name}</b><span class="no">${c.id}</span></div>
+      <dl><dt>📖 知识点</dt><dd>${c.know}</dd><dt>✏️ 小任务</dt><dd>${c.task}</dd><dt>💡 小贴士</dt><dd>${c.tip}</dd></dl>
+      ${c.quote ? `<blockquote>“${c.quote}”</blockquote>` : ''}</div>`;
+  return `<div class="card r-${c.rarity}" role="button" aria-label="${c.name} — tap to flip">${front}${back}</div>`;
+}
+
+function closeModal() { modal = null; layer.hidden = true; layer.innerHTML = ''; }
+
+// Screen position of a point given in the canvas' logical coordinates
+function canvasToScreen(x, y) {
+  const r = cv.getBoundingClientRect();
+  return { x: r.left + x / W * r.width, y: r.top + y / H * r.height, k: r.width / W };
+}
+const T3 = (dx, dy, s, rx, ry) => `translate(${dx}px, ${dy}px) scale(${s}) rotateX(${rx}deg) rotateY(${ry}deg)`;
+
+// Won cards leave the slot and fly out in perspective, landing in a centered row across the screen
+function openReveal() {
+  if (!cardQueue.length) return;
+  const items = cardQueue.splice(0), n = items.length, slotN = Math.min(3, n);
+  const ur = items.some(q => q.card.rarity === 'UR');
+  layer.innerHTML = `<div class="panel">
+      <div class="mtitle">${ur ? '🏆 集齐全套! 解锁 UR 三科全能王!' : `获得 ${n} 张学习卡!`}</div>
+      <div class="spread" style="--n:${n}">${items.map(q =>
+        `<div class="stage glow-${q.card.rarity}" data-card="${q.card.id}" data-new="${q.isNew ? 1 : ''}">${cardHTML(q.card, q.isNew)}</div>`).join('')}</div>
+      <div class="mhint">点击卡片放大查看 · Tap a card to zoom in</div>
+      <button class="btn" data-act="next">收下 OK</button>
+    </div>`;
+  layer.hidden = false;
+  layer.querySelectorAll('.spread .stage').forEach((st, i) => {
+    // start exactly where the canvas drew this card sticking out of the slot
+    const b = st.getBoundingClientRect();
+    const from = canvasToScreen(i < slotN ? 226 + (i - (slotN - 1) / 2) * 44 : 226, 777);
+    const dx = from.x - (b.left + b.width / 2), dy = from.y - (b.top + b.height / 2);
+    st.animate([
+      { transform: T3(dx, dy, 30 * from.k / b.width, 70, -180) },
+      { transform: T3(dx * 0.3, dy * 0.3 - 80, 0.85, -18, 160), offset: 0.5 },
+      { transform: T3(0, -12, 1.06, 6, 340), offset: 0.82 },
+      { transform: T3(0, 0, 1, 0, 360) },
+    ], { duration: 1100, delay: 160 * i, easing: 'cubic-bezier(.3, .7, .3, 1)', fill: 'backwards' });
+    setTimeout(() => sfx.card(), 160 * i);
+  });
+  if (items.some(q => RANKS.indexOf(q.card.rarity) >= 2)) setTimeout(() => sfx.rare(), 900 + 160 * n);
+  modal = { flip() {}, next: closeModal, close: closeModal };
+}
+
+// Big preview that zooms out of `fromEl` while spinning; tap flips it, closing shrinks it back
+function zoomCard(card, fromEl, isNew = false) {
+  const prev = modal;
+  const z = document.createElement('div');
+  z.className = 'zoom';
+  z.innerHTML = `<div class="stage glow-${card.rarity}">${cardHTML(card, isNew)}</div>
+      <div class="mhint">点击卡片翻面 · Tap the card to flip</div>
+      <button class="btn" data-act="zclose">关闭 Close</button>`;
+  layer.appendChild(z);
+  const st = z.querySelector('.stage');
+  const a = fromEl.getBoundingClientRect(), b = st.getBoundingClientRect();
+  const start = T3(a.left + a.width / 2 - (b.left + b.width / 2), a.top + a.height / 2 - (b.top + b.height / 2), a.width / b.width, 0, -360);
+  const end = T3(0, 0, 1, 0, 0);
+  fromEl.style.visibility = 'hidden';
+  st.animate([{ transform: start }, { transform: end }], { duration: 750, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+  sfx.whoosh();
+  let closing = false;
+  const close = () => {
+    if (closing) return;
+    closing = true;
+    modal = prev;
+    z.querySelectorAll('.mhint, .btn').forEach(el => { el.style.visibility = 'hidden'; });
+    z.animate([{ backgroundColor: 'rgba(8,4,12,0.72)' }, { backgroundColor: 'rgba(8,4,12,0)' }], { duration: 380, fill: 'forwards' });
+    st.animate([{ transform: end }, { transform: start }], { duration: 380, easing: 'cubic-bezier(.5, 0, .8, .5)', fill: 'forwards' })
+      .onfinish = () => { z.remove(); fromEl.style.visibility = ''; };
+  };
+  modal = { flip: () => st.querySelector('.card').classList.toggle('flipped'), next: close, close };
+}
+
+function openAlbum(tab = albumTab) {
+  albumTab = tab;
+  const of = s => CARDS.filter(c => c.subj === s);
+  const owned = s => of(s).filter(c => collection[c.id]).length;
+  const cells = of(tab).map(c => collection[c.id]
+    ? `<div class="cell" data-id="${c.id}">${cardHTML(c, false, true)}<span class="cnt">×${collection[c.id]}</span></div>`
+    : `<div class="cell"><div class="card mini locked-card"><span>${c.id}</span><b>?</b><span>${c.rarity}</span></div></div>`).join('');
+  layer.innerHTML = `<div class="panel album">
+      <div class="ahead"><b>🎴 学习卡册 ALBUM</b><span class="prog">${ownedCount()} / ${CARDS.length}</span>
+        <button class="x" data-act="close" aria-label="Close">✕</button></div>
+      <div class="tabs">${Object.keys(SUBJ).map(s =>
+        `<button class="tab${s === tab ? ' on' : ''}" data-tab="${s}">${SUBJ[s].icon} ${SUBJ[s].label}<small>${owned(s)}/${of(s).length}</small></button>`).join('')}</div>
+      <div class="grid">${cells}</div>
+      <p class="note">${tab === 'UR' ? '集齐语数外三科全部60张卡牌，自动获得 UR 限定卡「三科全能王」<br>' : ''}
+        每赢 50 珠发 1 张卡（每次最多 3 张，3 张时至少 1 张 R+）<br>N 60% · R 27% · SR 10% · SSR 3%</p>
+    </div>`;
+  modal = { flip() {}, next: closeModal, close: closeModal };
+  layer.hidden = false;
+}
+
+layer.addEventListener('click', e => {
+  if (!modal) return;
+  const t = e.target;
+  t.closest('button')?.blur();
+  const z = t.closest('.zoom');
+  if (z) {                                  // big preview on top: card flips, anything else closes it
+    if (t.closest('.card')) modal.flip();
+    else if (t === z || t.closest('[data-act="zclose"]')) modal.close();
+    return;
+  }
+  const el = t.closest('[data-act], [data-tab], [data-id], [data-card]');
+  if (!el) { if (t === layer && layer.querySelector('.album')) modal.close(); return; }
+  if (el.dataset.act === 'next') modal.next();
+  else if (el.dataset.act === 'close') modal.close();
+  else if (el.dataset.tab) openAlbum(el.dataset.tab);
+  else if (el.dataset.id) zoomCard(CARD_BY_ID[el.dataset.id], el.querySelector('.card'));
+  else zoomCard(CARD_BY_ID[el.dataset.card], el, !!el.dataset.new);
+});
 
 // ============================================================
 // Rendering
@@ -563,7 +785,7 @@ function drawHead() {
   rr(8, 6, 464, 174, 16);
   ctx.fillStyle = g; ctx.fill();
   ctx.lineWidth = 3; ctx.strokeStyle = '#ffd2b0'; ctx.stroke();
-  screw(20, 18); screw(20, 168); screw(460, 168);
+  screw(20, 168); screw(460, 168);
 
   text('弹珠乐', 240, 26, 24, '#fff', { stroke: '#a3220a', strokeW: 5 });
   text('PINBALL FRENZY', 240, 44, 9, '#ffe7d4', { weight: '800' });
@@ -594,6 +816,12 @@ function drawHead() {
   ctx.beginPath(); ctx.arc(UI.mute.x, UI.mute.y, UI.mute.r, 0, Math.PI * 2);
   ctx.fillStyle = 'rgba(0,0,0,0.18)'; ctx.fill();
   text(game.muted ? '🔇' : '🔊', UI.mute.x, UI.mute.y + 1, 13, '#fff', { weight: '400' });
+
+  // card album
+  ctx.beginPath(); ctx.arc(UI.album.x, UI.album.y, UI.album.r, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0,0,0,0.18)'; ctx.fill();
+  text('🎴', UI.album.x, UI.album.y + 1, 13, '#fff', { weight: '400' });
+  text(`${ownedCount()}/${CARDS.length}`, UI.album.x, UI.album.y + 21, 7.5, '#fff');
 }
 
 function fieldPath() {
@@ -853,10 +1081,55 @@ function drawBottom() {
   text('START', s.x, s.y + 13, 9, enabled ? '#7a2d00' : '#6d6450', { weight: '800' });
 }
 
+// Face-down card as it sticks out of the slot; the border shows its rarity
+function drawCardBack(x, y, w, h, rarity) {
+  const col = RARITY[rarity].color;
+  rr(x, y, w, h, 4);
+  if (rarity === 'UR') {
+    const g = ctx.createLinearGradient(x, y, x + w, y + h);
+    ['#ff4d4d', '#ffd84d', '#4dff88', '#4dc3ff', '#c86bff'].forEach((c, i, a) => g.addColorStop(i / (a.length - 1), c));
+    ctx.fillStyle = g;
+  } else ctx.fillStyle = col;
+  ctx.shadowColor = col; ctx.shadowBlur = rarity === 'N' ? 0 : 8;
+  ctx.fill(); ctx.shadowBlur = 0;
+  rr(x + 2.5, y + 2.5, w - 5, h - 5, 3);
+  const g = ctx.createLinearGradient(x, y, x, y + h);
+  g.addColorStop(0, '#46246e'); g.addColorStop(1, '#170a2c');
+  ctx.fillStyle = g; ctx.fill();
+  text('★', x + w / 2, y + h - 14, 12, col === '#9aa0a6' ? '#d7dade' : col);
+}
+
+function drawCardSlot() {
+  const s = UI.slot, n = Math.min(3, cardQueue.length), out = cardsOut();
+  // ejected cards slide down out of the slit (clipped so they appear to come from inside)
+  ctx.save();
+  ctx.beginPath(); ctx.rect(s.x, s.y + s.h, s.w, 796 - s.y - s.h); ctx.clip();
+  for (let i = 0; i < n; i++) {
+    const q = cardQueue[i];
+    if (q.t <= 0) continue;
+    const p = Math.min(1, q.t / 0.45), e = 1 - (1 - p) ** 3;
+    const cw = 30, ch = 42, cx = 226 + (i - (n - 1) / 2) * 44;
+    const bob = p >= 1 ? Math.sin(game.time * 4 + i * 1.3) * 1.2 : 0;
+    drawCardBack(cx - cw / 2, s.y + s.h - ch + 30 * e + bob, cw, ch, q.card.rarity);
+  }
+  ctx.restore();
+
+  // slot: metal lip + dark slit
+  const lip = ctx.createLinearGradient(0, s.y - 4, 0, s.y + s.h + 4);
+  lip.addColorStop(0, '#f4f5f8'); lip.addColorStop(0.5, '#9aa1ad'); lip.addColorStop(1, '#dfe2e8');
+  rr(s.x - 5, s.y - 4, s.w + 10, s.h + 8, 6);
+  if (out) { ctx.shadowColor = '#ffe066'; ctx.shadowBlur = 8 + 5 * Math.sin(game.time * 5); }
+  ctx.fillStyle = lip; ctx.fill(); ctx.shadowBlur = 0;
+  rr(s.x, s.y, s.w, s.h, 3);
+  ctx.fillStyle = '#07040a'; ctx.fill();
+  text('发卡口', s.x + s.w + 24, s.y + s.h / 2, 9, 'rgba(255,255,255,0.6)');
+}
+
 function drawOverlays() {
   // hint panel under the slope
   text(hintText(), 226, 744, 14, '#ffe9a8');
-  text('B drop · Enter start · hold Space / drag knob to shoot', 226, 770, 9.5, 'rgba(255,255,255,0.55)', { weight: '500' });
+  drawCardSlot();
+  if (!cardQueue.length) text('B drop · Enter start · hold Space / drag knob to shoot · C cards', 226, 781, 9.5, 'rgba(255,255,255,0.55)', { weight: '500' });
 
   if (banner) {
     const k = Math.min(1, banner.t / 0.15), fade = Math.min(1, (banner.dur - banner.t) / 0.3);
@@ -930,6 +1203,9 @@ function frame(now) {
   while (acc >= DT) { tickSim(DT, sim, onSimEvent); acc -= DT; }
 
   for (let i = coinAnims.length - 1; i >= 0; i--) { coinAnims[i].t += dt; if (coinAnims[i].t > 0.35) coinAnims.splice(i, 1); }
+  for (const q of cardQueue) { if (q.t <= 0 && q.t + dt > 0) sfx.card(); q.t += dt; }
+  // once every card has poked out of the slot, they fly out on their own (waits if the album is open)
+  if (!modal && cardQueue.length && cardQueue.every(q => q.t > 0.5)) openReveal();
   if (game.flashT > 0) game.flashT -= dt;
   if (game.wonShown < game.won) game.wonShown = Math.min(game.won, game.wonShown + Math.max(1, Math.ceil((game.won - game.wonShown) * 0.08)));
   if (banner) { banner.t += dt; if (banner.t > banner.dur) banner = null; }
