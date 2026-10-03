@@ -1,6 +1,6 @@
 // Service worker template. vite.config.js fills in the version and file list at build time.
-const CACHE = 'sky-scarf-49ab6a17a6fb';
-const PRECACHE = ["./","assets/index-D8AdHuZr.js","assets/index-DsjqxyqX.css","icons/icon-180.png","icons/icon-192.png","icons/icon-512.png","manifest.webmanifest"];
+const CACHE = 'sky-scarf-763597c78f69';
+const PRECACHE = ["./","assets/index-C_JXBSMm.js","assets/index-DsjqxyqX.css","icons/icon-180.png","icons/icon-192.png","icons/icon-512.png","manifest.webmanifest"];
 const FONT_CACHE = 'sky-scarf-fonts';
 
 self.addEventListener('install', (event) => {
