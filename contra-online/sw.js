@@ -1,6 +1,6 @@
 // Service worker template. vite.config.js fills in VERSION and PRECACHE at build time.
-const VERSION = "musgc3b0";
-const PRECACHE = ["./","./index.html","./assets/index-BHKQFuPO.css","./assets/phaser-oK1S3g9Q.js","./assets/index-B2gyEgOc.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./manifest.webmanifest"];
+const VERSION = "musi9xdv";
+const PRECACHE = ["./","./index.html","./assets/index-BHKQFuPO.css","./assets/phaser-oK1S3g9Q.js","./assets/index-CwkIJhxO.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./manifest.webmanifest"];
 const CACHE = `contra-${VERSION}`;
 const FONT_CACHE = 'contra-fonts';
 
