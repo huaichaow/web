@@ -1,7 +1,7 @@
 // Service worker template. The `pwa` plugin in vite.config.ts fills in the
 // placeholders at build time and emits it as dist/sw.js; it is not used in dev.
-const PRECACHE = ["./","assets/index-ChjO-XnO.js","assets/index-Bh6jC9rC.css","manifest.webmanifest","icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/maskable-512.png"];
-const CACHE = `cs-web-${"b577a229fd89"}`;
+const PRECACHE = ["./","assets/index-BvHTguPY.js","assets/index-Bh6jC9rC.css","manifest.webmanifest","icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/maskable-512.png"];
+const CACHE = `cs-web-${"c30b3794e26d"}`;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
