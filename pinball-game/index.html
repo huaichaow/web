@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Pinball Frenzy</title>
+<link rel="icon" href="./favicon.ico" sizes="48x48">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./apple-touch-icon-180x180.png">
+<meta name="theme-color" content="#3a1f2b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>*{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}html,body{height:100%;margin:0;overflow:hidden}body{background:radial-gradient(#3a1f2b 0%,#140a10 75%);justify-content:center;align-items:center;display:flex}canvas{touch-action:none;-webkit-user-select:none;user-select:none;display:block}@property --ang{syntax:"<angle>";inherits:true;initial-value:0deg}[hidden]{display:none!important}#cardLayer{z-index:10;-webkit-backdrop-filter:blur(3px);color:#fff;-webkit-user-select:none;user-select:none;touch-action:manipulation;background:#08040ccc;justify-content:center;align-items:center;font-family:PingFang SC,Microsoft YaHei,Noto Sans SC,system-ui,sans-serif;display:flex;position:fixed;inset:0}.panel{flex-direction:column;align-items:center;gap:14px;max-width:calc(100vw - 32px);display:flex}.mtitle{color:#ffe066;letter-spacing:1px;min-height:22px;font-size:18px;font-weight:800}.mhint{color:#fff9;font-size:12px}.btn{font:inherit;cursor:pointer;color:#7a2d00;background:linear-gradient(#ffe98a,#f2a900);border:0;border-radius:999px;padding:10px 28px;font-size:16px;font-weight:800;box-shadow:0 3px #a55f00}.btn:active{transform:translateY(2px);box-shadow:0 1px #a55f00}.stage{perspective:1200px;transform-origin:50%}.stage.glow-SR{filter:drop-shadow(0 0 16px #a855f7d9)}.stage.glow-SSR{filter:drop-shadow(0 0 18px #ffc400e6)}.stage.glow-UR{filter:drop-shadow(0 0 22px #ff5fd2f2)}.card{--w:min(72vw, 300px, 46vh);width:var(--w);height:calc(var(--w) * 88 / 63);font-size:calc(var(--w) / 16);transform-style:preserve-3d;cursor:pointer;line-height:1.35;transition:transform .55s cubic-bezier(.3,.7,.3,1);position:relative}.card.flipped{transform:rotateY(180deg)}#cardLayer,.zoom{animation:.3s ease-out fadeIn}@keyframes fadeIn{0%{background-color:#08040c00}}.spread{perspective:1400px;justify-content:center;align-items:center;gap:14px;display:flex}.spread .stage{cursor:pointer;will-change:transform}.spread .card{--w:min(calc((100vw - 32px - (var(--n) - 1) * 14px) / var(--n)), 250px, 40vh);font-size:calc(var(--w) / 14)}.zoom{z-index:1;perspective:1400px;background:#08040cb8;flex-direction:column;justify-content:center;align-items:center;gap:14px;display:flex;position:fixed;inset:0}.zoom .card{--w:min(84vw, 340px, 46vh)}@media (height<=460px){.panel{gap:6px}.mtitle{min-height:0;font-size:14px}.mhint{display:none}.btn{padding:6px 20px;font-size:14px}}.face{box-sizing:border-box;border-radius:calc(var(--w) * .06);border:calc(var(--w) * .035) solid transparent;background:var(--inner) padding-box, var(--frame) border-box;backface-visibility:hidden;color:#2a2230;flex-direction:column;padding:.5em .6em;display:flex;position:absolute;inset:0;overflow:hidden}.face.back{transform:rotateY(180deg)}.fx{pointer-events:none;position:absolute;inset:0}.top{justify-content:space-between;align-items:center;font-size:.8em;display:flex}.badge{background:var(--rc);color:#fff;border-radius:.45em;padding:.05em .55em;font-weight:900}.no{opacity:.7;font-family:ui-monospace,Consolas,monospace;font-weight:700}.art{font-size:min(3.1em, calc(8em / var(--al,2)));white-space:nowrap;background:#fff9;border-radius:.55em;flex:1;place-items:center;margin:.4em 0;line-height:1;display:grid;box-shadow:inset 0 0 0 .05em #0000001a}.name{text-align:center;font-size:1.35em;font-weight:900}.meta{justify-content:space-between;align-items:center;margin-top:.2em;font-size:.8em;display:flex}.subj{color:#fff;background:var(--sc);border-radius:.45em;padding:.05em .5em;font-weight:700}.stars{color:var(--rc);letter-spacing:.05em}.new{color:#fff;background:#ff3b30;border-radius:.3em;padding:.1em .7em;font-size:.9em;font-weight:900;position:absolute;top:22%;left:50%;transform:translate(-50%)rotate(-8deg);box-shadow:0 .15em .4em #0000004d}.back .top{border-bottom:.08em solid var(--rc);padding-bottom:.35em;font-size:1em}.back .top b{font-size:1.2em}.back dl{flex-direction:column;flex:1;justify-content:space-evenly;margin:.5em 0 0;display:flex}.back dt{color:var(--rc);font-size:.9em;font-weight:900}.back dd{margin:.15em 0 0;font-size:.92em}.back blockquote{opacity:.85;text-align:center;margin:.4em 0 0;font-size:.72em;font-style:italic}.r-N{--rc:#6f757c;--frame:linear-gradient(135deg, #c3c7cc, #6f757c);--inner:linear-gradient(#f2f3f5, #dfe2e6)}.r-R{--rc:#2563eb;--frame:linear-gradient(135deg, #a5cdfd, #1d4ed8 55%, #60a5fa);--inner:linear-gradient(160deg, #f0f6ff, #c6dbff)}.r-SR{--rc:#7c3aed;--frame:linear-gradient(135deg, #eddcff, #7c3aed 50%, #c084fc);--inner:linear-gradient(160deg, #f8f0ff, #dcc6ff)}.r-SSR{--rc:#b7791f;--frame:linear-gradient(135deg, #fff3b0, #d4a017 35%, #fff7cc 55%, #b8860b);--inner:linear-gradient(160deg, #fffaf0, #ffe6a0)}.r-UR{--rc:#db2777;--inner:linear-gradient(160deg, #fff0fb, #e8f4ff 50%, #efffef)}.r-UR .face{--frame:conic-gradient(from var(--ang), #ff4d4d, #ffb84d, #fff04d, #4dff88, #4dc3ff, #9b6bff, #ff4dd2, #ff4d4d);animation:4s linear infinite urSpin}@keyframes urSpin{to{--ang:360deg}}.r-R .fx{background:radial-gradient(circle at 18% 30%,#fff 0 1.5px,#0000 2.5px),radial-gradient(circle at 78% 18%,#fff 0 1px,#0000 2px),radial-gradient(circle at 62% 72%,#fff 0 1.5px,#0000 2.5px),radial-gradient(circle at 28% 84%,#fff 0 1px,#0000 2px);animation:2.2s ease-in-out infinite twinkle}.r-SR .fx,.r-UR .fx{background:linear-gradient(115deg,#0000 20%,#ff00c838 35%,#00ffff38 50%,#ffff0038 65%,#0000 80%) 0 0/250% 100%;animation:3s linear infinite sweep}.r-SSR .fx{background:linear-gradient(105deg,#0000 42%,#fffc 50%,#0000 58%) 0 0/300% 100%;animation:2.4s linear infinite sweep}@keyframes sweep{0%{background-position:100% 0}to{background-position:0 0}}@keyframes twinkle{50%{opacity:.25}}.album{box-sizing:border-box;background:linear-gradient(#2a1533,#170b1d);border:2px solid #ff8b3d;border-radius:16px;align-items:stretch;gap:10px;width:min(460px,100vw - 32px);max-height:calc(100vh - 32px);padding:12px}.ahead{align-items:center;gap:10px;font-size:16px;display:flex}.ahead b{flex:1}.prog{color:#ffe066;font-weight:800}.x{font:inherit;color:#fff;cursor:pointer;background:#ffffff1f;border:0;border-radius:50%;width:32px;height:32px}.tabs{grid-template-columns:repeat(4,1fr);gap:6px;display:grid}.tab{font:inherit;cursor:pointer;color:#fff;background:#ffffff14;border:1px solid #ffffff26;border-radius:10px;padding:6px 2px;font-size:13px;font-weight:700}.tab small{opacity:.75;font-size:11px;display:block}.tab.on{background:#ff8b3d;border-color:#ffd2b0}.grid{grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px;padding:2px 4px 6px 2px;display:grid;overflow-y:auto}.cell{position:relative;container-type:inline-size}.cell[data-id]{cursor:pointer}.card.mini{--w:100cqw;font-size:calc(var(--w) / 11);cursor:inherit}.card.mini .face{padding:.35em .4em}.card.mini .meta,.card.mini .no{display:none}.card.mini .name{white-space:nowrap;text-overflow:ellipsis;font-size:1em;overflow:hidden}.card.mini .art{font-size:min(2.2em, calc(5.6em / var(--al,2)));margin:.25em 0}.locked-card{box-sizing:border-box;border-radius:calc(var(--w) * .06);color:#8d7fa0;background:repeating-linear-gradient(45deg,#2a2233 0 6px,#231c2b 6px 12px);border:2px dashed #5a4a6a;flex-direction:column;justify-content:space-evenly;align-items:center;font-weight:800;display:flex}.locked-card b{font-size:2.4em}.cnt{color:#fff;background:#ff3b30;border-radius:8px;padding:0 5px;font-size:11px;font-weight:800;position:absolute;bottom:2px;right:2px}.note{color:#fff9;text-align:center;margin:0;font-size:11.5px;line-height:1.5}</style>
+<link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+<body>
+<canvas id="c" aria-label="Pinball multiplier machine game"></canvas>
+<div id="cardLayer" hidden></div>
+<script src="./cards.js"></script>
+<script>
+'use strict';
+
+// ============================================================
+// Constants & layout (logical 480 x 900 coordinate space)
+// ============================================================
+const W = 480, H = 900;
+const DT = 1 / 480;            // physics step
+const R = 8;                   // ball radius
+const GRAVITY = 1400;          // px/s^2 along the tilted board
+const FRICTION = 0.8;          // tangential damping per second of contact
+const MAX_SPEED = 2600;
+const SLOPE_PUSH = 3000, SLOPE_MAX_V = 900;   // extra downhill acceleration on the return slope, and the speed it stops pushing at
+
+const FIELD_L = 28, FIELD_R = 424;
+const POCKETS = 12, POCKET_W = (FIELD_R - FIELD_L) / POCKETS;
+const DIV_TOP = 596, DIV_BOT = 636, POCKET_SENSOR_Y = 616, LAMP_Y = 582;
+const LANE_L = 424, LANE_R = 452, LANE_TOP = 310;
+const TIP_REST = 712, PULL_MAX = 60, KNOB_OFFSET = 90;
+const LAUNCH_MIN = 950, LAUNCH_MAX = 1450;   // plunger return speed at 0 and full pull
+const ELL = { cx: 240, cy: 330, rx: 212, ry: 120 };
+const SLOPE = { x1: 28, y1: 660, x2: 424, y2: 700 };
+const MULTS = [2, 4, 6, 8, 10];
+const LIT_COUNT = { 2: 5, 4: 4, 6: 3, 8: 2, 10: 1 };
+const START_TRAY = 100, MAX_BET = 99;
+
+const UI = {
+  mute:  { x: 452, y: 24, r: 14 },
+  coin:  { x: 124, y: 812, w: 150, h: 74 },
+  hole:  { x: 160, y: 856 },
+  start: { x: 330, y: 848, r: 38 },
+  reset: { x: 166, y: 470, w: 120, h: 36 },
+  album: { x: 28, y: 24, r: 14 },
+  slot:  { x: 116, y: 718, w: 220, h: 6 },
+  cardTap: { x: 110, y: 712, w: 232, h: 48 },
+};
+const DEBUG = /[?&]debug\b/.test(location.search);
+const FONT = "'PingFang SC','Microsoft YaHei','Noto Sans SC',system-ui,sans-serif";
+
+// ============================================================
+// World geometry
+// ============================================================
+const segs = [], pins = [];
+function addSeg(x1, y1, x2, y2, o = {}) {
+  const s = { x1, y1, x2, y2, th: o.th ?? 1.5, e: o.e ?? 0.4, on: o.on ?? true, kind: o.kind || 'wall' };
+  segs.push(s);
+  return s;
+}
+
+// Dome: top half of an ellipse, from the left wall over to the lane's right wall
+{
+  const n = 64;
+  let px = ELL.cx - ELL.rx, py = ELL.cy;
+  for (let i = 1; i <= n; i++) {
+    const t = Math.PI - Math.PI * i / n;
+    const x = ELL.cx + ELL.rx * Math.cos(t), y = ELL.cy - ELL.ry * Math.sin(t);
+    addSeg(px, py, x, y, { kind: 'dome', e: 0.3 });
+    px = x; py = y;
+  }
+}
+addSeg(FIELD_L, ELL.cy, FIELD_L, SLOPE.y1);                                    // left wall
+addSeg(SLOPE.x1, SLOPE.y1, SLOPE.x2, SLOPE.y2, { kind: 'slope', e: 0.25 });    // return slope
+addSeg(LANE_L, LANE_TOP, LANE_L, 660, { kind: 'lane' });                       // lane inner wall (upper)
+const cupGate = addSeg(LANE_L, 660, LANE_L, TIP_REST, { kind: 'gate' });       // holds ball in the cup
+addSeg(LANE_L, TIP_REST, LANE_L, 796, { kind: 'lane' });                       // lane inner wall (lower)
+addSeg(LANE_R, ELL.cy, LANE_R, 796, { kind: 'lane' });                         // lane outer wall
+const laneGate = addSeg(LANE_L, LANE_TOP, 447, 301, { kind: 'gate', on: false }); // one-way flap at lane exit
+for (let i = 1; i < POCKETS; i++) {
+  const x = FIELD_L + POCKET_W * i;
+  addSeg(x, DIV_TOP, x, DIV_BOT, { kind: 'divider', e: 0.35 });
+}
+// Obstacle bars (all sloped so nothing can rest on them)
+addSeg(60, 312, 112, 330, { kind: 'bar', th: 2.5, e: 0.5 });
+addSeg(205, 330, 240, 316, { kind: 'bar', th: 2.5, e: 0.5 });
+addSeg(240, 316, 275, 330, { kind: 'bar', th: 2.5, e: 0.5 });
+addSeg(352, 332, 398, 316, { kind: 'bar', th: 2.5, e: 0.5 });
+// Side-wall kickers push wall-hugging balls back into the pins (placed level with odd pin rows)
+for (const y of [388, 444, 500, 556]) {
+  addSeg(FIELD_L, y - 14, FIELD_L + 18, y, { kind: 'bar', th: 2.5, e: 0.45 });
+  addSeg(FIELD_R, y - 14, FIELD_R - 18, y, { kind: 'bar', th: 2.5, e: 0.45 });
+}
+// Pin grid
+for (let k = 0; k < 8; k++) {
+  const y = 360 + 28 * k;
+  if (k % 2 === 0) for (let i = 0; i <= 10; i++) pins.push({ x: 61 + 33 * i, y, r: 3 });
+  else for (let i = 0; i <= 9; i++) pins.push({ x: 77.5 + 33 * i, y, r: 3 });
+}
+
+// ============================================================
+// Physics
+// ============================================================
+const ball = { x: 414, y: 690, vx: 0, vy: 0 };
+const pl = { x: 0, v: 0, held: false, pull: 0, w2: 1600 };   // x = pull displacement (down), v = velocity (+down)
+// Spring stiffness chosen so the rod snaps back at a speed that grows linearly with the pull
+const springFor = x => (LAUNCH_MIN + (LAUNCH_MAX - LAUNCH_MIN) * x / PULL_MAX) ** 2 / (x * x);
+let impactHook = null;
+let onSlope = false;           // ball touched the return slope during the last physics step
+
+function bounce(nx, ny, e, jitter) {
+  const vn = ball.vx * nx + ball.vy * ny;
+  if (vn < 0) {
+    const ee = vn > -40 ? 0 : e;
+    ball.vx -= (1 + ee) * vn * nx;
+    ball.vy -= (1 + ee) * vn * ny;
+    if (jitter) {
+      const j = (Math.random() - 0.5) * jitter;
+      ball.vx += -ny * j; ball.vy += nx * j;
+    }
+  }
+  const tx = -ny, ty = nx;
+  const f = (ball.vx * tx + ball.vy * ty) * FRICTION * DT;
+  ball.vx -= f * tx; ball.vy -= f * ty;
+  return -vn;
+}
+
+function collideSeg(s) {
+  const dx = s.x2 - s.x1, dy = s.y2 - s.y1;
+  let t = ((ball.x - s.x1) * dx + (ball.y - s.y1) * dy) / (dx * dx + dy * dy);
+  t = t < 0 ? 0 : t > 1 ? 1 : t;
+  const px = s.x1 + dx * t, py = s.y1 + dy * t;
+  let nx = ball.x - px, ny = ball.y - py;
+  const min = R + s.th, d2 = nx * nx + ny * ny;
+  if (d2 >= min * min) return;
+  let d = Math.sqrt(d2);
+  if (d < 1e-6) { nx = -dy; ny = dx; d = Math.hypot(nx, ny); }
+  nx /= d; ny /= d;
+  ball.x = px + nx * min; ball.y = py + ny * min;
+  const imp = bounce(nx, ny, s.e, s.kind === 'bar' ? 30 : 0);
+  if (s.kind === 'slope') {
+    onSlope = true;
+    const len = Math.hypot(dx, dy), tx = dx / len, ty = dy / len;   // points downhill, toward the cup
+    if (ball.vx * tx + ball.vy * ty < SLOPE_MAX_V) { ball.vx += tx * SLOPE_PUSH * DT; ball.vy += ty * SLOPE_PUSH * DT; }
+  }
+  if (imp > 150 && impactHook) impactHook(s.kind, imp);
+}
+
+function collidePin(p) {
+  let nx = ball.x - p.x, ny = ball.y - p.y;
+  const min = R + p.r, d2 = nx * nx + ny * ny;
+  if (d2 >= min * min) return;
+  const d = Math.sqrt(d2) || 1e-6;
+  nx /= d; ny /= d;
+  ball.x = p.x + nx * min; ball.y = p.y + ny * min;
+  const imp = bounce(nx, ny, 0.55, 50);
+  if (imp > 120 && impactHook) impactHook('pin', imp);
+}
+
+function stepPlunger(dt) {
+  if (pl.held) {
+    // pulling out follows the hand instantly; easing back in is slow so it can't flick the ball
+    const mv = pl.pull >= pl.x ? pl.pull - pl.x : Math.max(-400 * dt, pl.pull - pl.x);
+    pl.x += mv; pl.v = mv > 0 ? 0 : mv / dt;
+  } else if (pl.x > 0 || pl.v < 0) {
+    pl.v += -pl.w2 * pl.x * dt;
+    pl.x += pl.v * dt;
+    if (pl.x <= 0) {                       // rod hits its stopper
+      const hitV = -pl.v;
+      pl.x = 0; pl.v = 0;
+      if (ball.x > LANE_L && Math.abs(ball.y + R - TIP_REST) < 8 && ball.vy < 0) {
+        ball.vy *= 1 + (Math.random() - 0.5) * 0.03;   // tiny launch variance
+      }
+      if (impactHook) impactHook('stop', hitV);
+    }
+  } else {
+    pl.v = 0;
+  }
+}
+
+function collideTip() {
+  const tipY = TIP_REST + pl.x;
+  if (ball.x > LANE_L && ball.x < LANE_R && ball.y + R > tipY && ball.y < tipY + 16) {
+    ball.y = tipY - R;
+    const rel = ball.vy - pl.v;
+    if (rel > 0) ball.vy = pl.v - (rel > 120 ? rel * 0.25 : 0);
+    ball.vx *= 0.995;
+  }
+}
+
+function physStep(dt) {
+  stepPlunger(dt);
+  onSlope = false;
+  ball.vy += GRAVITY * dt;
+  ball.x += ball.vx * dt;
+  ball.y += ball.vy * dt;
+  for (const s of segs) if (s.on) collideSeg(s);
+  for (const p of pins) collidePin(p);
+  collideTip();
+  const sp = Math.hypot(ball.vx, ball.vy);
+  if (sp > MAX_SPEED) { ball.vx *= MAX_SPEED / sp; ball.vy *= MAX_SPEED / sp; }
+}
+
+const inCup = () => ball.x > 400 && ball.y > 675 && ball.x < LANE_L;
+const ballInLane = () => ball.x > LANE_L && ball.y > 560;
+
+// One simulation tick plus sensors. `s` is the per-shot sensor state; `emit` reports events.
+function tickSim(dt, s, emit) {
+  physStep(dt);
+  if (!cupGate.on && ball.x > 434 && ball.y > 690) cupGate.on = true;  // ball has rolled onto the plunger
+  if (!s.active) return;
+  if (!s.exited && ball.x < LANE_L - 3) {
+    s.exited = true; laneGate.on = true; emit('exit');
+  }
+  if (s.pocket < 0 && ball.y > POCKET_SENSOR_Y && ball.x < FIELD_R) {
+    s.pocket = Math.max(0, Math.min(POCKETS - 1, Math.floor((ball.x - FIELD_L) / POCKET_W)));
+    emit('pocket', s.pocket);
+  }
+  if (s.pocket >= 0 && !s.landed && onSlope) { s.landed = true; emit('landed'); }
+  const speed = Math.hypot(ball.vx, ball.vy);
+  if (s.pocket >= 0 && inCup() && speed < 25) {
+    s.active = false; emit('home');
+    return;
+  }
+  if (s.exited && !inCup()) {
+    if (speed < 15) {
+      s.stillT += dt;
+      if (s.stillT > 1.5) {
+        s.stillT = 0; s.nudges++;
+        ball.vx += (Math.random() - 0.5) * 240; ball.vy -= 180;
+        emit('nudge');
+      }
+    } else s.stillT = 0;
+  }
+}
+
+// ============================================================
+// Audio (tiny WebAudio synth)
+// ============================================================
+let actx = null, lastTick = 0;
+function ensureAudio() {
+  if (!actx) { try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { /* no audio */ } }
+  if (actx && actx.state === 'suspended') actx.resume();
+}
+function tone(freq, dur, type = 'square', vol = 0.06, slide = 1, delay = 0) {
+  if (game.muted || !actx) return;
+  const t = actx.currentTime + delay;
+  const o = actx.createOscillator(), g = actx.createGain();
+  o.type = type;
+  o.frequency.setValueAtTime(freq, t);
+  if (slide !== 1) o.frequency.exponentialRampToValueAtTime(Math.max(30, freq * slide), t + dur);
+  g.gain.setValueAtTime(vol, t);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  o.connect(g).connect(actx.destination);
+  o.start(t); o.stop(t + dur + 0.02);
+}
+const sfx = {
+  tick()   { tone(2000 + Math.random() * 800, 0.025, 'square', 0.025); },
+  wall()   { tone(480, 0.035, 'triangle', 0.05); },
+  coin()   { tone(1320, 0.05, 'square', 0.05); tone(1760, 0.07, 'square', 0.04, 1, 0.05); },
+  start()  { [523, 659, 784, 1047].forEach((f, i) => tone(f, 0.09, 'square', 0.05, 1, i * 0.07)); },
+  spring(p){ tone(140 + 200 * p, 0.18, 'sawtooth', 0.05, 2.5); },
+  thunk()  { tone(90, 0.09, 'triangle', 0.15, 0.6); },
+  win()    { [784, 988, 1175, 1568, 1175, 1568, 2093].forEach((f, i) => tone(f, 0.12, 'square', 0.05, 1, i * 0.1)); },
+  miss()   { tone(330, 0.18, 'triangle', 0.07, 0.7); tone(220, 0.28, 'triangle', 0.07, 0.6, 0.16); },
+  buzz()   { tone(110, 0.2, 'sawtooth', 0.05); },
+  card()   { tone(500, 0.12, 'sawtooth', 0.03, 2.4); tone(1500, 0.05, 'square', 0.03, 1, 0.12); },
+  whoosh() { tone(240, 0.25, 'sine', 0.07, 3); },
+  rare()   { [1047, 1319, 1568, 2093].forEach((f, i) => tone(f, 0.14, 'triangle', 0.07, 1, i * 0.06)); },
+};
+impactHook = (kind, imp) => {
+  if (kind === 'stop') { if (imp > 200) sfx.thunk(); return; }
+  const now = performance.now();
+  if (now - lastTick < 35) return;
+  lastTick = now;
+  kind === 'pin' ? sfx.tick() : sfx.wall();
+};
+
+// ============================================================
+// Game state machine
+// ============================================================
+const game = {
+  state: 'IDLE',          // IDLE -> READY -> SHOT -> RESULT -> IDLE
+  tray: START_TRAY, bet: 0, mult: 0, lit: new Set(),
+  won: 0, wonShown: 0, pocket: -1, lastWin: false,
+  flashT: 0, gameOver: false, muted: false, time: 0, startPressT: -1,
+};
+const sim = { active: false, exited: false, pocket: -1, landed: false, stillT: 0, nudges: 0 };
+let banner = null;
+const coinAnims = [];
+
+function say(text, color = '#fff', ms = 1600) { banner = { text, color, t: 0, dur: ms / 1000 }; }
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+
+function dropBall() {
+  if (game.gameOver) return;
+  if (game.state !== 'IDLE' && game.state !== 'READY') { say('Bet locked!', '#ff9e80', 800); return; }
+  if (game.tray <= 0) { say('No balls left', '#ff9e80', 900); sfx.buzz(); return; }
+  if (game.bet >= MAX_BET) { say(`Max bet ${MAX_BET}`, '#ffd34d', 900); return; }
+  game.tray--; game.bet++;
+  coinAnims.push({ t: 0 });
+  sfx.coin();
+}
+
+function pressStart() {
+  if (game.gameOver || game.state !== 'IDLE') return;
+  if (game.bet < 1) { say('Drop at least 1 ball first!', '#ffd34d'); sfx.buzz(); return; }
+  const mult = MULTS[Math.floor(Math.random() * MULTS.length)];
+  startRound(mult, new Set(shuffle([...Array(POCKETS).keys()]).slice(0, LIT_COUNT[mult])));
+  game.startPressT = game.time;
+  sfx.start();
+  say(`×${game.mult}`, '#ffe066', 1200);
+}
+
+function startRound(mult, lit) {
+  game.mult = mult; game.lit = lit;
+  game.pocket = -1; game.won = 0; game.wonShown = 0; game.lastWin = false; game.flashT = 0;
+  Object.assign(sim, { active: false, exited: false, pocket: -1, landed: false, stillT: 0 });
+  laneGate.on = false;
+  cupGate.on = false;                       // release the trigger ball into the lane
+  ball.vx = Math.max(ball.vx, 90);
+  game.state = 'READY';
+}
+
+function releasePlunger() {
+  if (!pl.held) return;
+  const pulled = Math.max(pl.x, pl.pull);   // a quick flick may release before a physics step ran
+  pl.x = pulled;
+  pl.held = false; pl.pull = 0;
+  pl.w2 = springFor(Math.max(pulled, 1));
+  if (pulled < 4) return;
+  sfx.spring(pulled / PULL_MAX);
+  if (ballInLane() && (game.state === 'READY' || game.state === 'SHOT')) {
+    cupGate.on = true;
+    game.state = 'SHOT';                    // bet locks once the plunger fires
+    sim.active = true;
+  }
+}
+
+function onSimEvent(type, idx) {
+  if (type === 'pocket') {
+    game.state = 'RESULT';
+    game.pocket = idx;
+    if (game.lit.has(idx)) {
+      game.won = game.bet * game.mult;
+      game.tray += game.won;
+      game.lastWin = true; game.flashT = 2.5;
+      sfx.win();
+      const got = ejectCards(Math.min(CARD_MAX, Math.floor(game.won / CARD_PER)));
+      say(got.length ? `WIN +${game.won}! 🎴×${got.length}` : `WIN +${game.won}!`, '#ffe066', 2200);
+    } else {
+      game.won = 0; game.lastWin = false;
+      sfx.miss();
+      say('So close…', '#9fd3ff', 1500);
+    }
+  } else if (type === 'landed') {
+    openBetting();
+  } else if (type === 'home') {
+    finishRound();
+  } else if (type === 'nudge') {
+    say('TILT!', '#ff8a65', 600);
+  }
+}
+
+// Once the trigger ball lands on the return slope the round is settled: open betting for the next one
+// (START works too; the ball then rolls straight on into the lane). The result lamps stay lit until it's home.
+function openBetting() {
+  game.state = 'IDLE';
+  game.bet = 0; game.mult = 0;
+}
+
+function finishRound() {
+  if (game.state !== 'IDLE') openBetting();
+  game.lit = new Set(); game.pocket = -1;
+  sim.active = false; laneGate.on = false;
+  if (game.tray <= 0 && game.bet === 0) { game.gameOver = true; banner = null; sfx.buzz(); }
+}
+
+function resetGame() {
+  Object.assign(game, { tray: START_TRAY, bet: 0, mult: 0, won: 0, wonShown: 0, gameOver: false, state: 'IDLE', pocket: -1, flashT: 0 });
+  game.lit = new Set();
+  say('New game! 100 balls', '#ffe066', 1400);
+  sfx.start();
+}
+
+function toggleMute() { game.muted = !game.muted; }
+
+// Persist the tray and any balls bet but not yet shot, so a refresh resumes where you left off;
+// after START also the rolled multiplier & lit pockets, so a refresh can't re-roll them.
+// Once the plunger fires the bet is spent: a refresh mid-flight forfeits that round.
+const GAME_KEY = 'pinball.game.v1';
+let savedGame = '';
+function saveGame() {
+  const unshot = game.state === 'IDLE' || game.state === 'READY';
+  const save = { tray: game.tray, bet: unshot ? game.bet : 0 };
+  if (game.state === 'READY') Object.assign(save, { started: true, mult: game.mult, lit: [...game.lit] });
+  const s = JSON.stringify(save);
+  if (s === savedGame) return;
+  savedGame = s;
+  try { localStorage.setItem(GAME_KEY, s); } catch (e) { /* storage unavailable */ }
+}
+(function loadGame() {
+  try {
+    const s = JSON.parse(localStorage.getItem(GAME_KEY));
+    if (!s) return;
+    const tray = Math.max(0, Math.floor(s.tray) || 0), bet = Math.min(MAX_BET, Math.max(0, Math.floor(s.bet) || 0));
+    Object.assign(game, { tray, bet, gameOver: tray <= 0 && bet === 0 });
+    if (s.started && bet > 0 && MULTS.includes(s.mult) && Array.isArray(s.lit)) {
+      const lit = new Set(s.lit.filter(i => Number.isInteger(i) && i >= 0 && i < POCKETS));
+      if (lit.size === LIT_COUNT[s.mult]) startRound(s.mult, lit);
+    }
+  } catch (e) { /* storage unavailable or corrupt: start fresh */ }
+})();
+
+// ============================================================
+// Learning cards: every 50 balls won ejects one card (max 3 per win)
+// ============================================================
+const CARD_PER = 50, CARD_MAX = 3;
+const RANKS = ['N', 'R', 'SR', 'SSR', 'UR'];
+const RARITY = {                       // p = chance per card; UR is never random, it rewards a full 60/60 set
+  N:   { p: 0.60, stars: 1, color: '#9aa0a6' },
+  R:   { p: 0.27, stars: 2, color: '#3b82f6' },
+  SR:  { p: 0.10, stars: 3, color: '#a855f7' },
+  SSR: { p: 0.03, stars: 4, color: '#f5b700' },
+  UR:  { p: 0,    stars: 5, color: '#ff5fd2' },
+};
+const SUBJ = {
+  YW: { label: '语文', icon: '📖', color: '#e5484d' },
+  SX: { label: '数学', icon: '🔢', color: '#3b82f6' },
+  YY: { label: '英语', icon: '🔤', color: '#22a55a' },
+  UR: { label: '全能', icon: '🏆', color: '#db2777' },
+};
+const CARDS = window.CARDS || [];
+const CARD_BY_ID = Object.fromEntries(CARDS.map(c => [c.id, c]));
+const STORE_KEY = 'pinball.cards.v1';
+const collection = (() => { try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch (e) { return {}; } })();
+function saveCollection() { try { localStorage.setItem(STORE_KEY, JSON.stringify(collection)); } catch (e) { /* storage unavailable */ } }
+const ownedCount = () => CARDS.filter(c => collection[c.id]).length;
+const cardQueue = [];                  // ejected, not yet opened: { card, isNew, t } (t < 0 = still waiting to come out)
+
+// Pick subject uniformly, then rarity by weight (at least minRarity), then a card of that subject & rarity
+function rollCard(minRarity = 'N') {
+  const subj = ['YW', 'SX', 'YY'][Math.floor(Math.random() * 3)];
+  const pool = RANKS.slice(RANKS.indexOf(minRarity), 4);
+  let x = Math.random() * pool.reduce((s, r) => s + RARITY[r].p, 0), rarity = pool[pool.length - 1];
+  for (const r of pool) { if ((x -= RARITY[r].p) < 0) { rarity = r; break; } }
+  const cands = CARDS.filter(c => c.subj === subj && c.rarity === rarity);
+  return cands[Math.floor(Math.random() * cands.length)];
+}
+
+function ejectCards(n) {
+  if (!CARDS.length) return [];
+  const got = [];
+  for (let i = 0; i < n; i++) got.push(rollCard(i === 2 ? 'R' : 'N'));   // a 3-card win guarantees one R or better
+  const ur = CARD_BY_ID['UR-01'];
+  if (ur && !collection[ur.id] && CARDS.every(c => c === ur || collection[c.id] || got.includes(c))) got.push(ur);
+  got.forEach((card, i) => {
+    cardQueue.push({ card, isNew: !collection[card.id], t: -0.2 - 0.15 * i });
+    collection[card.id] = (collection[card.id] || 0) + 1;
+  });
+  saveCollection();
+  return got;
+}
+
+// Headless test: fire n shots at random strengths and report where they land.
+function autoTest(n = 300, minPull = 4, maxPull = PULL_MAX) {
+  const save = JSON.stringify({ ball, pl, sim, cup: cupGate.on, lane: laneGate.on });
+  const hook = impactHook; impactHook = null;
+  const hits = Array(POCKETS).fill(0);
+  let fallbacks = 0, timeouts = 0, nudges = 0, home = 0, totalT = 0;
+  for (let i = 0; i < n; i++) {
+    const pull = minPull + Math.random() * (maxPull - minPull);
+    Object.assign(ball, { x: 440, y: TIP_REST + pull - R, vx: 0, vy: 0 });
+    Object.assign(pl, { x: pull, v: 0, held: false, pull: 0, w2: springFor(pull) });
+    cupGate.on = true; laneGate.on = false;
+    const s = { active: true, exited: false, pocket: -1, landed: false, stillT: 0, nudges: 0 };
+    let t = 0, done = false, fell = false;
+    const emit = (type, idx) => { if (type === 'pocket') hits[idx]++; if (type === 'home') done = true; };
+    while (t < 40 && !done) {
+      tickSim(DT, s, emit); t += DT;
+      if (!s.exited && t > 0.5 && pl.x === 0 && ballInLane() && Math.abs(ball.vy) < 1) { fell = true; break; }
+    }
+    if (fell) fallbacks++;
+    else if (done) { home++; totalT += t; }
+    else timeouts++;
+    nudges += s.nudges;
+  }
+  const o = JSON.parse(save);
+  Object.assign(ball, o.ball); Object.assign(pl, o.pl); Object.assign(sim, o.sim);
+  cupGate.on = o.cup; laneGate.on = o.lane;
+  impactHook = hook;
+  return { rounds: n, fallbacks, returnedHome: home, timeouts, nudges,
+           avgRoundSec: +(totalT / Math.max(1, home)).toFixed(2), pocketHits: hits };
+}
+
+// Fast-forward the live game (for testing when the tab isn't animating)
+function advance(sec) { for (let t = 0; t < sec; t += DT) tickSim(DT, sim, onSimEvent); }
+
+Object.assign(game, { autoTest, advance, ball, plunger: pl, sim, dropBall, pressStart,
+                      ejectCards, rollCard, collection, cardQueue, openAlbum });
+window.game = game;
+
+// ============================================================
+// Input
+// ============================================================
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+let drag = null, keyPull = false, repeatTimer = null;
+
+function toLogical(e) {
+  const r = cv.getBoundingClientRect();
+  return { x: (e.clientX - r.left) / r.width * W, y: (e.clientY - r.top) / r.height * H };
+}
+const inRect = (p, r) => p.x >= r.x && p.x <= r.x + r.w && p.y >= r.y && p.y <= r.y + r.h;
+const inCircle = (p, c, r = c.r) => Math.hypot(p.x - c.x, p.y - c.y) <= r;
+const knobY = () => TIP_REST + pl.x + KNOB_OFFSET;
+const onKnob = p => inCircle(p, { x: 438, y: knobY() }, 30) || (p.x > 408 && p.x < 478 && p.y > TIP_REST + pl.x + 20 && p.y < knobY() + 30);
+
+function stopRepeat() { clearTimeout(repeatTimer); clearInterval(repeatTimer); repeatTimer = null; }
+
+cv.addEventListener('pointerdown', e => {
+  ensureAudio();
+  const p = toLogical(e);
+  cv.setPointerCapture(e.pointerId);
+  if (inCircle(p, UI.mute, 18)) toggleMute();
+  else if (inCircle(p, UI.album, 18)) openAlbum();
+  else if (cardsOut() && inRect(p, UI.cardTap)) openReveal();
+  else if (game.gameOver && inRect(p, UI.reset)) resetGame();
+  else if (inRect(p, UI.coin)) {
+    dropBall();
+    stopRepeat();
+    repeatTimer = setTimeout(() => { repeatTimer = setInterval(dropBall, 110); }, 380);
+  }
+  else if (inCircle(p, UI.start, UI.start.r + 4)) pressStart();
+  else if (onKnob(p)) { drag = { startY: p.y - pl.x }; pl.held = true; pl.pull = pl.x; }
+});
+cv.addEventListener('pointermove', e => {
+  const p = toLogical(e);
+  if (drag) { pl.pull = Math.max(0, Math.min(PULL_MAX, p.y - drag.startY)); return; }
+  let cur = 'default';
+  if (inCircle(p, UI.mute, 18) || inCircle(p, UI.album, 18) || inRect(p, UI.coin) || inCircle(p, UI.start, UI.start.r + 4) ||
+      (cardsOut() && inRect(p, UI.cardTap)) || (game.gameOver && inRect(p, UI.reset))) cur = 'pointer';
+  else if (onKnob(p)) cur = 'grab';
+  cv.style.cursor = cur;
+});
+function endPointer() { stopRepeat(); if (drag) { drag = null; releasePlunger(); } }
+cv.addEventListener('pointerup', endPointer);
+cv.addEventListener('pointercancel', endPointer);
+// long-press on mobile would otherwise pop the browser's context menu on release
+window.addEventListener('contextmenu', e => e.preventDefault());
+
+window.addEventListener('keydown', e => {
+  ensureAudio();
+  const k = e.key;
+  if (modal) {                              // a card overlay is open: keys drive it, not the machine
+    if (k === ' ' || k === 'Enter') e.preventDefault();
+    if (k === 'Escape') modal.close();
+    else if (k === 'Enter' || k === 'ArrowRight') modal.next();
+    else if (k === ' ' || k === 'f' || k === 'F') modal.flip();
+    return;
+  }
+  if (k === ' ' || k === 'ArrowDown') {
+    e.preventDefault();
+    if (!e.repeat && !pl.held) { keyPull = true; pl.held = true; pl.pull = pl.x; }
+  } else if (k === 'b' || k === 'B') dropBall();
+  else if (k === 'Enter' || k === 's' || k === 'S') pressStart();
+  else if (k === 'm' || k === 'M') toggleMute();
+  else if ((k === 'r' || k === 'R') && game.gameOver) resetGame();
+  else if (k === 'c' || k === 'C') cardQueue.length ? openReveal() : openAlbum();
+});
+window.addEventListener('keyup', e => {
+  if ((e.key === ' ' || e.key === 'ArrowDown') && keyPull) { keyPull = false; releasePlunger(); }
+});
+window.addEventListener('blur', () => { keyPull = false; endPointer(); releasePlunger(); });
+
+// ============================================================
+// Card overlays (DOM): flip viewer for new cards, and the album
+// ============================================================
+const layer = document.getElementById('cardLayer');
+let modal = null;                           // { flip, next, close } of the open overlay
+let albumTab = 'YW';
+const cardsOut = () => cardQueue.some(q => q.t > 0);
+
+// Number of visible symbols in the art (so 3-emoji art is drawn smaller to fit its box)
+const artLen = str => (Intl.Segmenter ? [...new Intl.Segmenter().segment(str)] : [...str]).length;
+
+function cardHTML(c, isNew = false, mini = false) {
+  const s = SUBJ[c.subj];
+  const front = `<div class="face front"><div class="fx"></div>
+      <div class="top"><span class="badge">${c.rarity}</span><span class="no">${c.id}</span></div>
+      <div class="art" style="--al:${artLen(c.art)}">${c.art}</div>
+      <div class="name">${c.name}</div>
+      <div class="meta"><span class="subj" style="--sc:${s.color}">${s.icon} ${s.label}</span><span class="stars">${'★'.repeat(RARITY[c.rarity].stars)}</span></div>
+      ${isNew ? '<div class="new">NEW!</div>' : ''}</div>`;
+  if (mini) return `<div class="card mini r-${c.rarity}">${front}</div>`;
+  const back = `<div class="face back">
+      <div class="top"><b>${c.name}</b><span class="no">${c.id}</span></div>
+      <dl><dt>📖 知识点</dt><dd>${c.know}</dd><dt>✏️ 小任务</dt><dd>${c.task}</dd><dt>💡 小贴士</dt><dd>${c.tip}</dd></dl>
+      ${c.quote ? `<blockquote>“${c.quote}”</blockquote>` : ''}</div>`;
+  return `<div class="card r-${c.rarity}" role="button" aria-label="${c.name} — tap to flip">${front}${back}</div>`;
+}
+
+function closeModal() { modal = null; layer.hidden = true; layer.innerHTML = ''; }
+
+// Screen position of a point given in the canvas' logical coordinates
+function canvasToScreen(x, y) {
+  const r = cv.getBoundingClientRect();
+  return { x: r.left + x / W * r.width, y: r.top + y / H * r.height, k: r.width / W };
+}
+const T3 = (dx, dy, s, rx, ry) => `translate(${dx}px, ${dy}px) scale(${s}) rotateX(${rx}deg) rotateY(${ry}deg)`;
+
+// Won cards leave the slot and fly out in perspective, landing in a centered row across the screen
+function openReveal() {
+  if (!cardQueue.length) return;
+  const items = cardQueue.splice(0), n = items.length, slotN = Math.min(3, n);
+  const ur = items.some(q => q.card.rarity === 'UR');
+  layer.innerHTML = `<div class="panel">
+      <div class="mtitle">${ur ? '🏆 集齐全套! 解锁 UR 三科全能王!' : `获得 ${n} 张学习卡!`}</div>
+      <div class="spread" style="--n:${n}">${items.map(q =>
+        `<div class="stage glow-${q.card.rarity}" data-card="${q.card.id}" data-new="${q.isNew ? 1 : ''}">${cardHTML(q.card, q.isNew)}</div>`).join('')}</div>
+      <div class="mhint">点击卡片放大查看 · Tap a card to zoom in</div>
+      <button class="btn" data-act="next">收下 OK</button>
+    </div>`;
+  layer.hidden = false;
+  layer.querySelectorAll('.spread .stage').forEach((st, i) => {
+    // start exactly where the canvas drew this card sticking out of the slot
+    const b = st.getBoundingClientRect();
+    const from = canvasToScreen(i < slotN ? 226 + (i - (slotN - 1) / 2) * 44 : 226, UI.slot.y + 21);
+    const dx = from.x - (b.left + b.width / 2), dy = from.y - (b.top + b.height / 2);
+    st.animate([
+      { transform: T3(dx, dy, 30 * from.k / b.width, 70, -180) },
+      { transform: T3(dx * 0.3, dy * 0.3 - 80, 0.85, -18, 160), offset: 0.5 },
+      { transform: T3(0, -12, 1.06, 6, 340), offset: 0.82 },
+      { transform: T3(0, 0, 1, 0, 360) },
+    ], { duration: 1100, delay: 160 * i, easing: 'cubic-bezier(.3, .7, .3, 1)', fill: 'backwards' });
+    setTimeout(() => sfx.card(), 160 * i);
+  });
+  if (items.some(q => RANKS.indexOf(q.card.rarity) >= 2)) setTimeout(() => sfx.rare(), 900 + 160 * n);
+  modal = { flip() {}, next: closeModal, close: closeModal };
+}
+
+// Big preview that zooms out of `fromEl` while spinning; tap flips it, closing shrinks it back
+function zoomCard(card, fromEl, isNew = false) {
+  const prev = modal;
+  const z = document.createElement('div');
+  z.className = 'zoom';
+  z.innerHTML = `<div class="stage glow-${card.rarity}">${cardHTML(card, isNew)}</div>
+      <div class="mhint">点击卡片翻面 · Tap the card to flip</div>
+      <button class="btn" data-act="zclose">关闭 Close</button>`;
+  layer.appendChild(z);
+  const st = z.querySelector('.stage');
+  const a = fromEl.getBoundingClientRect(), b = st.getBoundingClientRect();
+  const start = T3(a.left + a.width / 2 - (b.left + b.width / 2), a.top + a.height / 2 - (b.top + b.height / 2), a.width / b.width, 0, -360);
+  const end = T3(0, 0, 1, 0, 0);
+  fromEl.style.visibility = 'hidden';
+  st.animate([{ transform: start }, { transform: end }], { duration: 750, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+  sfx.whoosh();
+  let closing = false;
+  const close = () => {
+    if (closing) return;
+    closing = true;
+    modal = prev;
+    z.querySelectorAll('.mhint, .btn').forEach(el => { el.style.visibility = 'hidden'; });
+    z.animate([{ backgroundColor: 'rgba(8,4,12,0.72)' }, { backgroundColor: 'rgba(8,4,12,0)' }], { duration: 380, fill: 'forwards' });
+    st.animate([{ transform: end }, { transform: start }], { duration: 380, easing: 'cubic-bezier(.5, 0, .8, .5)', fill: 'forwards' })
+      .onfinish = () => { z.remove(); fromEl.style.visibility = ''; };
+  };
+  modal = { flip: () => st.querySelector('.card').classList.toggle('flipped'), next: close, close };
+}
+
+function openAlbum(tab = albumTab) {
+  albumTab = tab;
+  const of = s => CARDS.filter(c => c.subj === s);
+  const owned = s => of(s).filter(c => collection[c.id]).length;
+  const cells = of(tab).map(c => collection[c.id]
+    ? `<div class="cell" data-id="${c.id}">${cardHTML(c, false, true)}<span class="cnt">×${collection[c.id]}</span></div>`
+    : `<div class="cell"><div class="card mini locked-card"><span>${c.id}</span><b>?</b><span>${c.rarity}</span></div></div>`).join('');
+  layer.innerHTML = `<div class="panel album">
+      <div class="ahead"><b>🎴 学习卡册 ALBUM</b><span class="prog">${ownedCount()} / ${CARDS.length}</span>
+        <button class="x" data-act="close" aria-label="Close">✕</button></div>
+      <div class="tabs">${Object.keys(SUBJ).map(s =>
+        `<button class="tab${s === tab ? ' on' : ''}" data-tab="${s}">${SUBJ[s].icon} ${SUBJ[s].label}<small>${owned(s)}/${of(s).length}</small></button>`).join('')}</div>
+      <div class="grid">${cells}</div>
+      <p class="note">${tab === 'UR' ? '集齐语数外三科全部60张卡牌，自动获得 UR 限定卡「三科全能王」<br>' : ''}
+        每赢 50 珠发 1 张卡（每次最多 3 张，3 张时至少 1 张 R+）<br>N 60% · R 27% · SR 10% · SSR 3%</p>
+    </div>`;
+  modal = { flip() {}, next: closeModal, close: closeModal };
+  layer.hidden = false;
+}
+
+layer.addEventListener('click', e => {
+  if (!modal) return;
+  const t = e.target;
+  t.closest('button')?.blur();
+  const z = t.closest('.zoom');
+  if (z) {                                  // big preview on top: card flips, anything else closes it
+    if (t.closest('.card')) modal.flip();
+    else if (t === z || t.closest('[data-act="zclose"]')) modal.close();
+    return;
+  }
+  const el = t.closest('[data-act], [data-tab], [data-id], [data-card]');
+  if (!el) { if (t === layer && layer.querySelector('.album')) modal.close(); return; }
+  if (el.dataset.act === 'next') modal.next();
+  else if (el.dataset.act === 'close') modal.close();
+  else if (el.dataset.tab) openAlbum(el.dataset.tab);
+  else if (el.dataset.id) zoomCard(CARD_BY_ID[el.dataset.id], el.querySelector('.card'));
+  else zoomCard(CARD_BY_ID[el.dataset.card], el, !!el.dataset.new);
+});
+
+// ============================================================
+// Rendering
+// ============================================================
+let scale = 1, dpr = 1;
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  scale = Math.min(window.innerWidth / W, window.innerHeight / H);
+  cv.style.width = W * scale + 'px';
+  cv.style.height = H * scale + 'px';
+  cv.width = Math.round(W * scale * dpr);
+  cv.height = Math.round(H * scale * dpr);
+}
+window.addEventListener('resize', resize);
+resize();
+
+let seed = 7;
+const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const fieldImg = new Image();
+fieldImg.src = './playfield-bg.jpg';
+const stars = Array.from({ length: 150 }, () => ({ x: 28 + rnd() * 424, y: 200 + rnd() * 600, r: rnd() * 1.3 + 0.3, a: rnd() * 0.7 + 0.3, p: rnd() * 6 }));
+
+function rr(x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+function text(str, x, y, size, color, opts = {}) {
+  ctx.font = `${opts.weight || 'bold'} ${size}px ${FONT}`;
+  ctx.textAlign = opts.align || 'center';
+  ctx.textBaseline = opts.base || 'middle';
+  if (opts.stroke) { ctx.lineWidth = opts.strokeW || 4; ctx.strokeStyle = opts.stroke; ctx.lineJoin = 'round'; ctx.strokeText(str, x, y); }
+  ctx.fillStyle = color;
+  ctx.fillText(str, x, y);
+}
+
+// --- 7-segment LEDs ---
+const SEGMAP = { '0': 'abcdef', '1': 'bc', '2': 'abged', '3': 'abgcd', '4': 'fgbc', '5': 'afgcd',
+                 '6': 'afgedc', '7': 'abc', '8': 'abcdefg', '9': 'abcdfg', '-': 'g', ' ': '' };
+function drawDigit(x, y, w, h, ch) {
+  const t = Math.max(2, w * 0.18), hh = h / 2, on = SEGMAP[ch] || '';
+  const S = {
+    a: [t * 0.5, 0, w - t, t], g: [t * 0.5, hh - t / 2, w - t, t], d: [t * 0.5, h - t, w - t, t],
+    f: [0, t * 0.5, t, hh - t * 0.5], b: [w - t, t * 0.5, t, hh - t * 0.5],
+    e: [0, hh, t, hh - t * 0.5], c: [w - t, hh, t, hh - t * 0.5],
+  };
+  ctx.save();
+  ctx.translate(x + h * 0.05, y);
+  ctx.transform(1, 0, -0.09, 1, 0, 0);
+  for (const k in S) {
+    const [sx, sy, sw, sh] = S[k], lit = on.includes(k);
+    ctx.fillStyle = lit ? '#ff3b24' : 'rgba(255,50,30,0.11)';
+    ctx.shadowColor = '#ff2200';
+    ctx.shadowBlur = lit ? 8 : 0;
+    rr(sx + 0.7, sy + 0.7, sw - 1.4, sh - 1.4, Math.min(sw, sh) * 0.4);
+    ctx.fill();
+  }
+  ctx.restore();
+}
+function drawLED(x, y, w, h, value, n) {
+  rr(x, y, w, h, 6);
+  ctx.fillStyle = '#1b0707'; ctx.fill();
+  ctx.lineWidth = 2; ctx.strokeStyle = '#5a2014'; ctx.stroke();
+  const pad = 6, gap = h > 55 ? 8 : 5, dh = h - pad * 2;
+  const dw = Math.min(dh * 0.55, (w - pad * 2 - gap * (n - 1)) / n);
+  const total = n * dw + (n - 1) * gap, x0 = x + (w - total) / 2;
+  const s = String(value).padStart(n, ' ').slice(-n);
+  for (let i = 0; i < n; i++) drawDigit(x0 + i * (dw + gap), y + pad, dw, dh, s[i]);
+}
+
+function drawLamp(x, y, r, on, color = 'red') {
+  ctx.beginPath(); ctx.arc(x, y, r + 3, 0, Math.PI * 2);
+  ctx.fillStyle = '#2a0b06'; ctx.fill();
+  const g = ctx.createRadialGradient(x - r * 0.3, y - r * 0.3, 1, x, y, r);
+  if (on) {
+    if (color === 'red') { g.addColorStop(0, '#fff3c0'); g.addColorStop(0.35, '#ff5a2a'); g.addColorStop(1, '#b01000'); }
+    else { g.addColorStop(0, '#ffffff'); g.addColorStop(0.35, '#ffe14d'); g.addColorStop(1, '#c78a00'); }
+    ctx.shadowColor = color === 'red' ? '#ff3010' : '#ffd000';
+    ctx.shadowBlur = 18;
+  } else {
+    g.addColorStop(0, '#6b2418'); g.addColorStop(1, '#2a0804');
+  }
+  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.fillStyle = g; ctx.fill();
+  ctx.shadowBlur = 0;
+}
+function screw(x, y) {
+  ctx.beginPath(); ctx.arc(x, y, 4, 0, Math.PI * 2);
+  ctx.fillStyle = '#e8e8ec'; ctx.fill();
+  ctx.strokeStyle = '#8a8f99'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x - 2.5, y); ctx.lineTo(x + 2.5, y); ctx.stroke();
+}
+
+function drawHead() {
+  const g = ctx.createLinearGradient(0, 6, 0, 180);
+  g.addColorStop(0, '#ff8b3d'); g.addColorStop(1, '#f0561c');
+  rr(8, 6, 464, 174, 16);
+  ctx.fillStyle = g; ctx.fill();
+  ctx.lineWidth = 3; ctx.strokeStyle = '#ffd2b0'; ctx.stroke();
+  screw(20, 168); screw(460, 168);
+
+  text('弹珠乐', 240, 26, 24, '#fff', { stroke: '#a3220a', strokeW: 5 });
+  text('PINBALL FRENZY', 240, 44, 9, '#ffe7d4', { weight: '800' });
+
+  text('▼ 预估获得珠数  EST.', 97, 58, 10, '#fff');
+  text('当前投珠  BET', 240, 58, 11, '#fff');
+  text('实际获得珠数 WON ▼', 383, 58, 10, '#fff');
+
+  const est = game.mult ? game.bet * game.mult : 0;
+  drawLED(24, 66, 146, 46, game.mult ? est : ' ', 4);
+  drawLED(190, 66, 100, 58, String(game.bet).padStart(2, '0'), 2);
+  drawLED(310, 66, 146, 46, game.wonShown, 4);
+
+  const chase = Math.floor(game.time / 0.15) % MULTS.length;
+  const blink = Math.floor(game.time * 8) % 2 === 0;
+  for (let i = 0; i < MULTS.length; i++) {
+    const x = 120 + 60 * i;
+    text(String(MULTS[i]), x, 136, 13, '#4a1206');
+    let on;
+    if (game.gameOver) on = false;
+    else if (game.state === 'IDLE') on = chase === i;
+    else on = game.mult === MULTS[i] && (game.flashT > 0 ? blink : true);
+    drawLamp(x, 156, 10, on);
+  }
+  text('★ 好运连连 · GOOD LUCK ★', 240, 174, 8, '#ffe7d4', { weight: '700' });
+
+  // mute
+  ctx.beginPath(); ctx.arc(UI.mute.x, UI.mute.y, UI.mute.r, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0,0,0,0.18)'; ctx.fill();
+  text(game.muted ? '🔇' : '🔊', UI.mute.x, UI.mute.y + 1, 13, '#fff', { weight: '400' });
+
+  // card album
+  ctx.beginPath(); ctx.arc(UI.album.x, UI.album.y, UI.album.r, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0,0,0,0.18)'; ctx.fill();
+  text('🎴', UI.album.x, UI.album.y + 1, 13, '#fff', { weight: '400' });
+  text(`${ownedCount()}/${CARDS.length}`, UI.album.x, UI.album.y + 21, 7.5, '#fff');
+}
+
+function fieldPath() {
+  ctx.beginPath();
+  ctx.moveTo(FIELD_L, ELL.cy);
+  ctx.ellipse(ELL.cx, ELL.cy, ELL.rx, ELL.ry, 0, Math.PI, Math.PI * 2);
+  ctx.lineTo(LANE_R, 796);
+  ctx.lineTo(FIELD_L, 796);
+  ctx.closePath();
+}
+
+function drawField() {
+  // cabinet rails
+  const rail = ctx.createLinearGradient(12, 0, 468, 0);
+  rail.addColorStop(0, '#d9dbe2'); rail.addColorStop(0.5, '#fbfbfd'); rail.addColorStop(1, '#c4c7cf');
+  rr(12, 184, 456, 620, 14);
+  ctx.fillStyle = rail; ctx.fill();
+
+  // board
+  fieldPath();
+  const bg = ctx.createLinearGradient(0, 200, 0, 800);
+  bg.addColorStop(0, '#12235e'); bg.addColorStop(1, '#060c2a');
+  ctx.fillStyle = bg; ctx.fill();
+
+  ctx.save();
+  fieldPath(); ctx.clip();
+  if (fieldImg.complete && fieldImg.naturalWidth) {
+    // background photo, scaled to cover the whole board
+    const bx = FIELD_L, by = ELL.cy - ELL.ry, bw = LANE_R - FIELD_L, bh = 796 - by;
+    const k = Math.max(bw / fieldImg.naturalWidth, bh / fieldImg.naturalHeight);
+    const iw = fieldImg.naturalWidth * k, ih = fieldImg.naturalHeight * k;
+    ctx.drawImage(fieldImg, bx + (bw - iw) / 2, by + (bh - ih) / 2, iw, ih);
+    ctx.fillStyle = 'rgba(6,12,42,0.25)';   // dim slightly so pins and ball stand out
+    ctx.fillRect(bx, by, bw, bh);
+  } else {
+    for (const s of stars) {
+      ctx.globalAlpha = s.a * (0.6 + 0.4 * Math.sin(game.time * 2 + s.p));
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = '#cfe0ff'; ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  text('好运弹珠 · 欢乐加倍', 226, 268, 20, 'rgba(255,255,255,0.95)', { stroke: 'rgba(160,30,10,0.7)', strokeW: 4 });
+  for (const [x, y, s] of [[80, 420, 9], [370, 400, 7], [300, 540, 8], [120, 540, 6]]) {
+    ctx.fillStyle = 'rgba(255,255,255,0.35)';
+    ctx.beginPath();
+    ctx.moveTo(x, y - s); ctx.lineTo(x + s * 0.25, y - s * 0.25); ctx.lineTo(x + s, y);
+    ctx.lineTo(x + s * 0.25, y + s * 0.25); ctx.lineTo(x, y + s); ctx.lineTo(x - s * 0.25, y + s * 0.25);
+    ctx.lineTo(x - s, y); ctx.lineTo(x - s * 0.25, y - s * 0.25); ctx.closePath(); ctx.fill();
+  }
+
+  // area under the return slope
+  ctx.beginPath();
+  ctx.moveTo(SLOPE.x1, SLOPE.y1); ctx.lineTo(SLOPE.x2, SLOPE.y2); ctx.lineTo(LANE_L, 796); ctx.lineTo(FIELD_L, 796); ctx.closePath();
+  ctx.fillStyle = 'rgba(0,0,0,0.35)'; ctx.fill();
+
+  // shooter lane tint
+  ctx.fillStyle = 'rgba(255,255,255,0.05)';
+  ctx.fillRect(LANE_L, LANE_TOP, LANE_R - LANE_L, 796 - LANE_TOP);
+  ctx.restore();
+
+  drawPockets();
+
+  // pins
+  for (const p of pins) {
+    ctx.beginPath(); ctx.arc(p.x + 1, p.y + 1.5, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(0,0,0,0.4)'; ctx.fill();
+    const g = ctx.createRadialGradient(p.x - 1, p.y - 1, 0.5, p.x, p.y, p.r);
+    g.addColorStop(0, '#ffffff'); g.addColorStop(1, '#8e96a6');
+    ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = g; ctx.fill();
+  }
+
+  // walls & bars
+  ctx.lineCap = 'round';
+  for (const s of segs) {
+    if (s.kind === 'gate' || s.kind === 'divider') continue;
+    ctx.beginPath(); ctx.moveTo(s.x1, s.y1); ctx.lineTo(s.x2, s.y2);
+    if (s.kind === 'bar') {
+      ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 5;
+      ctx.shadowColor = 'rgba(255,255,255,0.6)'; ctx.shadowBlur = 6;
+    } else {
+      ctx.strokeStyle = '#c8ccd6'; ctx.lineWidth = 3; ctx.shadowBlur = 0;
+    }
+    ctx.stroke();
+  }
+  ctx.shadowBlur = 0;
+
+  // gates
+  for (const gSeg of [cupGate, laneGate]) {
+    ctx.beginPath(); ctx.moveTo(gSeg.x1, gSeg.y1); ctx.lineTo(gSeg.x2, gSeg.y2);
+    ctx.setLineDash(gSeg.on ? [] : [3, 4]);
+    ctx.strokeStyle = gSeg.on ? '#ffb13b' : 'rgba(255,177,59,0.35)';
+    ctx.lineWidth = gSeg.on ? 3 : 2;
+    ctx.stroke();
+  }
+  ctx.setLineDash([]);
+
+  // power meter beside the lane
+  const segsLit = Math.round(pl.x / PULL_MAX * 10);
+  for (let i = 0; i < 10; i++) {
+    const y = 700 - i * 13;
+    ctx.fillStyle = i < segsLit ? (i > 6 ? '#ff5a2a' : '#39e07a') : 'rgba(40,120,70,0.35)';
+    rr(455, y, 7, 9, 2); ctx.fill();
+  }
+}
+
+function drawPockets() {
+  const blink = Math.floor(game.time * 8) % 2 === 0;
+  for (let i = 0; i < POCKETS; i++) {
+    const x0 = FIELD_L + POCKET_W * i, cx = x0 + POCKET_W / 2;
+    ctx.fillStyle = 'rgba(0,0,0,0.5)';
+    ctx.fillRect(x0 + 2, DIV_TOP, POCKET_W - 4, DIV_BOT - DIV_TOP);
+    if (game.pocket === i) {
+      ctx.fillStyle = game.lastWin ? (blink ? 'rgba(255,220,60,0.55)' : 'rgba(255,220,60,0.2)') : 'rgba(120,180,255,0.35)';
+      ctx.fillRect(x0 + 2, DIV_TOP, POCKET_W - 4, DIV_BOT - DIV_TOP);
+    }
+    rr(cx - 3, DIV_TOP + 8, 6, 22, 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.8)'; ctx.fill();
+    const lit = game.lit.has(i);
+    const on = lit && !(game.flashT > 0 && !blink);
+    drawLamp(cx, LAMP_Y, 7, on);
+    ctx.beginPath(); ctx.arc(cx, 648, 2, 0, Math.PI * 2);
+    ctx.fillStyle = lit ? '#48ff8a' : '#1d5a36'; ctx.fill();
+  }
+  ctx.lineCap = 'round';
+  for (const s of segs) {
+    if (s.kind !== 'divider') continue;
+    ctx.beginPath(); ctx.moveTo(s.x1, s.y1); ctx.lineTo(s.x2, s.y2);
+    ctx.strokeStyle = '#dfe3ea'; ctx.lineWidth = 3; ctx.stroke();
+  }
+}
+
+function drawPlunger() {
+  const tipY = TIP_REST + pl.x, kY = tipY + KNOB_OFFSET;
+  // spring between tip and lane floor
+  ctx.save();
+  ctx.beginPath(); ctx.rect(LANE_L, LANE_TOP, LANE_R - LANE_L, 796 - LANE_TOP); ctx.clip();
+  ctx.beginPath();
+  const coils = 9, top = tipY + 8, bot = 796, step = (bot - top) / (coils * 2);
+  ctx.moveTo(438, top);
+  for (let i = 0; i < coils * 2; i++) ctx.lineTo(i % 2 ? 446 : 430, top + step * (i + 1));
+  ctx.strokeStyle = '#9aa3b5'; ctx.lineWidth = 1.6; ctx.stroke();
+  ctx.restore();
+  // rod
+  ctx.fillStyle = '#b8bec9';
+  ctx.fillRect(436, tipY + 8, 4, kY - tipY - 8);
+  // tip
+  const tg = ctx.createLinearGradient(426, 0, 450, 0);
+  tg.addColorStop(0, '#9aa1ad'); tg.addColorStop(0.5, '#ffffff'); tg.addColorStop(1, '#8a919e');
+  rr(LANE_L + 2, tipY, LANE_R - LANE_L - 4, 8, 2);
+  ctx.fillStyle = tg; ctx.fill();
+  // knob
+  const kg = ctx.createRadialGradient(434, kY - 4, 2, 438, kY, 15);
+  kg.addColorStop(0, '#ff9a8a'); kg.addColorStop(0.5, '#e02020'); kg.addColorStop(1, '#8a0a0a');
+  ctx.beginPath(); ctx.arc(438, kY, 14, 0, Math.PI * 2);
+  ctx.fillStyle = kg; ctx.shadowColor = 'rgba(0,0,0,0.5)'; ctx.shadowBlur = 6; ctx.fill(); ctx.shadowBlur = 0;
+  ctx.strokeStyle = '#5a0505'; ctx.lineWidth = 1.5; ctx.stroke();
+
+  const wantPull = (game.state === 'READY' || game.state === 'SHOT') && ballInLane() && !pl.held;
+  if (wantPull) {
+    const bob = Math.sin(game.time * 6) * 3;
+    text('PULL', 438, kY + 26 + bob, 10, '#fff', { stroke: '#8a0a0a', strokeW: 3 });
+    text('▼', 438, kY + 38 + bob, 10, '#fff', { stroke: '#8a0a0a', strokeW: 3 });
+  }
+}
+
+function drawBall() {
+  ctx.beginPath(); ctx.ellipse(ball.x + 2, ball.y + 3, R, R * 0.8, 0, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0,0,0,0.35)'; ctx.fill();
+  const g = ctx.createRadialGradient(ball.x - 3, ball.y - 3, 1, ball.x, ball.y, R);
+  g.addColorStop(0, '#ffffff'); g.addColorStop(0.4, '#dfe4ec'); g.addColorStop(1, '#6f7888');
+  ctx.beginPath(); ctx.arc(ball.x, ball.y, R, 0, Math.PI * 2);
+  ctx.fillStyle = g; ctx.fill();
+}
+
+function drawGlass() {
+  ctx.save();
+  fieldPath(); ctx.clip();
+  const g = ctx.createLinearGradient(40, 200, 300, 700);
+  g.addColorStop(0, 'rgba(255,255,255,0.10)'); g.addColorStop(0.35, 'rgba(255,255,255,0.02)');
+  g.addColorStop(0.5, 'rgba(255,255,255,0.07)'); g.addColorStop(0.6, 'rgba(255,255,255,0)');
+  ctx.fillStyle = g; ctx.fillRect(0, 180, W, 620);
+  ctx.restore();
+}
+
+function hintText() {
+  if (game.gameOver) return '';
+  switch (game.state) {
+    case 'IDLE': return game.bet === 0 ? 'Drop balls into 投珠口 to bet' : 'Press START 开始 (or add more balls)';
+    case 'READY': return ballInLane() ? 'Pull the plunger & release! (can still add)' : 'Loading ball…';
+    case 'SHOT': return ballInLane() && !sim.exited ? 'Too weak — pull again!' : 'Bet locked — good luck!';
+    case 'RESULT': return game.lastWin ? `You won ${game.won} balls!` : 'Ball returning…';
+  }
+  return '';
+}
+
+function drawBottom() {
+  const g = ctx.createLinearGradient(0, 806, 0, 896);
+  g.addColorStop(0, '#ff8b3d'); g.addColorStop(1, '#ef5419');
+  rr(8, 806, 464, 90, 16);
+  ctx.fillStyle = g; ctx.fill();
+  ctx.lineWidth = 3; ctx.strokeStyle = '#ffd2b0'; ctx.stroke();
+
+  // tray counter
+  text('余珠 TRAY', 64, 822, 11, '#fff');
+  drawLED(22, 832, 86, 42, game.tray, 4);
+
+  // coin hole plate
+  const idleEmpty = !game.gameOver && game.state === 'IDLE' && game.bet === 0;
+  const c = UI.coin;
+  rr(c.x, c.y, c.w, c.h, 10);
+  ctx.fillStyle = '#fff6ee'; ctx.fill();
+  if (idleEmpty) {
+    ctx.shadowColor = '#ffe066'; ctx.shadowBlur = 10 + 6 * Math.sin(game.time * 5);
+    ctx.strokeStyle = '#ffd43b'; ctx.lineWidth = 3;
+  } else { ctx.strokeStyle = '#e3c9b6'; ctx.lineWidth = 2; }
+  ctx.stroke(); ctx.shadowBlur = 0;
+  ctx.beginPath(); ctx.arc(UI.hole.x, UI.hole.y, 17, 0, Math.PI * 2);
+  ctx.fillStyle = '#c0392b'; ctx.fill();
+  ctx.beginPath(); ctx.arc(UI.hole.x, UI.hole.y, 12, 0, Math.PI * 2);
+  ctx.fillStyle = '#111'; ctx.fill();
+  text('投珠口', 228, 838, 18, '#333');
+  text('DROP BALL', 228, 858, 10, '#8a5a40');
+  text('▼', 228, 873, 10, '#2e9e5a');
+  for (const a of coinAnims) {
+    const k = a.t / 0.35;
+    ctx.globalAlpha = 1 - k * 0.6;
+    const y = UI.hole.y - 40 + k * 40, r = 7 * (1 - k * 0.6);
+    const bg = ctx.createRadialGradient(UI.hole.x - 2, y - 2, 0.5, UI.hole.x, y, r);
+    bg.addColorStop(0, '#fff'); bg.addColorStop(1, '#7c8594');
+    ctx.beginPath(); ctx.arc(UI.hole.x, y, r, 0, Math.PI * 2);
+    ctx.fillStyle = bg; ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+
+  // START button
+  const s = UI.start;
+  const enabled = !game.gameOver && game.state === 'IDLE' && game.bet > 0;
+  const pressed = game.time - game.startPressT < 0.15;
+  const ring = ctx.createLinearGradient(s.x - s.r, s.y - s.r, s.x + s.r, s.y + s.r);
+  ring.addColorStop(0, '#ffffff'); ring.addColorStop(0.5, '#9aa1ad'); ring.addColorStop(1, '#e6e8ee');
+  ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+  ctx.fillStyle = ring; ctx.fill();
+  const ir = (s.r - 8) * (pressed ? 0.92 : 1);
+  const bg = ctx.createRadialGradient(s.x - 8, s.y - 10, 2, s.x, s.y, ir);
+  if (enabled) {
+    bg.addColorStop(0, '#fffbd0'); bg.addColorStop(0.5, '#ffd21f'); bg.addColorStop(1, '#e08a00');
+    ctx.shadowColor = '#ffe066'; ctx.shadowBlur = 14 + 10 * Math.sin(game.time * 6);
+  } else {
+    bg.addColorStop(0, '#efe6c8'); bg.addColorStop(1, '#a89a70');
+  }
+  ctx.beginPath(); ctx.arc(s.x, s.y, ir, 0, Math.PI * 2);
+  ctx.fillStyle = bg; ctx.fill(); ctx.shadowBlur = 0;
+  text('开始', s.x, s.y - 5, 20, enabled ? '#7a2d00' : '#6d6450');
+  text('START', s.x, s.y + 13, 9, enabled ? '#7a2d00' : '#6d6450', { weight: '800' });
+}
+
+// Face-down card as it sticks out of the slot; the border shows its rarity
+function drawCardBack(x, y, w, h, rarity) {
+  const col = RARITY[rarity].color;
+  rr(x, y, w, h, 4);
+  if (rarity === 'UR') {
+    const g = ctx.createLinearGradient(x, y, x + w, y + h);
+    ['#ff4d4d', '#ffd84d', '#4dff88', '#4dc3ff', '#c86bff'].forEach((c, i, a) => g.addColorStop(i / (a.length - 1), c));
+    ctx.fillStyle = g;
+  } else ctx.fillStyle = col;
+  ctx.shadowColor = col; ctx.shadowBlur = rarity === 'N' ? 0 : 8;
+  ctx.fill(); ctx.shadowBlur = 0;
+  rr(x + 2.5, y + 2.5, w - 5, h - 5, 3);
+  const g = ctx.createLinearGradient(x, y, x, y + h);
+  g.addColorStop(0, '#46246e'); g.addColorStop(1, '#170a2c');
+  ctx.fillStyle = g; ctx.fill();
+  text('★', x + w / 2, y + h - 14, 12, col === '#9aa0a6' ? '#d7dade' : col);
+}
+
+function drawCardSlot() {
+  const s = UI.slot, n = Math.min(3, cardQueue.length), out = cardsOut();
+  // ejected cards slide down out of the slit (clipped so they appear to come from inside)
+  ctx.save();
+  ctx.beginPath(); ctx.rect(s.x, s.y + s.h, s.w, 796 - s.y - s.h); ctx.clip();
+  for (let i = 0; i < n; i++) {
+    const q = cardQueue[i];
+    if (q.t <= 0) continue;
+    const p = Math.min(1, q.t / 0.45), e = 1 - (1 - p) ** 3;
+    const cw = 30, ch = 42, cx = 226 + (i - (n - 1) / 2) * 44;
+    const bob = p >= 1 ? Math.sin(game.time * 4 + i * 1.3) * 1.2 : 0;
+    drawCardBack(cx - cw / 2, s.y + s.h - ch + 30 * e + bob, cw, ch, q.card.rarity);
+  }
+  ctx.restore();
+
+  // slot: metal lip + dark slit
+  const lip = ctx.createLinearGradient(0, s.y - 4, 0, s.y + s.h + 4);
+  lip.addColorStop(0, '#f4f5f8'); lip.addColorStop(0.5, '#9aa1ad'); lip.addColorStop(1, '#dfe2e8');
+  rr(s.x - 5, s.y - 4, s.w + 10, s.h + 8, 6);
+  if (out) { ctx.shadowColor = '#ffe066'; ctx.shadowBlur = 8 + 5 * Math.sin(game.time * 5); }
+  ctx.fillStyle = lip; ctx.fill(); ctx.shadowBlur = 0;
+  rr(s.x, s.y, s.w, s.h, 3);
+  ctx.fillStyle = '#07040a'; ctx.fill();
+  text('发卡口', s.x + s.w + 24, s.y + s.h / 2, 9, 'rgba(255,255,255,0.6)');
+}
+
+function drawOverlays() {
+  // hint panel under the card slot
+  text(hintText(), 226, 765, 14, '#ffe9a8');
+  drawCardSlot();
+  if (!cardQueue.length) text('B drop · Enter start · hold Space / drag knob to shoot · C cards', 226, 783, 9.5, 'rgba(255,255,255,0.55)', { weight: '500' });
+
+  if (banner) {
+    const k = Math.min(1, banner.t / 0.15), fade = Math.min(1, (banner.dur - banner.t) / 0.3);
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, fade);
+    ctx.translate(226, 460);
+    ctx.scale(0.7 + 0.3 * k, 0.7 + 0.3 * k);
+    ctx.font = `900 30px ${FONT}`;
+    const w = ctx.measureText(banner.text).width + 40;
+    rr(-w / 2, -26, w, 52, 14);
+    ctx.fillStyle = 'rgba(10,10,30,0.72)'; ctx.fill();
+    text(banner.text, 0, 1, 30, banner.color, { weight: '900', stroke: 'rgba(0,0,0,0.6)', strokeW: 5 });
+    ctx.restore();
+  }
+
+  if (game.gameOver) {
+    rr(106, 392, 240, 130, 16);
+    ctx.fillStyle = 'rgba(10,10,30,0.88)'; ctx.fill();
+    ctx.strokeStyle = '#ff8b3d'; ctx.lineWidth = 2; ctx.stroke();
+    text('GAME OVER', 226, 422, 26, '#ff8b3d', { weight: '900' });
+    text('Out of balls', 226, 450, 13, '#ddd', { weight: '500' });
+    const r = UI.reset;
+    rr(r.x, r.y, r.w, r.h, 10);
+    ctx.fillStyle = '#ffd21f'; ctx.fill();
+    text('RESET (100)', r.x + r.w / 2, r.y + r.h / 2 + 1, 14, '#7a2d00');
+  }
+}
+
+let fps = 60;
+function drawDebug() {
+  ctx.lineWidth = 1;
+  for (const s of segs) {
+    ctx.beginPath(); ctx.moveTo(s.x1, s.y1); ctx.lineTo(s.x2, s.y2);
+    ctx.strokeStyle = s.on ? 'rgba(255,0,0,0.8)' : 'rgba(128,128,128,0.6)'; ctx.stroke();
+  }
+  for (const p of pins) { ctx.beginPath(); ctx.arc(p.x, p.y, p.r + R, 0, Math.PI * 2); ctx.strokeStyle = 'rgba(0,255,255,0.25)'; ctx.stroke(); }
+  ctx.beginPath(); ctx.moveTo(FIELD_L, POCKET_SENSOR_Y); ctx.lineTo(FIELD_R, POCKET_SENSOR_Y);
+  ctx.strokeStyle = 'lime'; ctx.stroke();
+  ctx.strokeStyle = 'yellow'; ctx.strokeRect(400, 675, LANE_L - 400, 25);
+  text(`${game.state} fps:${fps.toFixed(0)} exited:${sim.exited} pocket:${sim.pocket} v:${Math.hypot(ball.vx, ball.vy).toFixed(0)}`,
+       240, 196, 10, 'lime', { weight: '500' });
+}
+
+function draw() {
+  ctx.setTransform(scale * dpr, 0, 0, scale * dpr, 0, 0);
+  ctx.clearRect(0, 0, W, H);
+  drawField();
+  drawBall();
+  drawGlass();
+  drawHead();
+  drawBottom();
+  drawPlunger();
+  drawOverlays();
+  if (DEBUG) drawDebug();
+}
+
+// ============================================================
+// Main loop
+// ============================================================
+let last = performance.now(), acc = 0;
+function frame(now) {
+  let dt = (now - last) / 1000;
+  last = now;
+  if (dt > 0.05) dt = 0.05;
+  fps = fps * 0.95 + (1 / Math.max(dt, 1e-3)) * 0.05;
+  game.time += dt;
+
+  if (keyPull && pl.held) pl.pull = Math.min(PULL_MAX, pl.pull + 50 * dt);
+
+  acc += dt;
+  while (acc >= DT) { tickSim(DT, sim, onSimEvent); acc -= DT; }
+
+  for (let i = coinAnims.length - 1; i >= 0; i--) { coinAnims[i].t += dt; if (coinAnims[i].t > 0.35) coinAnims.splice(i, 1); }
+  for (const q of cardQueue) { if (q.t <= 0 && q.t + dt > 0) sfx.card(); q.t += dt; }
+  // once every card has poked out of the slot, they fly out on their own (waits if the album is open)
+  if (!modal && cardQueue.length && cardQueue.every(q => q.t > 0.5)) openReveal();
+  if (game.flashT > 0) game.flashT -= dt;
+  if (game.wonShown < game.won) game.wonShown = Math.min(game.won, game.wonShown + Math.max(1, Math.ceil((game.won - game.wonShown) * 0.08)));
+  if (banner) { banner.t += dt; if (banner.t > banner.dur) banner = null; }
+  saveGame();
+
+  draw();
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

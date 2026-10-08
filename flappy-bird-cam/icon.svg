@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#0f1b2d"/>
+  <!-- pipe -->
+  <rect x="372" y="300" width="70" height="212" fill="#3fbf5a"/>
+  <rect x="362" y="284" width="90" height="34" rx="4" fill="#4fd96d"/>
+  <!-- bird body -->
+  <ellipse cx="236" cy="240" rx="96" ry="84" fill="#ffd447"/>
+  <!-- wing -->
+  <ellipse cx="196" cy="262" rx="42" ry="26" fill="#f0b429"/>
+  <!-- eye -->
+  <circle cx="276" cy="212" r="26" fill="#ffffff"/>
+  <circle cx="286" cy="214" r="12" fill="#0f1b2d"/>
+  <!-- beak -->
+  <path d="M318 246 L376 260 L318 282 Z" fill="#ff8c42"/>
+</svg>

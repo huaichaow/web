@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Duck Storm" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <title>Duck Storm — VR Duck Shooter</title>
+  <script type="module" crossorigin src="./assets/index-DM-GlOAk.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CTP2XW-X.css">
+<link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+<body>
+  <video id="ar-video" autoplay muted playsinline></video>
+  <div id="app"></div>
+
+  <div id="hud">
+    <div id="vignette"></div>
+    <div id="crosshair"></div>
+    <div id="hp-wrap">
+      <div id="hp-label">HP</div>
+      <div id="hp-track"><div id="hp-fill"></div></div>
+    </div>
+    <div id="stats">
+      <div id="score">0</div>
+      <div id="level-time">Level 1 &middot; 0:00</div>
+    </div>
+    <div id="quota">0 / 17</div>
+    <div id="run-wrap">
+      <div id="run-level">LV 1</div>
+      <div id="run-xp-track"><div id="run-xp-fill"></div></div>
+    </div>
+    <div id="ammo-wrap">
+      <div id="ammo-reload-fill"></div>
+      <span id="ammo-text">10 / 10</span>
+    </div>
+    <div id="reload-msg">
+      <div id="reload-msg-text">LOADING BULLETS&hellip;</div>
+      <div id="reload-msg-track"><div id="reload-msg-fill"></div></div>
+    </div>
+    <canvas id="minimap"></canvas>
+    <button id="settings-btn" aria-label="Settings">⚙</button>
+    <div id="settings-panel">
+      <div class="setting-row">
+        <span>Camera background (AR)</span>
+        <input type="checkbox" id="ar-switch" />
+      </div>
+      <div class="setting-row">
+        <span>Sound effects</span>
+        <input type="checkbox" id="sfx-switch" checked />
+      </div>
+      <div class="setting-row">
+        <span>Endless mode</span>
+        <input type="checkbox" id="endless-switch" />
+      </div>
+      <div class="setting-row">
+        <span>Bat targets</span>
+        <input type="checkbox" id="bat-switch" />
+      </div>
+      <div class="setting-row" id="landscape-row">
+        <span>Landscape mode</span>
+        <input type="checkbox" id="landscape-switch" />
+      </div>
+      <div id="settings-status"></div>
+    </div>
+    <div id="app-version"></div>
+    <div id="rotate-hint"><span>🔄 Rotate your device to landscape</span></div>
+    <div id="sensor-warning">
+      <span>⚠ Motion sensors unavailable — drag to look instead. On Android this usually
+      means the page isn't trusted&#8209;HTTPS. See the README for the fix.</span>
+      <button id="sensor-warning-close" aria-label="Dismiss">✕</button>
+    </div>
+    <div id="debug-overlay"></div>
+  </div>
+
+  <div id="start-screen" class="overlay">
+    <div class="duck-emoji">🐤</div>
+    <h1>Duck Storm</h1>
+    <p>Rubber ducks are attacking from every direction!<br />
+       <b>Move your phone</b> to look around &middot; <b>Tap or hold</b> to shoot.<br />
+       Hit the kill quota to clear the level — don't let them reach you.</p>
+    <div id="start-progress"></div>
+    <button id="start-btn">START</button>
+    <button id="levels-btn" class="secondary">LEVELS</button>
+    <div class="hint" id="start-hint">On a phone, allow motion access when asked. On desktop, drag to look around.</div>
+  </div>
+
+  <div id="gameover-screen" class="overlay hidden">
+    <div class="duck-emoji">💥</div>
+    <h1 id="go-title">GAME OVER</h1>
+    <div id="final-stats"></div>
+    <button id="restart-btn">RETRY LEVEL</button>
+    <button id="gameover-levels-btn" class="secondary">LEVELS</button>
+  </div>
+
+  <div id="card-screen" class="overlay cards hidden">
+    <h2 id="card-title">LEVEL UP</h2>
+    <div id="card-row"></div>
+  </div>
+
+  <div id="complete-screen" class="overlay hidden">
+    <div class="duck-emoji">🏆</div>
+    <h1 id="complete-title">LEVEL CLEAR</h1>
+    <div id="complete-stats"></div>
+    <button id="complete-next-btn">NEXT LEVEL</button>
+    <button id="complete-levels-btn" class="secondary">LEVELS</button>
+  </div>
+
+  <div id="levelselect-screen" class="overlay hidden">
+    <h1>SELECT LEVEL</h1>
+    <p>Replay a cleared level to earn extra experience.</p>
+    <div id="level-grid"></div>
+    <button id="levelselect-back-btn" class="secondary">BACK</button>
+  </div>
+
+</body>
+</html>

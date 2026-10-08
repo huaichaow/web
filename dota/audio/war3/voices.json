@@ -1,0 +1,628 @@
+{
+ "brakk": {
+  "attack": [
+   "brakk/warcry_1",
+   "brakk/yesattack_1",
+   "brakk/yesattack_2",
+   "brakk/yesattack_3"
+  ],
+  "cast": [
+   "brakk/yes_1",
+   "brakk/yes_2",
+   "brakk/yes_3",
+   "brakk/yes_4",
+   "brakk/yesattack_1",
+   "brakk/yesattack_2",
+   "brakk/yesattack_3"
+  ],
+  "death": [
+   "brakk/death_1"
+  ],
+  "kill": [
+   "brakk/warcry_1",
+   "brakk/yesattack_1",
+   "brakk/yesattack_2",
+   "brakk/yesattack_3"
+  ],
+  "levelup": [
+   "brakk/warcry_1"
+  ],
+  "move": [
+   "brakk/yes_1",
+   "brakk/yes_2",
+   "brakk/yes_3",
+   "brakk/yes_4"
+  ],
+  "pissed": [
+   "brakk/pissed_1",
+   "brakk/pissed_2",
+   "brakk/pissed_3",
+   "brakk/pissed_4",
+   "brakk/pissed_5",
+   "brakk/pissed_6",
+   "brakk/pissed_7"
+  ],
+  "respawn": [
+   "brakk/ready_1",
+   "brakk/warcry_1"
+  ],
+  "select": [
+   "brakk/what_1",
+   "brakk/what_2",
+   "brakk/what_3",
+   "brakk/what_4"
+  ],
+  "target": [
+   "brakk/yesattack_1",
+   "brakk/yesattack_2",
+   "brakk/yesattack_3"
+  ],
+  "ult": [
+   "brakk/warcry_1"
+  ]
+ },
+ "gorran": {
+  "attack": [
+   "gorran/warcry_1",
+   "gorran/yesattack_1",
+   "gorran/yesattack_2",
+   "gorran/yesattack_3"
+  ],
+  "cast": [
+   "gorran/yes_1",
+   "gorran/yes_2",
+   "gorran/yes_3",
+   "gorran/yesattack_1",
+   "gorran/yesattack_2",
+   "gorran/yesattack_3"
+  ],
+  "death": [
+   "gorran/death_1"
+  ],
+  "kill": [
+   "gorran/warcry_1",
+   "gorran/yesattack_1",
+   "gorran/yesattack_2",
+   "gorran/yesattack_3"
+  ],
+  "levelup": [
+   "gorran/warcry_1"
+  ],
+  "move": [
+   "gorran/yes_1",
+   "gorran/yes_2",
+   "gorran/yes_3"
+  ],
+  "pissed": [
+   "gorran/pissed_1",
+   "gorran/pissed_2",
+   "gorran/pissed_3",
+   "gorran/pissed_4",
+   "gorran/pissed_5",
+   "gorran/pissed_6",
+   "gorran/pissed_7"
+  ],
+  "respawn": [
+   "gorran/ready_1",
+   "gorran/warcry_1"
+  ],
+  "select": [
+   "gorran/what_1",
+   "gorran/what_2",
+   "gorran/what_3"
+  ],
+  "target": [
+   "gorran/yesattack_1",
+   "gorran/yesattack_2",
+   "gorran/yesattack_3"
+  ],
+  "ult": [
+   "gorran/warcry_1"
+  ]
+ },
+ "kaelis": {
+  "attack": [
+   "kaelis/warcry_1",
+   "kaelis/yesattack_1",
+   "kaelis/yesattack_2",
+   "kaelis/yesattack_3",
+   "kaelis/yesattack_4"
+  ],
+  "cast": [
+   "kaelis/yes_1",
+   "kaelis/yes_2",
+   "kaelis/yes_3",
+   "kaelis/yes_4",
+   "kaelis/yesattack_1",
+   "kaelis/yesattack_2",
+   "kaelis/yesattack_3",
+   "kaelis/yesattack_4"
+  ],
+  "death": [
+   "kaelis/death_1"
+  ],
+  "kill": [
+   "kaelis/warcry_1",
+   "kaelis/yesattack_1",
+   "kaelis/yesattack_2",
+   "kaelis/yesattack_3",
+   "kaelis/yesattack_4"
+  ],
+  "levelup": [
+   "kaelis/warcry_1"
+  ],
+  "move": [
+   "kaelis/yes_1",
+   "kaelis/yes_2",
+   "kaelis/yes_3",
+   "kaelis/yes_4"
+  ],
+  "pissed": [
+   "kaelis/pissed_1",
+   "kaelis/pissed_2",
+   "kaelis/pissed_3",
+   "kaelis/pissed_4",
+   "kaelis/pissed_5",
+   "kaelis/pissed_6",
+   "kaelis/pissed_7",
+   "kaelis/pissed_8"
+  ],
+  "respawn": [
+   "kaelis/ready_1",
+   "kaelis/warcry_1"
+  ],
+  "select": [
+   "kaelis/what_1",
+   "kaelis/what_2",
+   "kaelis/what_3",
+   "kaelis/what_4"
+  ],
+  "target": [
+   "kaelis/yesattack_1",
+   "kaelis/yesattack_2",
+   "kaelis/yesattack_3",
+   "kaelis/yesattack_4"
+  ],
+  "ult": [
+   "kaelis/warcry_1"
+  ]
+ },
+ "kensei": {
+  "attack": [
+   "kensei/warcry_1",
+   "kensei/yesattack_1",
+   "kensei/yesattack_2",
+   "kensei/yesattack_3"
+  ],
+  "cast": [
+   "kensei/yes_1",
+   "kensei/yes_2",
+   "kensei/yes_3",
+   "kensei/yes_4",
+   "kensei/yesattack_1",
+   "kensei/yesattack_2",
+   "kensei/yesattack_3"
+  ],
+  "death": [
+   "kensei/death_1"
+  ],
+  "kill": [
+   "kensei/warcry_1",
+   "kensei/yesattack_1",
+   "kensei/yesattack_2",
+   "kensei/yesattack_3"
+  ],
+  "levelup": [
+   "kensei/warcry_1"
+  ],
+  "move": [
+   "kensei/yes_1",
+   "kensei/yes_2",
+   "kensei/yes_3",
+   "kensei/yes_4"
+  ],
+  "pissed": [
+   "kensei/pissed_1",
+   "kensei/pissed_2",
+   "kensei/pissed_3",
+   "kensei/pissed_4"
+  ],
+  "respawn": [
+   "kensei/ready_1",
+   "kensei/warcry_1"
+  ],
+  "select": [
+   "kensei/what_1",
+   "kensei/what_2",
+   "kensei/what_3",
+   "kensei/what_4"
+  ],
+  "target": [
+   "kensei/yesattack_1",
+   "kensei/yesattack_2",
+   "kensei/yesattack_3"
+  ],
+  "ult": [
+   "kensei/warcry_1"
+  ]
+ },
+ "marksman": {
+  "attack": [
+   "marksman/warcry_1",
+   "marksman/yesattack_1",
+   "marksman/yesattack_2",
+   "marksman/yesattack_3",
+   "marksman/yesattack_4"
+  ],
+  "cast": [
+   "marksman/yes_1",
+   "marksman/yes_2",
+   "marksman/yes_3",
+   "marksman/yes_4",
+   "marksman/yesattack_1",
+   "marksman/yesattack_2",
+   "marksman/yesattack_3",
+   "marksman/yesattack_4"
+  ],
+  "death": [
+   "marksman/death_1"
+  ],
+  "kill": [
+   "marksman/warcry_1",
+   "marksman/yesattack_1",
+   "marksman/yesattack_2",
+   "marksman/yesattack_3",
+   "marksman/yesattack_4"
+  ],
+  "levelup": [
+   "marksman/warcry_1"
+  ],
+  "move": [
+   "marksman/yes_1",
+   "marksman/yes_2",
+   "marksman/yes_3",
+   "marksman/yes_4"
+  ],
+  "pissed": [
+   "marksman/pissed_1",
+   "marksman/pissed_2",
+   "marksman/pissed_3",
+   "marksman/pissed_4",
+   "marksman/pissed_5",
+   "marksman/pissed_6",
+   "marksman/pissed_7",
+   "marksman/pissed_8"
+  ],
+  "respawn": [
+   "marksman/ready_1",
+   "marksman/warcry_1"
+  ],
+  "select": [
+   "marksman/what_1",
+   "marksman/what_2",
+   "marksman/what_3",
+   "marksman/what_4"
+  ],
+  "target": [
+   "marksman/yesattack_1",
+   "marksman/yesattack_2",
+   "marksman/yesattack_3",
+   "marksman/yesattack_4"
+  ],
+  "ult": [
+   "marksman/warcry_1"
+  ]
+ },
+ "mossa": {
+  "attack": [
+   "mossa/warcry_1",
+   "mossa/yesattack_1",
+   "mossa/yesattack_2",
+   "mossa/yesattack_3",
+   "mossa/yesattack_4"
+  ],
+  "cast": [
+   "mossa/yes_1",
+   "mossa/yes_2",
+   "mossa/yes_3",
+   "mossa/yes_4",
+   "mossa/yesattack_1",
+   "mossa/yesattack_2",
+   "mossa/yesattack_3",
+   "mossa/yesattack_4"
+  ],
+  "kill": [
+   "mossa/warcry_1",
+   "mossa/yesattack_1",
+   "mossa/yesattack_2",
+   "mossa/yesattack_3",
+   "mossa/yesattack_4"
+  ],
+  "levelup": [
+   "mossa/warcry_1"
+  ],
+  "move": [
+   "mossa/yes_1",
+   "mossa/yes_2",
+   "mossa/yes_3",
+   "mossa/yes_4"
+  ],
+  "pissed": [
+   "mossa/pissed_1",
+   "mossa/pissed_2",
+   "mossa/pissed_3",
+   "mossa/pissed_4",
+   "mossa/pissed_5"
+  ],
+  "respawn": [
+   "mossa/warcry_1"
+  ],
+  "select": [
+   "mossa/what_1",
+   "mossa/what_2",
+   "mossa/what_3",
+   "mossa/what_4"
+  ],
+  "target": [
+   "mossa/yesattack_1",
+   "mossa/yesattack_2",
+   "mossa/yesattack_3",
+   "mossa/yesattack_4"
+  ],
+  "ult": [
+   "mossa/warcry_1"
+  ]
+ },
+ "rime": {
+  "attack": [
+   "rime/warcry_1",
+   "rime/yesattack_1",
+   "rime/yesattack_2"
+  ],
+  "cast": [
+   "rime/yes_1",
+   "rime/yes_2",
+   "rime/yes_3",
+   "rime/yes_4",
+   "rime/yesattack_1",
+   "rime/yesattack_2"
+  ],
+  "death": [
+   "rime/death_1"
+  ],
+  "kill": [
+   "rime/warcry_1",
+   "rime/yesattack_1",
+   "rime/yesattack_2"
+  ],
+  "levelup": [
+   "rime/warcry_1"
+  ],
+  "move": [
+   "rime/yes_1",
+   "rime/yes_2",
+   "rime/yes_3",
+   "rime/yes_4"
+  ],
+  "pissed": [
+   "rime/pissed_1",
+   "rime/pissed_2",
+   "rime/pissed_3",
+   "rime/pissed_4",
+   "rime/pissed_5"
+  ],
+  "respawn": [
+   "rime/warcry_1"
+  ],
+  "select": [
+   "rime/what_1",
+   "rime/what_2",
+   "rime/what_3",
+   "rime/what_4"
+  ],
+  "target": [
+   "rime/yesattack_1",
+   "rime/yesattack_2"
+  ],
+  "ult": [
+   "rime/warcry_1"
+  ]
+ },
+ "solenne": {
+  "attack": [
+   "solenne/warcry_1",
+   "solenne/yesattack_1",
+   "solenne/yesattack_2",
+   "solenne/yesattack_3"
+  ],
+  "cast": [
+   "solenne/yes_1",
+   "solenne/yes_2",
+   "solenne/yes_3",
+   "solenne/yes_4",
+   "solenne/yesattack_1",
+   "solenne/yesattack_2",
+   "solenne/yesattack_3"
+  ],
+  "death": [
+   "solenne/death_1"
+  ],
+  "kill": [
+   "solenne/warcry_1",
+   "solenne/yesattack_1",
+   "solenne/yesattack_2",
+   "solenne/yesattack_3"
+  ],
+  "levelup": [
+   "solenne/warcry_1"
+  ],
+  "move": [
+   "solenne/yes_1",
+   "solenne/yes_2",
+   "solenne/yes_3",
+   "solenne/yes_4"
+  ],
+  "pissed": [
+   "solenne/pissed_1",
+   "solenne/pissed_2",
+   "solenne/pissed_3",
+   "solenne/pissed_4",
+   "solenne/pissed_5",
+   "solenne/pissed_6"
+  ],
+  "respawn": [
+   "solenne/ready_1",
+   "solenne/warcry_1"
+  ],
+  "select": [
+   "solenne/what_1",
+   "solenne/what_2",
+   "solenne/what_3",
+   "solenne/what_4"
+  ],
+  "target": [
+   "solenne/yesattack_1",
+   "solenne/yesattack_2",
+   "solenne/yesattack_3"
+  ],
+  "ult": [
+   "solenne/warcry_1"
+  ]
+ },
+ "tamsin": {
+  "attack": [
+   "tamsin/warcry_1",
+   "tamsin/yesattack_1",
+   "tamsin/yesattack_2",
+   "tamsin/yesattack_3",
+   "tamsin/yesattack_4"
+  ],
+  "cast": [
+   "tamsin/yes_1",
+   "tamsin/yes_2",
+   "tamsin/yes_3",
+   "tamsin/yes_4",
+   "tamsin/yes_5",
+   "tamsin/yesattack_1",
+   "tamsin/yesattack_2",
+   "tamsin/yesattack_3",
+   "tamsin/yesattack_4"
+  ],
+  "death": [
+   "tamsin/death_1"
+  ],
+  "kill": [
+   "tamsin/warcry_1",
+   "tamsin/yesattack_1",
+   "tamsin/yesattack_2",
+   "tamsin/yesattack_3",
+   "tamsin/yesattack_4"
+  ],
+  "levelup": [
+   "tamsin/warcry_1"
+  ],
+  "move": [
+   "tamsin/yes_1",
+   "tamsin/yes_2",
+   "tamsin/yes_3",
+   "tamsin/yes_4",
+   "tamsin/yes_5"
+  ],
+  "pissed": [
+   "tamsin/pissed_1",
+   "tamsin/pissed_2",
+   "tamsin/pissed_3",
+   "tamsin/pissed_4",
+   "tamsin/pissed_5",
+   "tamsin/pissed_6",
+   "tamsin/pissed_7",
+   "tamsin/pissed_8"
+  ],
+  "respawn": [
+   "tamsin/ready_1",
+   "tamsin/warcry_1"
+  ],
+  "select": [
+   "tamsin/what_1",
+   "tamsin/what_2",
+   "tamsin/what_3",
+   "tamsin/what_4",
+   "tamsin/what_5"
+  ],
+  "target": [
+   "tamsin/yesattack_1",
+   "tamsin/yesattack_2",
+   "tamsin/yesattack_3",
+   "tamsin/yesattack_4"
+  ],
+  "ult": [
+   "tamsin/warcry_1"
+  ]
+ },
+ "vesper": {
+  "attack": [
+   "vesper/warcry_1",
+   "vesper/yesattack_1",
+   "vesper/yesattack_2",
+   "vesper/yesattack_3"
+  ],
+  "cast": [
+   "vesper/yes_1",
+   "vesper/yes_2",
+   "vesper/yes_3",
+   "vesper/yes_4",
+   "vesper/yes_5",
+   "vesper/yesattack_1",
+   "vesper/yesattack_2",
+   "vesper/yesattack_3"
+  ],
+  "death": [
+   "vesper/death_1"
+  ],
+  "kill": [
+   "vesper/warcry_1",
+   "vesper/yesattack_1",
+   "vesper/yesattack_2",
+   "vesper/yesattack_3"
+  ],
+  "levelup": [
+   "vesper/warcry_1"
+  ],
+  "move": [
+   "vesper/yes_1",
+   "vesper/yes_2",
+   "vesper/yes_3",
+   "vesper/yes_4",
+   "vesper/yes_5"
+  ],
+  "pissed": [
+   "vesper/pissed_1",
+   "vesper/pissed_2",
+   "vesper/pissed_3",
+   "vesper/pissed_4",
+   "vesper/pissed_5",
+   "vesper/pissed_6",
+   "vesper/pissed_7",
+   "vesper/pissed_8"
+  ],
+  "respawn": [
+   "vesper/ready_1",
+   "vesper/warcry_1"
+  ],
+  "select": [
+   "vesper/what_1",
+   "vesper/what_2",
+   "vesper/what_3",
+   "vesper/what_4",
+   "vesper/what_5"
+  ],
+  "target": [
+   "vesper/yesattack_1",
+   "vesper/yesattack_2",
+   "vesper/yesattack_3"
+  ],
+  "ult": [
+   "vesper/warcry_1"
+  ]
+ }
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fishing Online</title>
+    <meta name="description" content="Cast a line into the sea on your computer monitor and land rare fish." />
+    <meta name="theme-color" content="#161b26" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Fishing" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <script type="module" crossorigin src="./assets/index-Cy46iP68.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DAKeMySv.css">
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <div id="hud">
+      <div id="stats">
+        <div id="count">0 caught</div>
+        <div id="log"></div>
+      </div>
+      <div id="hint"></div>
+      <button id="mute" type="button" aria-label="Mute sound" title="Sound (M)">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" />
+          <g class="on" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M16 9.5a3.5 3.5 0 0 1 0 5" />
+            <path d="M18.5 7a7 7 0 0 1 0 10" />
+          </g>
+          <g class="off" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M16 9l5 6M21 9l-5 6" />
+          </g>
+        </svg>
+      </button>
+      <div id="meter" class="hidden">
+        <div class="meter-row">
+          <span>Tension</span>
+          <div class="bar"><div id="tension-fill"></div><div class="bar-danger"></div></div>
+        </div>
+        <div class="meter-row">
+          <span>Line out</span>
+          <strong id="meters">0 m</strong>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="fish-name">
+      <div class="card">
+        <div class="card-top">
+          <span id="fish-rarity" class="rarity"></span>
+          <span id="fish-new" class="new-badge">New species!</span>
+        </div>
+        <h2 id="fish-name"></h2>
+        <canvas id="fish-canvas"></canvas>
+        <div class="fish-stats">
+          <div><span>Weight</span><strong id="fish-weight"></strong></div>
+          <div><span>Length</span><strong id="fish-length"></strong></div>
+        </div>
+        <p id="fish-desc"></p>
+        <button id="again" type="button">Cast again</button>
+      </div>
+    </div>
+
+  </body>
+</html>
