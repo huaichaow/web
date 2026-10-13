@@ -1,0 +1,214 @@
+{
+  "v": 1,
+  "source": "DotA Allstars 6.85m + Warcraft III 1.2x MPQs",
+  "maps": {
+    "dota": {
+      "frame": {
+        "minX": -75.52,
+        "maxX": 75.52,
+        "minZ": -75.52,
+        "maxZ": 75.52
+      },
+      "ground": {
+        "tiles": 4,
+        "files": [
+          "dota_ground_0_0.webp",
+          "dota_ground_1_0.webp",
+          "dota_ground_2_0.webp",
+          "dota_ground_3_0.webp",
+          "dota_ground_0_1.webp",
+          "dota_ground_1_1.webp",
+          "dota_ground_2_1.webp",
+          "dota_ground_3_1.webp",
+          "dota_ground_0_2.webp",
+          "dota_ground_1_2.webp",
+          "dota_ground_2_2.webp",
+          "dota_ground_3_2.webp",
+          "dota_ground_0_3.webp",
+          "dota_ground_1_3.webp",
+          "dota_ground_2_3.webp",
+          "dota_ground_3_3.webp"
+        ],
+        "ktx2": [
+          "dota_ground_0_0.ktx2",
+          "dota_ground_1_0.ktx2",
+          "dota_ground_2_0.ktx2",
+          "dota_ground_3_0.ktx2",
+          "dota_ground_0_1.ktx2",
+          "dota_ground_1_1.ktx2",
+          "dota_ground_2_1.ktx2",
+          "dota_ground_3_1.ktx2",
+          "dota_ground_0_2.ktx2",
+          "dota_ground_1_2.ktx2",
+          "dota_ground_2_2.ktx2",
+          "dota_ground_3_2.ktx2",
+          "dota_ground_0_3.ktx2",
+          "dota_ground_1_3.ktx2",
+          "dota_ground_2_3.ktx2",
+          "dota_ground_3_3.ktx2"
+        ]
+      },
+      "groundLow": {
+        "tiles": 2,
+        "files": [
+          "dota_ground_low_0_0.webp",
+          "dota_ground_low_1_0.webp",
+          "dota_ground_low_0_1.webp",
+          "dota_ground_low_1_1.webp"
+        ],
+        "ktx2": [
+          "dota_ground_low_0_0.ktx2",
+          "dota_ground_low_1_0.ktx2",
+          "dota_ground_low_0_1.ktx2",
+          "dota_ground_low_1_1.ktx2"
+        ]
+      },
+      "tall": "dota_trees.glb",
+      "structures": []
+    }
+  },
+  "models": {
+    "champ_pudge": {
+      "file": "champ_pudge.glb"
+    }
+  },
+  "names": {
+    "pudge": {
+      "champion": "Pudge",
+      "passive": "Flesh Heap",
+      "abilities": {
+        "pu_q": {
+          "name": "Meat Hook",
+          "label": "Hook"
+        },
+        "pu_w": {
+          "name": "Rot",
+          "label": "Rot"
+        },
+        "pu_e": {
+          "name": "Flesh Heap",
+          "label": "Heap"
+        },
+        "pu_r": {
+          "name": "Dismember",
+          "label": "Dismember"
+        }
+      }
+    }
+  },
+  "fx": {
+    "pudge": {
+      "chain": "fx_pudge_chain.png",
+      "drain": "fx_pudge_drain.png",
+      "blood": "fx_pudge_blood.png"
+    }
+  },
+  "audio": {
+    "pudge": {
+      "cues": {
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg",
+            "q_launch_1.ogg"
+          ],
+          "gain": 0.8
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "q_retract": {
+          "files": [
+            "q_retract_0.ogg"
+          ],
+          "gain": 0.55
+        },
+        "w_loop": {
+          "files": [
+            "w_loop_0.ogg"
+          ],
+          "gain": 0.4
+        },
+        "r_devour": {
+          "files": [
+            "r_devour_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_channel": {
+          "files": [
+            "r_channel_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg",
+            "vo_move_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg",
+            "vo_attack_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    }
+  }
+}

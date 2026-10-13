@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- LoL Online crest (original art, M8d): shield with two crossed bolts. tools/icons/genIcons.ts draws the PNGs from these coordinates. -->
+  <rect width="512" height="512" rx="96" fill="#10141a"/>
+  <path d="M256 56 L420 104 L420 250 Q420 380 256 460 Q92 380 92 250 L92 104 Z" fill="#ffd76a"/>
+  <path d="M256 84 L394 124 L394 250 Q394 362 256 430 Q118 362 118 250 L118 124 Z" fill="#1d3a6e"/>
+  <g transform="translate(256 262) rotate(45)">
+    <rect x="-9" y="-112" width="18" height="228" fill="#f2f6ff"/>
+    <path d="M0 -168 L-28 -108 L28 -108 Z" fill="#9fe8ff"/>
+    <path d="M-9 72 L-34 112 L-34 146 L-9 108 Z M9 72 L34 112 L34 146 L9 108 Z" fill="#ffd76a"/>
+  </g>
+  <g transform="translate(256 262) rotate(-45)">
+    <rect x="-9" y="-112" width="18" height="228" fill="#f2f6ff"/>
+    <path d="M0 -168 L-28 -108 L28 -108 Z" fill="#9fe8ff"/>
+    <path d="M-9 72 L-34 112 L-34 146 L-9 108 Z M9 72 L34 112 L34 146 L9 108 Z" fill="#ffd76a"/>
+  </g>
+</svg>

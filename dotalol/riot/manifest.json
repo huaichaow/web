@@ -1,0 +1,489 @@
+{
+  "v": 1,
+  "patch": "16.20",
+  "models": {
+    "champ_ezreal": {
+      "file": "champ_ezreal.glb"
+    },
+    "tower": {
+      "file": "tower.glb"
+    },
+    "inhibitor": {
+      "file": "inhibitor.glb"
+    },
+    "nexus": {
+      "file": "nexus.glb"
+    }
+  },
+  "names": {},
+  "maps": {
+    "sr": {
+      "frame": {
+        "minX": -73.598,
+        "maxX": 73.598,
+        "minZ": -73.797,
+        "maxZ": 73.797
+      },
+      "ground": {
+        "tiles": 4,
+        "files": [
+          "sr_ground_0_0.webp",
+          "sr_ground_1_0.webp",
+          "sr_ground_2_0.webp",
+          "sr_ground_3_0.webp",
+          "sr_ground_0_1.webp",
+          "sr_ground_1_1.webp",
+          "sr_ground_2_1.webp",
+          "sr_ground_3_1.webp",
+          "sr_ground_0_2.webp",
+          "sr_ground_1_2.webp",
+          "sr_ground_2_2.webp",
+          "sr_ground_3_2.webp",
+          "sr_ground_0_3.webp",
+          "sr_ground_1_3.webp",
+          "sr_ground_2_3.webp",
+          "sr_ground_3_3.webp"
+        ],
+        "ktx2": [
+          "sr_ground_0_0.ktx2",
+          "sr_ground_1_0.ktx2",
+          "sr_ground_2_0.ktx2",
+          "sr_ground_3_0.ktx2",
+          "sr_ground_0_1.ktx2",
+          "sr_ground_1_1.ktx2",
+          "sr_ground_2_1.ktx2",
+          "sr_ground_3_1.ktx2",
+          "sr_ground_0_2.ktx2",
+          "sr_ground_1_2.ktx2",
+          "sr_ground_2_2.ktx2",
+          "sr_ground_3_2.ktx2",
+          "sr_ground_0_3.ktx2",
+          "sr_ground_1_3.ktx2",
+          "sr_ground_2_3.ktx2",
+          "sr_ground_3_3.ktx2"
+        ]
+      },
+      "groundLow": {
+        "tiles": 2,
+        "files": [
+          "sr_ground_low_0_0.webp",
+          "sr_ground_low_1_0.webp",
+          "sr_ground_low_0_1.webp",
+          "sr_ground_low_1_1.webp"
+        ],
+        "ktx2": [
+          "sr_ground_low_0_0.ktx2",
+          "sr_ground_low_1_0.ktx2",
+          "sr_ground_low_0_1.ktx2",
+          "sr_ground_low_1_1.ktx2"
+        ]
+      },
+      "tall": "sr_tall.glb",
+      "structures": [
+        {
+          "x": 58.844,
+          "z": -58.225,
+          "yaw": 3.142
+        },
+        {
+          "x": -58.08,
+          "z": 57.522,
+          "yaw": 2.356
+        },
+        {
+          "x": -56.106,
+          "z": 51.425,
+          "yaw": 2.618
+        },
+        {
+          "x": -51.816,
+          "z": 56.055,
+          "yaw": 2.094
+        },
+        {
+          "x": 56.934,
+          "z": -51.995,
+          "yaw": -0.541
+        },
+        {
+          "x": 52.524,
+          "z": -56.715,
+          "yaw": -1.065
+        },
+        {
+          "x": -30.776,
+          "z": 61.595,
+          "yaw": 1.484
+        },
+        {
+          "x": -37.076,
+          "z": 37.165,
+          "yaw": 2.356
+        },
+        {
+          "x": -61.896,
+          "z": 31.255,
+          "yaw": -3.089
+        },
+        {
+          "x": -41.48,
+          "z": 41.95,
+          "yaw": -2.361
+        },
+        {
+          "x": -38.906,
+          "z": 61.815,
+          "yaw": 3.142
+        },
+        {
+          "x": -61.859,
+          "z": 38.292,
+          "yaw": -1.552
+        },
+        {
+          "x": 39.166,
+          "z": -62.447,
+          "yaw": 1.571
+        },
+        {
+          "x": -4.396,
+          "z": 59.295,
+          "yaw": 1.553
+        },
+        {
+          "x": 5.844,
+          "z": -59.985,
+          "yaw": -1.482
+        },
+        {
+          "x": 31.454,
+          "z": 63.835,
+          "yaw": 1.567
+        },
+        {
+          "x": -23.106,
+          "z": 26.005,
+          "yaw": 2.426
+        },
+        {
+          "x": 31.224,
+          "z": -62.375,
+          "yaw": -1.516
+        },
+        {
+          "x": -30.406,
+          "z": -64.625,
+          "yaw": -1.134
+        },
+        {
+          "x": -15.126,
+          "z": 10.165,
+          "yaw": 2.321
+        },
+        {
+          "x": -63.776,
+          "z": -30.285,
+          "yaw": 3.054
+        },
+        {
+          "x": -58.466,
+          "z": 7.135,
+          "yaw": 3.124
+        },
+        {
+          "x": 24.084,
+          "z": -27.005,
+          "yaw": -0.785
+        },
+        {
+          "x": 37.754,
+          "z": -37.945,
+          "yaw": -0.785
+        },
+        {
+          "x": 42.349,
+          "z": -42.571,
+          "yaw": 2.341
+        },
+        {
+          "x": 15.964,
+          "z": -10.975,
+          "yaw": -0.845
+        },
+        {
+          "x": 65.074,
+          "z": 29.075,
+          "yaw": -0.024
+        },
+        {
+          "x": 62.405,
+          "z": -39.074,
+          "yaw": 3.142
+        },
+        {
+          "x": 62.654,
+          "z": -31.595,
+          "yaw": 0
+        },
+        {
+          "x": 59.684,
+          "z": -8.135,
+          "yaw": 0
+        }
+      ]
+    }
+  },
+  "vfx": {
+    "ezreal": {
+      "data": "vfx_ezreal.json",
+      "atlases": [
+        {
+          "ktx2": "vfx_ezreal_0.ktx2",
+          "webp": "vfx_ezreal_0.webp"
+        }
+      ]
+    }
+  },
+  "audio": {
+    "ezreal": {
+      "cues": {
+        "ba_cast": {
+          "files": [
+            "ba_cast_0.ogg",
+            "ba_cast_1.ogg",
+            "ba_cast_2.ogg"
+          ],
+          "gain": 0.55
+        },
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg",
+            "ba_launch_1.ogg",
+            "ba_launch_2.ogg"
+          ],
+          "gain": 0.6
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg",
+            "q_cast_1.ogg",
+            "q_cast_2.ogg"
+          ],
+          "gain": 0.75
+        },
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg",
+            "q_launch_1.ogg",
+            "q_launch_2.ogg"
+          ],
+          "gain": 0.8
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg",
+            "q_hit_1.ogg",
+            "q_hit_2.ogg"
+          ],
+          "gain": 0.85
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg",
+            "w_cast_1.ogg"
+          ],
+          "gain": 0.75
+        },
+        "w_launch": {
+          "files": [
+            "w_launch_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "w_mark": {
+          "files": [
+            "w_mark_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "w_detonate": {
+          "files": [
+            "w_detonate_0.ogg",
+            "w_detonate_1.ogg"
+          ],
+          "gain": 0.9
+        },
+        "e_blink": {
+          "files": [
+            "e_blink_0.ogg",
+            "e_blink_1.ogg"
+          ],
+          "gain": 0.85
+        },
+        "e_launch": {
+          "files": [
+            "e_launch_0.ogg",
+            "e_launch_1.ogg"
+          ],
+          "gain": 0.75
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg",
+            "e_hit_1.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_charge": {
+          "files": [
+            "r_charge_0.ogg",
+            "r_charge_1.ogg"
+          ],
+          "gain": 0.9
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg",
+            "r_release_1.ogg"
+          ],
+          "gain": 1
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg",
+            "r_hit_1.ogg"
+          ],
+          "gain": 0.8
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "recall": {
+          "files": [
+            "recall_0.ogg"
+          ],
+          "gain": 0.5
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg",
+            "vo_first_move_1.ogg",
+            "vo_first_move_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg",
+            "vo_attack_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_q": {
+          "files": [
+            "vo_q_0.ogg",
+            "vo_q_1.ogg",
+            "vo_q_2.ogg",
+            "vo_q_3.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_w": {
+          "files": [
+            "vo_w_0.ogg",
+            "vo_w_1.ogg",
+            "vo_w_2.ogg",
+            "vo_w_3.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_e": {
+          "files": [
+            "vo_e_0.ogg",
+            "vo_e_1.ogg",
+            "vo_e_2.ogg",
+            "vo_e_3.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_r": {
+          "files": [
+            "vo_r_0.ogg",
+            "vo_r_1.ogg",
+            "vo_r_2.ogg",
+            "vo_r_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_death": {
+          "files": [
+            "vo_death_0.ogg",
+            "vo_death_1.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg",
+            "vo_kill_1.ogg",
+            "vo_kill_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_tower": {
+          "files": [
+            "vo_tower_0.ogg",
+            "vo_tower_1.ogg",
+            "vo_tower_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_buy": {
+          "files": [
+            "vo_buy_0.ogg",
+            "vo_buy_1.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    }
+  }
+}
