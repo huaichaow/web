@@ -64,12 +64,16 @@
         ]
       },
       "tall": "dota_trees.glb",
-      "structures": []
-    }
-  },
-  "models": {
-    "champ_pudge": {
-      "file": "champ_pudge.glb"
+      "cliffs": "dota_cliffs.glb",
+      "structures": [],
+      "height": {
+        "file": "dota_height.bin",
+        "cols": 257,
+        "rows": 257,
+        "minX": -81.92,
+        "minZ": -84.48,
+        "step": 0.64
+      }
     }
   },
   "names": {
@@ -94,13 +98,700 @@
           "label": "Dismember"
         }
       }
+    },
+    "juggernaut": {
+      "champion": "Juggernaut",
+      "passive": "Blade Dance",
+      "abilities": {
+        "ju_q": {
+          "name": "Blade Fury",
+          "label": "Fury"
+        },
+        "ju_w": {
+          "name": "Healing Ward",
+          "label": "Ward"
+        },
+        "ju_e": {
+          "name": "Blade Dance",
+          "label": "Dance"
+        },
+        "ju_r": {
+          "name": "Omnislash",
+          "label": "Omnislash"
+        }
+      }
+    },
+    "sven": {
+      "champion": "Sven",
+      "passive": "Great Cleave",
+      "abilities": {
+        "sv_q": {
+          "name": "Storm Hammer",
+          "label": "Hammer"
+        },
+        "sv_w": {
+          "name": "Great Cleave",
+          "label": "Cleave"
+        },
+        "sv_e": {
+          "name": "Warcry",
+          "label": "Warcry"
+        },
+        "sv_r": {
+          "name": "God's Strength",
+          "label": "Strength"
+        }
+      }
+    },
+    "ursa": {
+      "champion": "Ursa",
+      "passive": "Fury Swipes",
+      "abilities": {
+        "ur_q": {
+          "name": "Earthshock",
+          "label": "Shock"
+        },
+        "ur_w": {
+          "name": "Overpower",
+          "label": "Overpower"
+        },
+        "ur_e": {
+          "name": "Fury Swipes",
+          "label": "Swipes"
+        },
+        "ur_r": {
+          "name": "Enrage",
+          "label": "Enrage"
+        }
+      }
+    },
+    "lina": {
+      "champion": "Lina",
+      "passive": "Fiery Soul",
+      "abilities": {
+        "li_q": {
+          "name": "Dragon Slave",
+          "label": "Slave"
+        },
+        "li_w": {
+          "name": "Light Strike Array",
+          "label": "Array"
+        },
+        "li_e": {
+          "name": "Fiery Soul",
+          "label": "Soul"
+        },
+        "li_r": {
+          "name": "Laguna Blade",
+          "label": "Laguna"
+        }
+      }
+    },
+    "earthshaker": {
+      "champion": "Earthshaker",
+      "passive": "Totem",
+      "abilities": {
+        "es_q": {
+          "name": "Fissure",
+          "label": "Fissure"
+        },
+        "es_w": {
+          "name": "Enchant Totem",
+          "label": "Totem"
+        },
+        "es_e": {
+          "name": "Aftershock",
+          "label": "Aftershock"
+        },
+        "es_r": {
+          "name": "Echo Slam",
+          "label": "Echo"
+        }
+      }
+    },
+    "drow": {
+      "champion": "Drow Ranger",
+      "passive": "Marksmanship",
+      "abilities": {
+        "dr_q": {
+          "name": "Frost Arrows",
+          "label": "Frost"
+        },
+        "dr_w": {
+          "name": "Gust",
+          "label": "Gust"
+        },
+        "dr_e": {
+          "name": "Precision Aura",
+          "label": "Aura"
+        },
+        "dr_r": {
+          "name": "Marksmanship",
+          "label": "Marks"
+        }
+      }
+    },
+    "mirana": {
+      "champion": "Mirana",
+      "passive": "Moon Priestess",
+      "abilities": {
+        "mi_q": {
+          "name": "Starstorm",
+          "label": "Stars"
+        },
+        "mi_w": {
+          "name": "Sacred Arrow",
+          "label": "Arrow"
+        },
+        "mi_e": {
+          "name": "Leap",
+          "label": "Leap"
+        },
+        "mi_r": {
+          "name": "Moonlight Shadow",
+          "label": "Moon"
+        }
+      }
+    },
+    "crystalmaiden": {
+      "champion": "Crystal Maiden",
+      "passive": "Brilliance Aura",
+      "abilities": {
+        "cm_q": {
+          "name": "Crystal Nova",
+          "label": "Nova"
+        },
+        "cm_w": {
+          "name": "Frostbite",
+          "label": "Frost"
+        },
+        "cm_e": {
+          "name": "Brilliance Aura",
+          "label": "Aura"
+        },
+        "cm_r": {
+          "name": "Freezing Field",
+          "label": "Field"
+        }
+      }
+    },
+    "shadowshaman": {
+      "champion": "Shadow Shaman",
+      "passive": "Voodoo",
+      "abilities": {
+        "ss_q": {
+          "name": "Ether Shock",
+          "label": "Shock"
+        },
+        "ss_w": {
+          "name": "Hex",
+          "label": "Hex"
+        },
+        "ss_e": {
+          "name": "Shackles",
+          "label": "Shackles"
+        },
+        "ss_r": {
+          "name": "Mass Serpent Ward",
+          "label": "Wards"
+        }
+      }
     }
+  },
+  "models": {
+    "champ_pudge": {
+      "file": "heroes/pudge/champ_pudge.glb",
+      "low": "heroes/pudge/low/champ_pudge.glb"
+    },
+    "champ_juggernaut": {
+      "file": "heroes/juggernaut/champ_juggernaut.glb",
+      "low": "heroes/juggernaut/low/champ_juggernaut.glb"
+    },
+    "champ_sven": {
+      "file": "heroes/sven/champ_sven.glb",
+      "low": "heroes/sven/low/champ_sven.glb"
+    },
+    "champ_ursa": {
+      "file": "heroes/ursa/champ_ursa.glb",
+      "low": "heroes/ursa/low/champ_ursa.glb"
+    },
+    "champ_lina": {
+      "file": "heroes/lina/champ_lina.glb",
+      "low": "heroes/lina/low/champ_lina.glb"
+    },
+    "champ_earthshaker": {
+      "file": "heroes/earthshaker/champ_earthshaker.glb",
+      "low": "heroes/earthshaker/low/champ_earthshaker.glb"
+    },
+    "champ_drow": {
+      "file": "heroes/drow/champ_drow.glb",
+      "low": "heroes/drow/low/champ_drow.glb"
+    },
+    "champ_mirana": {
+      "file": "heroes/mirana/champ_mirana.glb",
+      "low": "heroes/mirana/low/champ_mirana.glb"
+    },
+    "champ_crystalmaiden": {
+      "file": "heroes/crystalmaiden/champ_crystalmaiden.glb",
+      "low": "heroes/crystalmaiden/low/champ_crystalmaiden.glb"
+    },
+    "champ_shadowshaman": {
+      "file": "heroes/shadowshaman/champ_shadowshaman.glb",
+      "low": "heroes/shadowshaman/low/champ_shadowshaman.glb"
+    },
+    "w3_healing_ward": {
+      "file": "heroes/juggernaut/w3_healing_ward.glb",
+      "low": "heroes/juggernaut/low/w3_healing_ward.glb"
+    },
+    "w3_fissure_rock": {
+      "file": "heroes/earthshaker/w3_fissure_rock.glb",
+      "low": "heroes/earthshaker/low/w3_fissure_rock.glb"
+    },
+    "w3_serpent_ward": {
+      "file": "heroes/shadowshaman/w3_serpent_ward.glb",
+      "low": "heroes/shadowshaman/low/w3_serpent_ward.glb"
+    },
+    "w3_hex_frog": {
+      "file": "heroes/shadowshaman/w3_hex_frog.glb",
+      "low": "heroes/shadowshaman/low/w3_hex_frog.glb"
+    },
+    "w3_creep_sentinel_melee": {
+      "file": "w3_creep_sentinel_melee.glb"
+    },
+    "w3_creep_sentinel_caster": {
+      "file": "w3_creep_sentinel_caster.glb"
+    },
+    "w3_creep_sentinel_siege": {
+      "file": "w3_creep_sentinel_siege.glb"
+    },
+    "w3_creep_scourge_melee": {
+      "file": "w3_creep_scourge_melee.glb"
+    },
+    "w3_creep_scourge_caster": {
+      "file": "w3_creep_scourge_caster.glb"
+    },
+    "w3_creep_scourge_siege": {
+      "file": "w3_creep_scourge_siege.glb"
+    },
+    "w3_tower_sentinel": {
+      "file": "w3_tower_sentinel.glb"
+    },
+    "w3_tower_scourge": {
+      "file": "w3_tower_scourge.glb"
+    },
+    "w3_inhibitor_sentinel": {
+      "file": "w3_inhibitor_sentinel.glb"
+    },
+    "w3_inhibitor_scourge": {
+      "file": "w3_inhibitor_scourge.glb"
+    },
+    "w3_nexus_sentinel": {
+      "file": "w3_nexus_sentinel.glb"
+    },
+    "w3_nexus_scourge": {
+      "file": "w3_nexus_scourge.glb"
+    },
+    "w3_barracks_sentinel": {
+      "file": "w3_barracks_sentinel.glb"
+    },
+    "w3_barracks_scourge": {
+      "file": "w3_barracks_scourge.glb"
+    },
+    "w3_fountain_sentinel": {
+      "file": "w3_fountain_sentinel.glb"
+    },
+    "w3_fountain_scourge": {
+      "file": "w3_fountain_scourge.glb"
+    },
+    "w3_moonwell": {
+      "file": "w3_moonwell.glb"
+    },
+    "w3_ancientofwind": {
+      "file": "w3_ancientofwind.glb"
+    },
+    "w3_huntershall": {
+      "file": "w3_huntershall.glb"
+    },
+    "w3_ziggurat": {
+      "file": "w3_ziggurat.glb"
+    },
+    "w3_sacrificialpit": {
+      "file": "w3_sacrificialpit.glb"
+    },
+    "w3_boneyard": {
+      "file": "w3_boneyard.glb"
+    },
+    "w3_jungle_beast": {
+      "file": "w3_jungle_beast.glb"
+    },
+    "w3_black_dragon": {
+      "file": "w3_black_dragon.glb"
+    },
+    "w3_dark_troll_trapper": {
+      "file": "w3_dark_troll_trapper.glb"
+    },
+    "w3_dark_troll": {
+      "file": "w3_dark_troll.glb"
+    },
+    "w3_polar_furbolg": {
+      "file": "w3_polar_furbolg.glb"
+    },
+    "w3_ogre_magi": {
+      "file": "w3_ogre_magi.glb"
+    },
+    "w3_ogre": {
+      "file": "w3_ogre.glb"
+    },
+    "w3_satyr_hellcaller": {
+      "file": "w3_satyr_hellcaller.glb"
+    },
+    "w3_satyr": {
+      "file": "w3_satyr.glb"
+    },
+    "w3_satyr_trickster": {
+      "file": "w3_satyr_trickster.glb"
+    },
+    "w3_timber_wolf": {
+      "file": "w3_timber_wolf.glb"
+    },
+    "w3_centaur_khan": {
+      "file": "w3_centaur_khan.glb"
+    },
+    "w3_centaur": {
+      "file": "w3_centaur.glb"
+    }
+  },
+  "scenery": {
+    "dota": [
+      {
+        "model": "w3_fountain_sentinel",
+        "x": -71.68,
+        "z": 69.12,
+        "yaw": 0
+      },
+      {
+        "model": "w3_barracks_sentinel",
+        "x": -66.56,
+        "z": 42.24,
+        "yaw": 0
+      },
+      {
+        "model": "w3_barracks_sentinel",
+        "x": -48.64,
+        "z": 47.36,
+        "yaw": 0
+      },
+      {
+        "model": "w3_barracks_sentinel",
+        "x": -40.32,
+        "z": 62.72,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -58.56,
+        "z": 52.16,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -66.24,
+        "z": 48.32,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -53.44,
+        "z": 36.8,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -50.88,
+        "z": 43.2,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -39.36,
+        "z": 50.88,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -50.88,
+        "z": 52.8,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -48.96,
+        "z": 59.84,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -38.08,
+        "z": 56,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -45.12,
+        "z": 68.16,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -54.72,
+        "z": 44.48,
+        "yaw": 0
+      },
+      {
+        "model": "w3_moonwell",
+        "x": -45.12,
+        "z": 56,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ancientofwind",
+        "x": -60.8,
+        "z": 48.64,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ancientofwind",
+        "x": -45.44,
+        "z": 62.72,
+        "yaw": 0
+      },
+      {
+        "model": "w3_huntershall",
+        "x": -64,
+        "z": 54.4,
+        "yaw": 0
+      },
+      {
+        "model": "w3_huntershall",
+        "x": -52.48,
+        "z": 65.92,
+        "yaw": 0
+      },
+      {
+        "model": "w3_fountain_scourge",
+        "x": 67.84,
+        "z": -66.24,
+        "yaw": 0
+      },
+      {
+        "model": "w3_barracks_scourge",
+        "x": 33.92,
+        "z": -63.36,
+        "yaw": 0
+      },
+      {
+        "model": "w3_barracks_scourge",
+        "x": 39.04,
+        "z": -41.6,
+        "yaw": 0
+      },
+      {
+        "model": "w3_barracks_scourge",
+        "x": 60.8,
+        "z": -32,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 26.56,
+        "z": -49.6,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 31.68,
+        "z": -43.2,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 34.88,
+        "z": -50.88,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 41.28,
+        "z": -64.96,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 40.64,
+        "z": -55.36,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 43.84,
+        "z": -45.12,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 57.28,
+        "z": -42.56,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 55.36,
+        "z": -27.2,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 50.24,
+        "z": -40,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 68.8,
+        "z": -41.92,
+        "yaw": 0
+      },
+      {
+        "model": "w3_ziggurat",
+        "x": 46.4,
+        "z": -31.04,
+        "yaw": 0
+      },
+      {
+        "model": "w3_sacrificialpit",
+        "x": 39.68,
+        "z": -61.44,
+        "yaw": 0
+      },
+      {
+        "model": "w3_sacrificialpit",
+        "x": 64,
+        "z": -38.4,
+        "yaw": 0
+      },
+      {
+        "model": "w3_boneyard",
+        "x": 49.92,
+        "z": -62.08,
+        "yaw": 0
+      },
+      {
+        "model": "w3_boneyard",
+        "x": 64.64,
+        "z": -48.64,
+        "yaw": 0
+      }
+    ]
   },
   "fx": {
     "pudge": {
-      "chain": "fx_pudge_chain.png",
-      "drain": "fx_pudge_drain.png",
-      "blood": "fx_pudge_blood.png"
+      "chain": "heroes/pudge/fx_pudge_chain.png",
+      "drain": "heroes/pudge/fx_pudge_drain.png",
+      "blood": "heroes/pudge/fx_pudge_blood.png"
+    },
+    "juggernaut": {
+      "spin": "heroes/juggernaut/fx_juggernaut_spin.png",
+      "streak": "heroes/juggernaut/fx_juggernaut_streak.png",
+      "rune": "heroes/juggernaut/fx_juggernaut_rune.png",
+      "glow": "heroes/juggernaut/fx_juggernaut_glow.png",
+      "trail": "heroes/juggernaut/fx_juggernaut_trail.png",
+      "star": "heroes/juggernaut/fx_juggernaut_star.png"
+    },
+    "sven": {
+      "skin": "heroes/sven/fx_sven_skin.webp",
+      "zap": "heroes/sven/fx_sven_zap.png",
+      "glow": "heroes/sven/fx_sven_glow.png",
+      "ball": "heroes/sven/fx_sven_ball.png",
+      "stun": "heroes/sven/fx_sven_stun.png",
+      "cleave": "heroes/sven/fx_sven_cleave.png",
+      "ring": "heroes/sven/fx_sven_ring.png",
+      "scream": "heroes/sven/fx_sven_scream.png",
+      "roar": "heroes/sven/fx_sven_roar.png",
+      "swords": "heroes/sven/fx_sven_swords.png",
+      "redglow": "heroes/sven/fx_sven_redglow.png"
+    },
+    "ursa": {
+      "ring": "heroes/ursa/fx_ursa_ring.png",
+      "dust": "heroes/ursa/fx_ursa_dust.png",
+      "claw": "heroes/ursa/fx_ursa_claw.png",
+      "slash": "heroes/ursa/fx_ursa_slash.png",
+      "glow": "heroes/ursa/fx_ursa_glow.png",
+      "star": "heroes/ursa/fx_ursa_star.png"
+    },
+    "lina": {
+      "flame": "heroes/lina/fx_lina_flame.png",
+      "flare": "heroes/lina/fx_lina_flare.png",
+      "ring": "heroes/lina/fx_lina_ring.png",
+      "star": "heroes/lina/fx_lina_star.png",
+      "ember": "heroes/lina/fx_lina_ember.png",
+      "bolt": "heroes/lina/fx_lina_bolt.png"
+    },
+    "earthshaker": {
+      "dust": "heroes/earthshaker/fx_earthshaker_dust.png",
+      "lava": "heroes/earthshaker/fx_earthshaker_lava.png",
+      "stomp": "heroes/earthshaker/fx_earthshaker_stomp.png",
+      "zap": "heroes/earthshaker/fx_earthshaker_zap.png",
+      "cloud": "heroes/earthshaker/fx_earthshaker_cloud.png",
+      "glow": "heroes/earthshaker/fx_earthshaker_glow.png",
+      "wave": "heroes/earthshaker/fx_earthshaker_wave.png",
+      "totem": "heroes/earthshaker/fx_earthshaker_totem.png",
+      "star": "heroes/earthshaker/fx_earthshaker_star.png"
+    },
+    "drow": {
+      "arrow": "heroes/drow/fx_drow_arrow.png",
+      "frost": "heroes/drow/fx_drow_frost.png",
+      "spark": "heroes/drow/fx_drow_spark.png",
+      "snow": "heroes/drow/fx_drow_snow.png",
+      "wind": "heroes/drow/fx_drow_wind.png",
+      "silence": "heroes/drow/fx_drow_silence.png",
+      "aura": "heroes/drow/fx_drow_aura.png",
+      "cross": "heroes/drow/fx_drow_cross.png",
+      "glow": "heroes/drow/fx_drow_glow.png"
+    },
+    "mirana": {
+      "arrow": "heroes/mirana/fx_mirana_arrow.png",
+      "ribbon": "heroes/mirana/fx_mirana_ribbon.png",
+      "star": "heroes/mirana/fx_mirana_star.png",
+      "glow": "heroes/mirana/fx_mirana_glow.png",
+      "flare": "heroes/mirana/fx_mirana_flare.png",
+      "shock": "heroes/mirana/fx_mirana_shock.png",
+      "moon": "heroes/mirana/fx_mirana_moon.png",
+      "sparkle": "heroes/mirana/fx_mirana_sparkle.png",
+      "pixie": "heroes/mirana/fx_mirana_pixie.png"
+    },
+    "crystalmaiden": {
+      "orb": "heroes/crystalmaiden/fx_cm_orb.png",
+      "ring": "heroes/crystalmaiden/fx_cm_ring.png",
+      "splat": "heroes/crystalmaiden/fx_cm_splat.png",
+      "star": "heroes/crystalmaiden/fx_cm_star.png",
+      "ice": "heroes/crystalmaiden/fx_cm_ice.png",
+      "frost": "heroes/crystalmaiden/fx_cm_frost.png",
+      "field": "heroes/crystalmaiden/fx_cm_field.png",
+      "snow": "heroes/crystalmaiden/fx_cm_snow.png",
+      "shard": "heroes/crystalmaiden/fx_cm_shard.png",
+      "blast": "heroes/crystalmaiden/fx_cm_blast.png",
+      "aura": "heroes/crystalmaiden/fx_cm_aura.png"
+    },
+    "shadowshaman": {
+      "forked": "heroes/shadowshaman/fx_shadowshaman_forked.png",
+      "leash": "heroes/shadowshaman/fx_shadowshaman_leash.png",
+      "shackle": "heroes/shadowshaman/fx_shadowshaman_shackle.png",
+      "cloud": "heroes/shadowshaman/fx_shadowshaman_cloud.png",
+      "star": "heroes/shadowshaman/fx_shadowshaman_star.png",
+      "blade": "heroes/shadowshaman/fx_shadowshaman_blade.png",
+      "ribbon": "heroes/shadowshaman/fx_shadowshaman_ribbon.png",
+      "spit": "heroes/shadowshaman/fx_shadowshaman_spit.png",
+      "spitstar": "heroes/shadowshaman/fx_shadowshaman_spitstar.png"
     }
   },
   "audio": {
@@ -207,6 +898,2529 @@
             "vo_recall_5.ogg"
           ],
           "gain": 1
+        }
+      }
+    },
+    "juggernaut": {
+      "cues": {
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "q_loop": {
+          "files": [
+            "q_loop_0.ogg"
+          ],
+          "gain": 0.5
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg",
+            "r_hit_1.ogg"
+          ],
+          "gain": 0.8
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    },
+    "sven": {
+      "cues": {
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "e_launch": {
+          "files": [
+            "e_launch_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    },
+    "ursa": {
+      "cues": {
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    },
+    "lina": {
+      "cues": {
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg",
+            "ba_launch_1.ogg",
+            "ba_launch_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "w_detonate": {
+          "files": [
+            "w_detonate_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_charge": {
+          "files": [
+            "r_charge_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg",
+            "vo_respawn_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    },
+    "earthshaker": {
+      "cues": {
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 1
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    },
+    "drow": {
+      "cues": {
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "w_launch": {
+          "files": [
+            "w_launch_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "w_mark": {
+          "files": [
+            "w_mark_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg",
+            "vo_respawn_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    },
+    "mirana": {
+      "cues": {
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg",
+            "q_hit_1.ogg",
+            "q_hit_2.ogg"
+          ],
+          "gain": 0.55
+        },
+        "w_launch": {
+          "files": [
+            "w_launch_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "w_hit": {
+          "files": [
+            "w_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "e_blink": {
+          "files": [
+            "e_blink_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    },
+    "crystalmaiden": {
+      "cues": {
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "r_charge": {
+          "files": [
+            "r_charge_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "r_channel": {
+          "files": [
+            "r_channel_0.ogg"
+          ],
+          "gain": 0.5
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg",
+            "r_hit_1.ogg",
+            "r_hit_2.ogg"
+          ],
+          "gain": 0.5
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    },
+    "shadowshaman": {
+      "cues": {
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "w_hit": {
+          "files": [
+            "w_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "e_cast": {
+          "files": [
+            "e_cast_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "e_loop": {
+          "files": [
+            "e_loop_0.ogg"
+          ],
+          "gain": 0.5
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "pet_attack": {
+          "files": [
+            "pet_attack_0.ogg"
+          ],
+          "gain": 0.3
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg",
+            "vo_attack_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg"
+          ],
+          "gain": 1
+        }
+      }
+    }
+  },
+  "heroes": {
+    "pudge": {
+      "dir": "heroes/pudge/",
+      "audioDir": "audio/pudge/",
+      "model": "heroes/pudge/champ_pudge.glb",
+      "fx": {
+        "chain": "heroes/pudge/fx_pudge_chain.png",
+        "drain": "heroes/pudge/fx_pudge_drain.png",
+        "blood": "heroes/pudge/fx_pudge_blood.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "q_retract": {
+            "files": [
+              "q_retract_0.ogg"
+            ],
+            "gain": 0.55
+          },
+          "w_loop": {
+            "files": [
+              "w_loop_0.ogg"
+            ],
+            "gain": 0.4
+          },
+          "r_devour": {
+            "files": [
+              "r_devour_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_channel": {
+            "files": [
+              "r_channel_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg",
+              "vo_move_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Pudge",
+        "passive": "Flesh Heap",
+        "abilities": {
+          "pu_q": {
+            "name": "Meat Hook",
+            "label": "Hook"
+          },
+          "pu_w": {
+            "name": "Rot",
+            "label": "Rot"
+          },
+          "pu_e": {
+            "name": "Flesh Heap",
+            "label": "Heap"
+          },
+          "pu_r": {
+            "name": "Dismember",
+            "label": "Dismember"
+          }
+        }
+      },
+      "bytes": 618736,
+      "game": true,
+      "low": {
+        "model": "heroes/pudge/low/champ_pudge.glb"
+      }
+    },
+    "juggernaut": {
+      "dir": "heroes/juggernaut/",
+      "audioDir": "audio/juggernaut/",
+      "model": "heroes/juggernaut/champ_juggernaut.glb",
+      "fx": {
+        "spin": "heroes/juggernaut/fx_juggernaut_spin.png",
+        "streak": "heroes/juggernaut/fx_juggernaut_streak.png",
+        "rune": "heroes/juggernaut/fx_juggernaut_rune.png",
+        "glow": "heroes/juggernaut/fx_juggernaut_glow.png",
+        "trail": "heroes/juggernaut/fx_juggernaut_trail.png",
+        "star": "heroes/juggernaut/fx_juggernaut_star.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_loop": {
+            "files": [
+              "q_loop_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Juggernaut",
+        "passive": "Blade Dance",
+        "abilities": {
+          "ju_q": {
+            "name": "Blade Fury",
+            "label": "Fury"
+          },
+          "ju_w": {
+            "name": "Healing Ward",
+            "label": "Ward"
+          },
+          "ju_e": {
+            "name": "Blade Dance",
+            "label": "Dance"
+          },
+          "ju_r": {
+            "name": "Omnislash",
+            "label": "Omnislash"
+          }
+        }
+      },
+      "bytes": 488954,
+      "game": true,
+      "extras": {
+        "w3_healing_ward": "heroes/juggernaut/w3_healing_ward.glb"
+      },
+      "low": {
+        "model": "heroes/juggernaut/low/champ_juggernaut.glb",
+        "extras": {
+          "w3_healing_ward": "heroes/juggernaut/low/w3_healing_ward.glb"
+        }
+      }
+    },
+    "sven": {
+      "dir": "heroes/sven/",
+      "audioDir": "audio/sven/",
+      "model": "heroes/sven/champ_sven.glb",
+      "fx": {
+        "skin": "heroes/sven/fx_sven_skin.webp",
+        "zap": "heroes/sven/fx_sven_zap.png",
+        "glow": "heroes/sven/fx_sven_glow.png",
+        "ball": "heroes/sven/fx_sven_ball.png",
+        "stun": "heroes/sven/fx_sven_stun.png",
+        "cleave": "heroes/sven/fx_sven_cleave.png",
+        "ring": "heroes/sven/fx_sven_ring.png",
+        "scream": "heroes/sven/fx_sven_scream.png",
+        "roar": "heroes/sven/fx_sven_roar.png",
+        "swords": "heroes/sven/fx_sven_swords.png",
+        "redglow": "heroes/sven/fx_sven_redglow.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_launch": {
+            "files": [
+              "e_launch_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Sven",
+        "passive": "Great Cleave",
+        "abilities": {
+          "sv_q": {
+            "name": "Storm Hammer",
+            "label": "Hammer"
+          },
+          "sv_w": {
+            "name": "Great Cleave",
+            "label": "Cleave"
+          },
+          "sv_e": {
+            "name": "Warcry",
+            "label": "Warcry"
+          },
+          "sv_r": {
+            "name": "God's Strength",
+            "label": "Strength"
+          }
+        }
+      },
+      "bytes": 558505,
+      "game": true,
+      "low": {
+        "model": "heroes/sven/low/champ_sven.glb"
+      }
+    },
+    "ursa": {
+      "dir": "heroes/ursa/",
+      "audioDir": "audio/ursa/",
+      "model": "heroes/ursa/champ_ursa.glb",
+      "fx": {
+        "ring": "heroes/ursa/fx_ursa_ring.png",
+        "dust": "heroes/ursa/fx_ursa_dust.png",
+        "claw": "heroes/ursa/fx_ursa_claw.png",
+        "slash": "heroes/ursa/fx_ursa_slash.png",
+        "glow": "heroes/ursa/fx_ursa_glow.png",
+        "star": "heroes/ursa/fx_ursa_star.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Ursa",
+        "passive": "Fury Swipes",
+        "abilities": {
+          "ur_q": {
+            "name": "Earthshock",
+            "label": "Shock"
+          },
+          "ur_w": {
+            "name": "Overpower",
+            "label": "Overpower"
+          },
+          "ur_e": {
+            "name": "Fury Swipes",
+            "label": "Swipes"
+          },
+          "ur_r": {
+            "name": "Enrage",
+            "label": "Enrage"
+          }
+        }
+      },
+      "bytes": 360606,
+      "game": true,
+      "low": {
+        "model": "heroes/ursa/low/champ_ursa.glb"
+      }
+    },
+    "lina": {
+      "dir": "heroes/lina/",
+      "audioDir": "audio/lina/",
+      "model": "heroes/lina/champ_lina.glb",
+      "fx": {
+        "flame": "heroes/lina/fx_lina_flame.png",
+        "flare": "heroes/lina/fx_lina_flare.png",
+        "ring": "heroes/lina/fx_lina_ring.png",
+        "star": "heroes/lina/fx_lina_star.png",
+        "ember": "heroes/lina/fx_lina_ember.png",
+        "bolt": "heroes/lina/fx_lina_bolt.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg",
+              "ba_launch_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_detonate": {
+            "files": [
+              "w_detonate_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg",
+              "vo_respawn_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Lina",
+        "passive": "Fiery Soul",
+        "abilities": {
+          "li_q": {
+            "name": "Dragon Slave",
+            "label": "Slave"
+          },
+          "li_w": {
+            "name": "Light Strike Array",
+            "label": "Array"
+          },
+          "li_e": {
+            "name": "Fiery Soul",
+            "label": "Soul"
+          },
+          "li_r": {
+            "name": "Laguna Blade",
+            "label": "Laguna"
+          }
+        }
+      },
+      "bytes": 618466,
+      "game": true,
+      "low": {
+        "model": "heroes/lina/low/champ_lina.glb"
+      }
+    },
+    "earthshaker": {
+      "dir": "heroes/earthshaker/",
+      "audioDir": "audio/earthshaker/",
+      "model": "heroes/earthshaker/champ_earthshaker.glb",
+      "fx": {
+        "dust": "heroes/earthshaker/fx_earthshaker_dust.png",
+        "lava": "heroes/earthshaker/fx_earthshaker_lava.png",
+        "stomp": "heroes/earthshaker/fx_earthshaker_stomp.png",
+        "zap": "heroes/earthshaker/fx_earthshaker_zap.png",
+        "cloud": "heroes/earthshaker/fx_earthshaker_cloud.png",
+        "glow": "heroes/earthshaker/fx_earthshaker_glow.png",
+        "wave": "heroes/earthshaker/fx_earthshaker_wave.png",
+        "totem": "heroes/earthshaker/fx_earthshaker_totem.png",
+        "star": "heroes/earthshaker/fx_earthshaker_star.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 1
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Earthshaker",
+        "passive": "Totem",
+        "abilities": {
+          "es_q": {
+            "name": "Fissure",
+            "label": "Fissure"
+          },
+          "es_w": {
+            "name": "Enchant Totem",
+            "label": "Totem"
+          },
+          "es_e": {
+            "name": "Aftershock",
+            "label": "Aftershock"
+          },
+          "es_r": {
+            "name": "Echo Slam",
+            "label": "Echo"
+          }
+        }
+      },
+      "bytes": 520587,
+      "game": true,
+      "extras": {
+        "w3_fissure_rock": "heroes/earthshaker/w3_fissure_rock.glb"
+      },
+      "low": {
+        "model": "heroes/earthshaker/low/champ_earthshaker.glb",
+        "extras": {
+          "w3_fissure_rock": "heroes/earthshaker/low/w3_fissure_rock.glb"
+        }
+      }
+    },
+    "drow": {
+      "dir": "heroes/drow/",
+      "audioDir": "audio/drow/",
+      "model": "heroes/drow/champ_drow.glb",
+      "fx": {
+        "arrow": "heroes/drow/fx_drow_arrow.png",
+        "frost": "heroes/drow/fx_drow_frost.png",
+        "spark": "heroes/drow/fx_drow_spark.png",
+        "snow": "heroes/drow/fx_drow_snow.png",
+        "wind": "heroes/drow/fx_drow_wind.png",
+        "silence": "heroes/drow/fx_drow_silence.png",
+        "aura": "heroes/drow/fx_drow_aura.png",
+        "cross": "heroes/drow/fx_drow_cross.png",
+        "glow": "heroes/drow/fx_drow_glow.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "w_mark": {
+            "files": [
+              "w_mark_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg",
+              "vo_respawn_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Drow Ranger",
+        "passive": "Marksmanship",
+        "abilities": {
+          "dr_q": {
+            "name": "Frost Arrows",
+            "label": "Frost"
+          },
+          "dr_w": {
+            "name": "Gust",
+            "label": "Gust"
+          },
+          "dr_e": {
+            "name": "Precision Aura",
+            "label": "Aura"
+          },
+          "dr_r": {
+            "name": "Marksmanship",
+            "label": "Marks"
+          }
+        }
+      },
+      "bytes": 572241,
+      "game": true,
+      "low": {
+        "model": "heroes/drow/low/champ_drow.glb"
+      }
+    },
+    "mirana": {
+      "dir": "heroes/mirana/",
+      "audioDir": "audio/mirana/",
+      "model": "heroes/mirana/champ_mirana.glb",
+      "fx": {
+        "arrow": "heroes/mirana/fx_mirana_arrow.png",
+        "ribbon": "heroes/mirana/fx_mirana_ribbon.png",
+        "star": "heroes/mirana/fx_mirana_star.png",
+        "glow": "heroes/mirana/fx_mirana_glow.png",
+        "flare": "heroes/mirana/fx_mirana_flare.png",
+        "shock": "heroes/mirana/fx_mirana_shock.png",
+        "moon": "heroes/mirana/fx_mirana_moon.png",
+        "sparkle": "heroes/mirana/fx_mirana_sparkle.png",
+        "pixie": "heroes/mirana/fx_mirana_pixie.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg",
+              "q_hit_2.ogg"
+            ],
+            "gain": 0.55
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_blink": {
+            "files": [
+              "e_blink_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Mirana",
+        "passive": "Moon Priestess",
+        "abilities": {
+          "mi_q": {
+            "name": "Starstorm",
+            "label": "Stars"
+          },
+          "mi_w": {
+            "name": "Sacred Arrow",
+            "label": "Arrow"
+          },
+          "mi_e": {
+            "name": "Leap",
+            "label": "Leap"
+          },
+          "mi_r": {
+            "name": "Moonlight Shadow",
+            "label": "Moon"
+          }
+        }
+      },
+      "bytes": 642714,
+      "game": true,
+      "low": {
+        "model": "heroes/mirana/low/champ_mirana.glb"
+      }
+    },
+    "crystalmaiden": {
+      "dir": "heroes/crystalmaiden/",
+      "audioDir": "audio/crystalmaiden/",
+      "model": "heroes/crystalmaiden/champ_crystalmaiden.glb",
+      "fx": {
+        "orb": "heroes/crystalmaiden/fx_cm_orb.png",
+        "ring": "heroes/crystalmaiden/fx_cm_ring.png",
+        "splat": "heroes/crystalmaiden/fx_cm_splat.png",
+        "star": "heroes/crystalmaiden/fx_cm_star.png",
+        "ice": "heroes/crystalmaiden/fx_cm_ice.png",
+        "frost": "heroes/crystalmaiden/fx_cm_frost.png",
+        "field": "heroes/crystalmaiden/fx_cm_field.png",
+        "snow": "heroes/crystalmaiden/fx_cm_snow.png",
+        "shard": "heroes/crystalmaiden/fx_cm_shard.png",
+        "blast": "heroes/crystalmaiden/fx_cm_blast.png",
+        "aura": "heroes/crystalmaiden/fx_cm_aura.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_channel": {
+            "files": [
+              "r_channel_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg",
+              "r_hit_2.ogg"
+            ],
+            "gain": 0.5
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Crystal Maiden",
+        "passive": "Brilliance Aura",
+        "abilities": {
+          "cm_q": {
+            "name": "Crystal Nova",
+            "label": "Nova"
+          },
+          "cm_w": {
+            "name": "Frostbite",
+            "label": "Frost"
+          },
+          "cm_e": {
+            "name": "Brilliance Aura",
+            "label": "Aura"
+          },
+          "cm_r": {
+            "name": "Freezing Field",
+            "label": "Field"
+          }
+        }
+      },
+      "bytes": 599585,
+      "game": true,
+      "low": {
+        "model": "heroes/crystalmaiden/low/champ_crystalmaiden.glb"
+      }
+    },
+    "shadowshaman": {
+      "dir": "heroes/shadowshaman/",
+      "audioDir": "audio/shadowshaman/",
+      "model": "heroes/shadowshaman/champ_shadowshaman.glb",
+      "fx": {
+        "forked": "heroes/shadowshaman/fx_shadowshaman_forked.png",
+        "leash": "heroes/shadowshaman/fx_shadowshaman_leash.png",
+        "shackle": "heroes/shadowshaman/fx_shadowshaman_shackle.png",
+        "cloud": "heroes/shadowshaman/fx_shadowshaman_cloud.png",
+        "star": "heroes/shadowshaman/fx_shadowshaman_star.png",
+        "blade": "heroes/shadowshaman/fx_shadowshaman_blade.png",
+        "ribbon": "heroes/shadowshaman/fx_shadowshaman_ribbon.png",
+        "spit": "heroes/shadowshaman/fx_shadowshaman_spit.png",
+        "spitstar": "heroes/shadowshaman/fx_shadowshaman_spitstar.png"
+      },
+      "audio": {
+        "cues": {
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_loop": {
+            "files": [
+              "e_loop_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "pet_attack": {
+            "files": [
+              "pet_attack_0.ogg"
+            ],
+            "gain": 0.3
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      },
+      "names": {
+        "champion": "Shadow Shaman",
+        "passive": "Voodoo",
+        "abilities": {
+          "ss_q": {
+            "name": "Ether Shock",
+            "label": "Shock"
+          },
+          "ss_w": {
+            "name": "Hex",
+            "label": "Hex"
+          },
+          "ss_e": {
+            "name": "Shackles",
+            "label": "Shackles"
+          },
+          "ss_r": {
+            "name": "Mass Serpent Ward",
+            "label": "Wards"
+          }
+        }
+      },
+      "bytes": 805149,
+      "game": true,
+      "extras": {
+        "w3_serpent_ward": "heroes/shadowshaman/w3_serpent_ward.glb",
+        "w3_hex_frog": "heroes/shadowshaman/w3_hex_frog.glb"
+      },
+      "low": {
+        "model": "heroes/shadowshaman/low/champ_shadowshaman.glb",
+        "extras": {
+          "w3_serpent_ward": "heroes/shadowshaman/low/w3_serpent_ward.glb",
+          "w3_hex_frog": "heroes/shadowshaman/low/w3_hex_frog.glb"
+        }
+      }
+    }
+  },
+  "gpu": {
+    "map": "dota",
+    "shared": {
+      "high": 39234620,
+      "low": 22457084
+    },
+    "heroes": {
+      "pudge": {
+        "high": 535216,
+        "low": 273072
+      },
+      "juggernaut": {
+        "high": 606200,
+        "low": 278520
+      },
+      "sven": {
+        "high": 873800,
+        "low": 611656
+      },
+      "ursa": {
+        "high": 518820,
+        "low": 256676
+      },
+      "lina": {
+        "high": 857428,
+        "low": 595284
+      },
+      "earthshaker": {
+        "high": 759116,
+        "low": 431436
+      },
+      "drow": {
+        "high": 546128,
+        "low": 283984
+      },
+      "mirana": {
+        "high": 584360,
+        "low": 322216
+      },
+      "crystalmaiden": {
+        "high": 667620,
+        "low": 405476
+      },
+      "shadowshaman": {
+        "high": 868356,
+        "low": 409604
+      }
+    }
+  },
+  "icons": {
+    "champs": [
+      "juggernaut",
+      "sven",
+      "ursa",
+      "lina",
+      "drow",
+      "mirana",
+      "crystalmaiden",
+      "shadowshaman",
+      "earthshaker",
+      "pudge"
+    ],
+    "abilities": [
+      "ju_q",
+      "ju_w",
+      "ju_e",
+      "ju_r",
+      "sv_q",
+      "sv_w",
+      "sv_e",
+      "sv_r",
+      "ur_q",
+      "ur_w",
+      "ur_e",
+      "ur_r",
+      "li_q",
+      "li_w",
+      "li_e",
+      "li_r",
+      "dr_q",
+      "dr_w",
+      "dr_e",
+      "dr_r",
+      "mi_q",
+      "mi_w",
+      "mi_e",
+      "mi_r",
+      "cm_q",
+      "cm_w",
+      "cm_e",
+      "cm_r",
+      "ss_q",
+      "ss_w",
+      "ss_e",
+      "ss_r",
+      "es_q",
+      "es_w",
+      "es_e",
+      "es_r",
+      "pu_q",
+      "pu_w",
+      "pu_e",
+      "pu_r"
+    ],
+    "summoners": [],
+    "ui": [],
+    "items": [
+      "boots_of_speed",
+      "gloves_of_haste",
+      "belt_of_strength",
+      "band_of_elvenskin",
+      "blades_of_attack",
+      "broadsword",
+      "claymore",
+      "mithril_hammer",
+      "ogre_club",
+      "javelin",
+      "quarterstaff",
+      "demon_edge",
+      "eaglesong",
+      "talisman_of_evasion",
+      "blade_of_alacrity",
+      "staff_of_wizardry",
+      "ring_of_health",
+      "void_stone",
+      "ring_of_regen",
+      "sobi_mask",
+      "morbid_mask",
+      "vitality_booster",
+      "reaver",
+      "platemail",
+      "chainmail",
+      "hyperstone",
+      "quelling_blade",
+      "helm_of_iron_will",
+      "blink_dagger",
+      "power_treads",
+      "phase_boots",
+      "perseverance",
+      "battle_fury",
+      "black_king_bar",
+      "desolator",
+      "crystalys",
+      "daedalus",
+      "monkey_king_bar",
+      "butterfly",
+      "skull_basher",
+      "sange",
+      "yasha",
+      "sange_and_yasha",
+      "heart_of_tarrasque",
+      "assault_cuirass",
+      "helm_of_the_dominator",
+      "satanic",
+      "mask_of_madness",
+      "force_staff",
+      "euls_scepter"
+    ]
+  },
+  "items": {
+    "fx": {
+      "blink": "items/fx_item_blink.png",
+      "blinkglow": "items/fx_item_blinkglow.png",
+      "gold": "items/fx_item_gold.png",
+      "goldstar": "items/fx_item_goldstar.png",
+      "cyclone": "items/fx_item_cyclone.png",
+      "wind": "items/fx_item_wind.png",
+      "redglow": "items/fx_item_redglow.png",
+      "redstar": "items/fx_item_redstar.png",
+      "vamp": "items/fx_item_vamp.png",
+      "butterfly": "items/fx_item_butterfly.png",
+      "speed": "items/fx_item_speed.png"
+    },
+    "audio": {
+      "cues": {
+        "it_blink": {
+          "files": [
+            "it_blink_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "it_blink_end": {
+          "files": [
+            "it_blink_end_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "it_bkb": {
+          "files": [
+            "it_bkb_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "it_force": {
+          "files": [
+            "it_force_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "it_cyclone": {
+          "files": [
+            "it_cyclone_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "it_land": {
+          "files": [
+            "it_land_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "it_satanic": {
+          "files": [
+            "it_satanic_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "it_madness": {
+          "files": [
+            "it_madness_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "it_phase": {
+          "files": [
+            "it_phase_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "it_butterfly": {
+          "files": [
+            "it_butterfly_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "it_treads": {
+          "files": [
+            "it_treads_0.ogg"
+          ],
+          "gain": 0.5
+        },
+        "it_bash": {
+          "files": [
+            "it_bash_0.ogg",
+            "it_bash_1.ogg",
+            "it_bash_2.ogg"
+          ],
+          "gain": 0.7
         }
       }
     }

@@ -1,18 +1,78 @@
 {
-  "v": 1,
+  "v": 2,
   "patch": "16.20",
   "models": {
-    "champ_ezreal": {
-      "file": "champ_ezreal.glb"
+    "sr_minion_order_melee": {
+      "file": "sr_minion_order_melee.glb"
+    },
+    "sr_minion_order_caster": {
+      "file": "sr_minion_order_caster.glb"
+    },
+    "sr_minion_order_siege": {
+      "file": "sr_minion_order_siege.glb"
+    },
+    "sr_minion_order_super": {
+      "file": "sr_minion_order_super.glb"
+    },
+    "sr_minion_chaos_melee": {
+      "file": "sr_minion_chaos_melee.glb"
+    },
+    "sr_minion_chaos_caster": {
+      "file": "sr_minion_chaos_caster.glb"
+    },
+    "sr_minion_chaos_siege": {
+      "file": "sr_minion_chaos_siege.glb"
+    },
+    "sr_minion_chaos_super": {
+      "file": "sr_minion_chaos_super.glb"
+    },
+    "sr_monster_blue": {
+      "file": "sr_monster_blue.glb"
+    },
+    "sr_monster_bluemini": {
+      "file": "sr_monster_bluemini.glb"
+    },
+    "sr_monster_red": {
+      "file": "sr_monster_red.glb"
+    },
+    "sr_monster_redmini": {
+      "file": "sr_monster_redmini.glb"
+    },
+    "sr_monster_murkwolf": {
+      "file": "sr_monster_murkwolf.glb"
+    },
+    "sr_monster_murkwolfmini": {
+      "file": "sr_monster_murkwolfmini.glb"
+    },
+    "sr_monster_razorbeak": {
+      "file": "sr_monster_razorbeak.glb"
+    },
+    "sr_monster_razorbeakmini": {
+      "file": "sr_monster_razorbeakmini.glb"
     },
     "tower": {
-      "file": "tower.glb"
+      "file": "tower.glb",
+      "low": "low/tower.glb"
     },
     "inhibitor": {
-      "file": "inhibitor.glb"
+      "file": "inhibitor.glb",
+      "low": "low/inhibitor.glb"
     },
     "nexus": {
-      "file": "nexus.glb"
+      "file": "nexus.glb",
+      "low": "low/nexus.glb"
+    },
+    "sr_tower": {
+      "file": "tower.glb",
+      "low": "low/tower.glb"
+    },
+    "sr_inhibitor": {
+      "file": "inhibitor.glb",
+      "low": "low/inhibitor.glb"
+    },
+    "sr_nexus": {
+      "file": "nexus.glb",
+      "low": "low/nexus.glb"
     }
   },
   "names": {},
@@ -233,255 +293,2226 @@
       ]
     }
   },
-  "vfx": {
+  "heroes": {
     "ezreal": {
-      "data": "vfx_ezreal.json",
-      "atlases": [
-        {
-          "ktx2": "vfx_ezreal_0.ktx2",
-          "webp": "vfx_ezreal_0.webp"
+      "models": {
+        "champ_ezreal": {
+          "file": "champ_ezreal.glb",
+          "low": "low/champ_ezreal.glb"
         }
-      ]
+      },
+      "vfx": {
+        "data": "vfx_ezreal.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_ezreal_0.ktx2",
+            "webp": "vfx_ezreal_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_ezreal_0.ktx2",
+            "webp": "low/vfx_ezreal_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg",
+              "ba_cast_2.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg",
+              "ba_launch_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg",
+              "q_cast_2.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg",
+              "q_launch_2.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg",
+              "q_hit_2.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg",
+              "w_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_mark": {
+            "files": [
+              "w_mark_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_detonate": {
+            "files": [
+              "w_detonate_0.ogg",
+              "w_detonate_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "e_blink": {
+            "files": [
+              "e_blink_0.ogg",
+              "e_blink_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_launch": {
+            "files": [
+              "e_launch_0.ogg",
+              "e_launch_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg",
+              "r_charge_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg",
+              "r_release_1.ogg"
+            ],
+            "gain": 1
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "recall": {
+            "files": [
+              "recall_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg",
+              "vo_first_move_1.ogg",
+              "vo_first_move_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg",
+              "vo_q_2.ogg",
+              "vo_q_3.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg",
+              "vo_w_2.ogg",
+              "vo_w_3.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg",
+              "vo_e_2.ogg",
+              "vo_e_3.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg",
+              "vo_r_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg",
+              "vo_kill_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_tower": {
+            "files": [
+              "vo_tower_0.ogg",
+              "vo_tower_1.ogg",
+              "vo_tower_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_buy": {
+            "files": [
+              "vo_buy_0.ogg",
+              "vo_buy_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "garen": {
+      "models": {
+        "champ_garen": {
+          "file": "champ_garen.glb",
+          "low": "low/champ_garen.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_garen.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_garen_0.ktx2",
+            "webp": "vfx_garen_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_garen_0.ktx2",
+            "webp": "low/vfx_garen_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg",
+              "ba_cast_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg",
+              "q_hit_2.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg",
+              "w_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "e_loop": {
+            "files": [
+              "e_loop_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg",
+              "e_hit_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg",
+              "r_charge_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg",
+              "vo_w_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg",
+              "vo_e_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "darius": {
+      "models": {
+        "champ_darius": {
+          "file": "champ_darius.glb",
+          "low": "low/champ_darius.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_darius.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_darius_0.ktx2",
+            "webp": "vfx_darius_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_darius_0.ktx2",
+            "webp": "low/vfx_darius_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg",
+              "w_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg",
+              "e_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "p_ready": {
+            "files": [
+              "p_ready_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg",
+              "r_charge_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg"
+            ],
+            "gain": 0.95
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg",
+              "vo_q_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg",
+              "vo_w_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "masteryi": {
+      "models": {
+        "champ_masteryi": {
+          "file": "champ_masteryi.glb",
+          "low": "low/champ_masteryi.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_masteryi.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_masteryi_0.ktx2",
+            "webp": "vfx_masteryi_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_masteryi_0.ktx2",
+            "webp": "low/vfx_masteryi_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg",
+              "ba_cast_2.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg",
+              "ba_hit_3.ogg"
+            ],
+            "gain": 0.7
+          },
+          "p_hit": {
+            "files": [
+              "p_hit_0.ogg",
+              "p_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg",
+              "q_hit_2.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_loop": {
+            "files": [
+              "w_loop_0.ogg"
+            ],
+            "gain": 0.55
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg",
+              "e_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg",
+              "e_hit_2.ogg"
+            ],
+            "gain": 0.75
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "recall": {
+            "files": [
+              "recall_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg",
+              "vo_q_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg",
+              "vo_e_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "warwick": {
+      "models": {
+        "champ_warwick": {
+          "file": "champ_warwick.glb",
+          "low": "low/champ_warwick.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_warwick.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_warwick_0.ktx2",
+            "webp": "vfx_warwick_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_warwick_0.ktx2",
+            "webp": "low/vfx_warwick_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.5
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_channel": {
+            "files": [
+              "r_channel_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "annie": {
+      "models": {
+        "champ_annie": {
+          "file": "champ_annie.glb",
+          "low": "low/champ_annie.glb"
+        },
+        "summon_tibbers": {
+          "file": "summon_tibbers.glb",
+          "low": "low/summon_tibbers.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_annie.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_annie_0.ktx2",
+            "webp": "vfx_annie_0.webp"
+          },
+          {
+            "ktx2": "vfx_annie_1.ktx2",
+            "webp": "vfx_annie_1.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_annie_0.ktx2",
+            "webp": "low/vfx_annie_0.webp"
+          },
+          {
+            "ktx2": "low/vfx_annie_1.ktx2",
+            "webp": "low/vfx_annie_1.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "p_ready": {
+            "files": [
+              "p_ready_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "pet_attack": {
+            "files": [
+              "pet_attack_0.ogg",
+              "pet_attack_1.ogg",
+              "pet_attack_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "pet_hit": {
+            "files": [
+              "pet_hit_0.ogg",
+              "pet_hit_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "pet_death": {
+            "files": [
+              "pet_death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "pet_enrage": {
+            "files": [
+              "pet_enrage_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg",
+              "vo_q_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg",
+              "vo_w_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg",
+              "vo_e_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg",
+              "vo_r_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "ahri": {
+      "models": {
+        "champ_ahri": {
+          "file": "champ_ahri.glb",
+          "low": "low/champ_ahri.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_ahri.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_ahri_0.ktx2",
+            "webp": "vfx_ahri_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_ahri_0.ktx2",
+            "webp": "low/vfx_ahri_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.45
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg"
+            ],
+            "gain": 0.5
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg",
+              "q_hit_2.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_retract": {
+            "files": [
+              "q_retract_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "e_blink": {
+            "files": [
+              "e_blink_0.ogg",
+              "e_blink_1.ogg",
+              "e_blink_2.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg",
+              "w_launch_1.ogg"
+            ],
+            "gain": 0.55
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg",
+              "w_hit_1.ogg"
+            ],
+            "gain": 0.65
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "e_launch": {
+            "files": [
+              "e_launch_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg",
+              "r_charge_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg",
+              "r_release_1.ogg"
+            ],
+            "gain": 0.6
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "p_ready": {
+            "files": [
+              "p_ready_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "recall": {
+            "files": [
+              "recall_0.ogg"
+            ],
+            "gain": 0.45
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg",
+              "vo_first_move_1.ogg",
+              "vo_first_move_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg",
+              "vo_q_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg",
+              "vo_kill_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "jinx": {
+      "models": {
+        "champ_jinx": {
+          "file": "champ_jinx.glb",
+          "low": "low/champ_jinx.glb"
+        },
+        "jinx_mine": {
+          "file": "jinx_mine.glb",
+          "low": "low/jinx_mine.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_jinx.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_jinx_0.ktx2",
+            "webp": "vfx_jinx_0.webp"
+          },
+          {
+            "ktx2": "vfx_jinx_1.ktx2",
+            "webp": "vfx_jinx_1.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_jinx_0.ktx2",
+            "webp": "low/vfx_jinx_0.webp"
+          },
+          {
+            "ktx2": "low/vfx_jinx_1.ktx2",
+            "webp": "low/vfx_jinx_1.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.45
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg",
+              "ba_launch_2.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg",
+              "w_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg",
+              "w_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_mark": {
+            "files": [
+              "w_mark_0.ogg",
+              "w_mark_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_launch": {
+            "files": [
+              "e_launch_0.ogg",
+              "e_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_blink": {
+            "files": [
+              "e_blink_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg",
+              "r_charge_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 1
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 1
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "recall": {
+            "files": [
+              "recall_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg",
+              "vo_e_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "lux": {
+      "models": {
+        "champ_lux": {
+          "file": "champ_lux.glb",
+          "low": "low/champ_lux.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_lux.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_lux_0.ktx2",
+            "webp": "vfx_lux_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_lux_0.ktx2",
+            "webp": "low/vfx_lux_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.45
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg"
+            ],
+            "gain": 0.55
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg",
+              "w_hit_1.ogg"
+            ],
+            "gain": 0.6
+          },
+          "w_detonate": {
+            "files": [
+              "w_detonate_0.ogg",
+              "w_detonate_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg",
+              "e_cast_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "e_loop": {
+            "files": [
+              "e_loop_0.ogg"
+            ],
+            "gain": 0.45
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg",
+              "r_charge_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg",
+              "r_release_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg",
+              "vo_first_move_1.ogg",
+              "vo_first_move_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
+    },
+    "thresh": {
+      "models": {
+        "champ_thresh": {
+          "file": "champ_thresh.glb",
+          "low": "low/champ_thresh.glb"
+        },
+        "thresh_lantern": {
+          "file": "thresh_lantern.glb",
+          "low": "low/thresh_lantern.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_thresh.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_thresh_0.ktx2",
+            "webp": "vfx_thresh_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_thresh_0.ktx2",
+            "webp": "low/vfx_thresh_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg"
+            ],
+            "gain": 0.45
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.55
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_blink": {
+            "files": [
+              "e_blink_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg",
+              "w_launch_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_detonate": {
+            "files": [
+              "w_detonate_0.ogg",
+              "w_detonate_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_mark": {
+            "files": [
+              "w_mark_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "e_launch": {
+            "files": [
+              "e_launch_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          }
+        }
+      }
     }
   },
-  "audio": {
-    "ezreal": {
+  "gpu": {
+    "map": "sr",
+    "shared": {
+      "high": 45876144,
+      "low": 16516032
+    },
+    "everyMap": {
+      "high": 1398128,
+      "low": 349552
+    },
+    "heroes": {
+      "ezreal": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "garen": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "annie": {
+        "high": 5592456,
+        "low": 1136064
+      },
+      "jinx": {
+        "high": 4543880,
+        "low": 1070528
+      },
+      "thresh": {
+        "high": 3145752,
+        "low": 720976
+      },
+      "darius": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "masteryi": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "ahri": {
+        "high": 4194332,
+        "low": 524352
+      },
+      "lux": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "warwick": {
+        "high": 2796228,
+        "low": 699104
+      }
+    }
+  },
+  "icons": {
+    "champs": [
+      "ezreal",
+      "garen",
+      "darius",
+      "masteryi",
+      "warwick",
+      "annie",
+      "ahri",
+      "jinx",
+      "lux",
+      "thresh"
+    ],
+    "abilities": [
+      "ez_q",
+      "ez_w",
+      "ez_e",
+      "ez_r",
+      "ga_q",
+      "ga_w",
+      "ga_e",
+      "ga_r",
+      "da_q",
+      "da_w",
+      "da_e",
+      "da_r",
+      "yi_q",
+      "yi_w",
+      "yi_e",
+      "yi_r",
+      "ww_q",
+      "ww_w",
+      "ww_e",
+      "ww_r",
+      "an_q",
+      "an_w",
+      "an_e",
+      "an_r",
+      "ah_q",
+      "ah_w",
+      "ah_e",
+      "ah_r",
+      "jx_q",
+      "jx_w",
+      "jx_e",
+      "jx_r",
+      "lx_q",
+      "lx_w",
+      "lx_e",
+      "lx_r",
+      "th_q",
+      "th_w",
+      "th_e",
+      "th_r"
+    ],
+    "summoners": [
+      "flash",
+      "heal"
+    ],
+    "ui": [
+      "recall",
+      "attack",
+      "minion",
+      "tower"
+    ],
+    "items": [
+      "long_sword",
+      "ruby",
+      "cloth",
+      "mantle",
+      "dagger",
+      "tome",
+      "boots",
+      "pickaxe",
+      "bf_sword",
+      "large_rod",
+      "blasting_wand",
+      "cloak_of_agility",
+      "glowing_mote",
+      "rejuvenation_bead",
+      "vampiric_scepter",
+      "serrated_dirk",
+      "phage",
+      "sheen",
+      "kindlegem",
+      "giants_belt",
+      "chain_vest",
+      "recurve_bow",
+      "zeal",
+      "bramble_vest",
+      "aether_wisp",
+      "seekers_armguard",
+      "spectres_cowl",
+      "blighting_jewel",
+      "hearthbound_axe",
+      "tunneler",
+      "rectrix",
+      "berserkers_greaves",
+      "plated_steelcaps",
+      "mercury_treads",
+      "sorcerers_shoes",
+      "infinity_edge",
+      "bloodthirster",
+      "botrk",
+      "trinity_force",
+      "black_cleaver",
+      "steraks_gage",
+      "youmuus_ghostblade",
+      "phantom_dancer",
+      "thornmail",
+      "spirit_visage",
+      "rabadons_deathcap",
+      "zhonyas_hourglass",
+      "void_staff",
+      "lich_bane",
+      "rylais_scepter"
+    ]
+  },
+  "items": {
+    "vfx": {
+      "data": "vfx_items.json",
+      "atlases": [
+        {
+          "ktx2": "vfx_items_0.ktx2",
+          "webp": "vfx_items_0.webp"
+        }
+      ],
+      "low": [
+        {
+          "ktx2": "low/vfx_items_0.ktx2",
+          "webp": "low/vfx_items_0.webp"
+        }
+      ]
+    },
+    "audio": {
       "cues": {
-        "ba_cast": {
+        "it_stasis": {
           "files": [
-            "ba_cast_0.ogg",
-            "ba_cast_1.ogg",
-            "ba_cast_2.ogg"
+            "it_stasis_0.ogg"
           ],
-          "gain": 0.55
+          "gain": 0.8
         },
-        "ba_launch": {
+        "it_ghost": {
           "files": [
-            "ba_launch_0.ogg",
-            "ba_launch_1.ogg",
-            "ba_launch_2.ogg"
+            "it_ghost_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "it_blade": {
+          "files": [
+            "it_blade_0.ogg"
           ],
           "gain": 0.6
         },
-        "ba_hit": {
+        "it_lifeline": {
           "files": [
-            "ba_hit_0.ogg",
-            "ba_hit_1.ogg",
-            "ba_hit_2.ogg"
+            "it_lifeline_0.ogg"
           ],
           "gain": 0.7
-        },
-        "q_cast": {
-          "files": [
-            "q_cast_0.ogg",
-            "q_cast_1.ogg",
-            "q_cast_2.ogg"
-          ],
-          "gain": 0.75
-        },
-        "q_launch": {
-          "files": [
-            "q_launch_0.ogg",
-            "q_launch_1.ogg",
-            "q_launch_2.ogg"
-          ],
-          "gain": 0.8
-        },
-        "q_hit": {
-          "files": [
-            "q_hit_0.ogg",
-            "q_hit_1.ogg",
-            "q_hit_2.ogg"
-          ],
-          "gain": 0.85
-        },
-        "w_cast": {
-          "files": [
-            "w_cast_0.ogg",
-            "w_cast_1.ogg"
-          ],
-          "gain": 0.75
-        },
-        "w_launch": {
-          "files": [
-            "w_launch_0.ogg"
-          ],
-          "gain": 0.75
-        },
-        "w_mark": {
-          "files": [
-            "w_mark_0.ogg"
-          ],
-          "gain": 0.8
-        },
-        "w_detonate": {
-          "files": [
-            "w_detonate_0.ogg",
-            "w_detonate_1.ogg"
-          ],
-          "gain": 0.9
-        },
-        "e_blink": {
-          "files": [
-            "e_blink_0.ogg",
-            "e_blink_1.ogg"
-          ],
-          "gain": 0.85
-        },
-        "e_launch": {
-          "files": [
-            "e_launch_0.ogg",
-            "e_launch_1.ogg"
-          ],
-          "gain": 0.75
-        },
-        "e_hit": {
-          "files": [
-            "e_hit_0.ogg",
-            "e_hit_1.ogg"
-          ],
-          "gain": 0.85
-        },
-        "r_charge": {
-          "files": [
-            "r_charge_0.ogg",
-            "r_charge_1.ogg"
-          ],
-          "gain": 0.9
-        },
-        "r_release": {
-          "files": [
-            "r_release_0.ogg",
-            "r_release_1.ogg"
-          ],
-          "gain": 1
-        },
-        "r_hit": {
-          "files": [
-            "r_hit_0.ogg",
-            "r_hit_1.ogg"
-          ],
-          "gain": 0.8
-        },
-        "death": {
-          "files": [
-            "death_0.ogg"
-          ],
-          "gain": 0.8
-        },
-        "recall": {
-          "files": [
-            "recall_0.ogg"
-          ],
-          "gain": 0.5
-        },
-        "vo_first_move": {
-          "files": [
-            "vo_first_move_0.ogg",
-            "vo_first_move_1.ogg",
-            "vo_first_move_2.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_move": {
-          "files": [
-            "vo_move_0.ogg",
-            "vo_move_1.ogg",
-            "vo_move_2.ogg",
-            "vo_move_3.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_attack": {
-          "files": [
-            "vo_attack_0.ogg",
-            "vo_attack_1.ogg",
-            "vo_attack_2.ogg",
-            "vo_attack_3.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_q": {
-          "files": [
-            "vo_q_0.ogg",
-            "vo_q_1.ogg",
-            "vo_q_2.ogg",
-            "vo_q_3.ogg"
-          ],
-          "gain": 0.9
-        },
-        "vo_w": {
-          "files": [
-            "vo_w_0.ogg",
-            "vo_w_1.ogg",
-            "vo_w_2.ogg",
-            "vo_w_3.ogg"
-          ],
-          "gain": 0.9
-        },
-        "vo_e": {
-          "files": [
-            "vo_e_0.ogg",
-            "vo_e_1.ogg",
-            "vo_e_2.ogg",
-            "vo_e_3.ogg"
-          ],
-          "gain": 0.9
-        },
-        "vo_r": {
-          "files": [
-            "vo_r_0.ogg",
-            "vo_r_1.ogg",
-            "vo_r_2.ogg",
-            "vo_r_3.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_death": {
-          "files": [
-            "vo_death_0.ogg",
-            "vo_death_1.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_respawn": {
-          "files": [
-            "vo_respawn_0.ogg",
-            "vo_respawn_1.ogg",
-            "vo_respawn_2.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_kill": {
-          "files": [
-            "vo_kill_0.ogg",
-            "vo_kill_1.ogg",
-            "vo_kill_2.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_tower": {
-          "files": [
-            "vo_tower_0.ogg",
-            "vo_tower_1.ogg",
-            "vo_tower_2.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_recall": {
-          "files": [
-            "vo_recall_0.ogg",
-            "vo_recall_1.ogg",
-            "vo_recall_2.ogg"
-          ],
-          "gain": 1
-        },
-        "vo_buy": {
-          "files": [
-            "vo_buy_0.ogg",
-            "vo_buy_1.ogg"
-          ],
-          "gain": 1
         }
       }
     }

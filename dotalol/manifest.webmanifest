@@ -1,6 +1,6 @@
 {
-  "name": "LoL Online",
-  "short_name": "LoL Online",
+  "name": "刀盟 League of the Ancient",
+  "short_name": "刀盟",
   "description": "A mobile-browser MOBA: one lane, towers, minions and bots, played with a virtual joystick.",
   "id": "./",
   "start_url": "./",
