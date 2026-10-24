@@ -296,6 +296,226 @@
           "label": "Wards"
         }
       }
+    },
+    "axe": {
+      "champion": "Axe",
+      "passive": "Counter Helix",
+      "abilities": {
+        "ax_q": {
+          "name": "Berserker's Call",
+          "label": "Call"
+        },
+        "ax_w": {
+          "name": "Battle Hunger",
+          "label": "Hunger"
+        },
+        "ax_e": {
+          "name": "Counter Helix",
+          "label": "Helix"
+        },
+        "ax_r": {
+          "name": "Culling Blade",
+          "label": "Culling"
+        }
+      }
+    },
+    "tiny": {
+      "champion": "Tiny",
+      "passive": "Craggy Exterior",
+      "abilities": {
+        "ti_q": {
+          "name": "Avalanche",
+          "label": "Avalanche"
+        },
+        "ti_w": {
+          "name": "Toss",
+          "label": "Toss"
+        },
+        "ti_e": {
+          "name": "Craggy Exterior",
+          "label": "Craggy"
+        },
+        "ti_r": {
+          "name": "Grow",
+          "label": "Grow"
+        }
+      }
+    },
+    "faceless": {
+      "champion": "Faceless Void",
+      "passive": "Backtrack",
+      "abilities": {
+        "fv_q": {
+          "name": "Time Walk",
+          "label": "Time Walk"
+        },
+        "fv_w": {
+          "name": "Backtrack",
+          "label": "Backtrack"
+        },
+        "fv_e": {
+          "name": "Time Lock",
+          "label": "Time Lock"
+        },
+        "fv_r": {
+          "name": "Chronosphere",
+          "label": "Chrono"
+        }
+      }
+    },
+    "skeletonking": {
+      "champion": "Skeleton King",
+      "passive": "Vampiric Aura",
+      "abilities": {
+        "sk_q": {
+          "name": "Hellfire Blast",
+          "label": "Hellfire"
+        },
+        "sk_w": {
+          "name": "Vampiric Aura",
+          "label": "Vampiric"
+        },
+        "sk_e": {
+          "name": "Critical Strike",
+          "label": "Crit"
+        },
+        "sk_r": {
+          "name": "Reincarnation",
+          "label": "Reincarnate"
+        }
+      }
+    },
+    "zeus": {
+      "champion": "Zeus",
+      "passive": "Static Field",
+      "abilities": {
+        "ze_q": {
+          "name": "Arc Lightning",
+          "label": "Arc"
+        },
+        "ze_w": {
+          "name": "Lightning Bolt",
+          "label": "Bolt"
+        },
+        "ze_e": {
+          "name": "Static Field",
+          "label": "Static"
+        },
+        "ze_r": {
+          "name": "Thundergod's Wrath",
+          "label": "Wrath"
+        }
+      }
+    },
+    "lich": {
+      "champion": "Lich",
+      "passive": "Ethreain",
+      "abilities": {
+        "lc_q": {
+          "name": "Frost Nova",
+          "label": "Nova"
+        },
+        "lc_w": {
+          "name": "Frost Armor",
+          "label": "Armor"
+        },
+        "lc_e": {
+          "name": "Dark Ritual",
+          "label": "Ritual"
+        },
+        "lc_r": {
+          "name": "Chain Frost",
+          "label": "Chain"
+        }
+      }
+    },
+    "sniper": {
+      "champion": "Sniper",
+      "passive": "Headshot",
+      "abilities": {
+        "sn_q": {
+          "name": "Shrapnel",
+          "label": "Shrapnel"
+        },
+        "sn_w": {
+          "name": "Headshot",
+          "label": "Headshot"
+        },
+        "sn_e": {
+          "name": "Take Aim",
+          "label": "Take Aim"
+        },
+        "sn_r": {
+          "name": "Assassinate",
+          "label": "Assassinate"
+        }
+      }
+    },
+    "phantomassassin": {
+      "champion": "Phantom Assassin",
+      "passive": "Coup de Grace",
+      "abilities": {
+        "pa_q": {
+          "name": "Stifling Dagger",
+          "label": "Dagger"
+        },
+        "pa_w": {
+          "name": "Phantom Strike",
+          "label": "Strike"
+        },
+        "pa_e": {
+          "name": "Blur",
+          "label": "Blur"
+        },
+        "pa_r": {
+          "name": "Coup de Grace",
+          "label": "Coup"
+        }
+      }
+    },
+    "lion": {
+      "champion": "Lion",
+      "passive": "Demon Witch",
+      "abilities": {
+        "ln_q": {
+          "name": "Earth Spike",
+          "label": "Spike"
+        },
+        "ln_w": {
+          "name": "Hex",
+          "label": "Hex"
+        },
+        "ln_e": {
+          "name": "Mana Drain",
+          "label": "Drain"
+        },
+        "ln_r": {
+          "name": "Finger of Death",
+          "label": "Finger"
+        }
+      }
+    },
+    "vengeful": {
+      "champion": "Vengeful Spirit",
+      "passive": "Vengeance",
+      "abilities": {
+        "vs_q": {
+          "name": "Magic Missile",
+          "label": "Missile"
+        },
+        "vs_w": {
+          "name": "Wave of Terror",
+          "label": "Wave"
+        },
+        "vs_e": {
+          "name": "Command Aura",
+          "label": "Command"
+        },
+        "vs_r": {
+          "name": "Nether Swap",
+          "label": "Swap"
+        }
+      }
     }
   },
   "models": {
@@ -339,6 +559,46 @@
       "file": "heroes/shadowshaman/champ_shadowshaman.glb",
       "low": "heroes/shadowshaman/low/champ_shadowshaman.glb"
     },
+    "champ_axe": {
+      "file": "heroes/axe/champ_axe.glb",
+      "low": "heroes/axe/low/champ_axe.glb"
+    },
+    "champ_tiny": {
+      "file": "heroes/tiny/champ_tiny.glb",
+      "low": "heroes/tiny/low/champ_tiny.glb"
+    },
+    "champ_faceless": {
+      "file": "heroes/faceless/champ_faceless.glb",
+      "low": "heroes/faceless/low/champ_faceless.glb"
+    },
+    "champ_skeletonking": {
+      "file": "heroes/skeletonking/champ_skeletonking.glb",
+      "low": "heroes/skeletonking/low/champ_skeletonking.glb"
+    },
+    "champ_zeus": {
+      "file": "heroes/zeus/champ_zeus.glb",
+      "low": "heroes/zeus/low/champ_zeus.glb"
+    },
+    "champ_lich": {
+      "file": "heroes/lich/champ_lich.glb",
+      "low": "heroes/lich/low/champ_lich.glb"
+    },
+    "champ_sniper": {
+      "file": "heroes/sniper/champ_sniper.glb",
+      "low": "heroes/sniper/low/champ_sniper.glb"
+    },
+    "champ_phantomassassin": {
+      "file": "heroes/phantomassassin/champ_phantomassassin.glb",
+      "low": "heroes/phantomassassin/low/champ_phantomassassin.glb"
+    },
+    "champ_lion": {
+      "file": "heroes/lion/champ_lion.glb",
+      "low": "heroes/lion/low/champ_lion.glb"
+    },
+    "champ_vengeful": {
+      "file": "heroes/vengeful/champ_vengeful.glb",
+      "low": "heroes/vengeful/low/champ_vengeful.glb"
+    },
     "w3_healing_ward": {
       "file": "heroes/juggernaut/w3_healing_ward.glb",
       "low": "heroes/juggernaut/low/w3_healing_ward.glb"
@@ -354,6 +614,10 @@
     "w3_hex_frog": {
       "file": "heroes/shadowshaman/w3_hex_frog.glb",
       "low": "heroes/shadowshaman/low/w3_hex_frog.glb"
+    },
+    "w3_lion_frog": {
+      "file": "heroes/lion/w3_lion_frog.glb",
+      "low": "heroes/lion/low/w3_lion_frog.glb"
     },
     "w3_creep_sentinel_melee": {
       "file": "w3_creep_sentinel_melee.glb"
@@ -792,6 +1056,119 @@
       "ribbon": "heroes/shadowshaman/fx_shadowshaman_ribbon.png",
       "spit": "heroes/shadowshaman/fx_shadowshaman_spit.png",
       "spitstar": "heroes/shadowshaman/fx_shadowshaman_spitstar.png"
+    },
+    "axe": {
+      "ring": "heroes/axe/fx_axe_ring.png",
+      "scream": "heroes/axe/fx_axe_scream.png",
+      "torch": "heroes/axe/fx_axe_torch.png",
+      "eyes": "heroes/axe/fx_axe_eyes.png",
+      "spin": "heroes/axe/fx_axe_spin.png",
+      "streak": "heroes/axe/fx_axe_streak.png",
+      "blood": "heroes/axe/fx_axe_blood.png",
+      "wave": "heroes/axe/fx_axe_wave.png",
+      "rune": "heroes/axe/fx_axe_rune.png"
+    },
+    "tiny": {
+      "rock": "heroes/tiny/fx_tiny_rock.png",
+      "dust": "heroes/tiny/fx_tiny_dust.png",
+      "cloud": "heroes/tiny/fx_tiny_cloud.png",
+      "wave": "heroes/tiny/fx_tiny_wave.png",
+      "ring": "heroes/tiny/fx_tiny_ring.png",
+      "glow": "heroes/tiny/fx_tiny_glow.png"
+    },
+    "faceless": {
+      "star": "heroes/faceless/fx_faceless_star.png",
+      "glow": "heroes/faceless/fx_faceless_glow.png",
+      "ripple": "heroes/faceless/fx_faceless_ripple.png",
+      "dust": "heroes/faceless/fx_faceless_dust.png",
+      "energy": "heroes/faceless/fx_faceless_energy.png",
+      "band": "heroes/faceless/fx_faceless_band.png",
+      "dome": "heroes/faceless/fx_faceless_dome.png",
+      "mote": "heroes/faceless/fx_faceless_mote.png"
+    },
+    "skeletonking": {
+      "glow": "heroes/skeletonking/fx_skeletonking_glow.png",
+      "zap": "heroes/skeletonking/fx_skeletonking_zap.png",
+      "flame": "heroes/skeletonking/fx_skeletonking_flame.png",
+      "rune": "heroes/skeletonking/fx_skeletonking_rune.png",
+      "vamp": "heroes/skeletonking/fx_skeletonking_vamp.png",
+      "grave": "heroes/skeletonking/fx_skeletonking_grave.png",
+      "ring": "heroes/skeletonking/fx_skeletonking_ring.png",
+      "wave": "heroes/skeletonking/fx_skeletonking_wave.png",
+      "star": "heroes/skeletonking/fx_skeletonking_star.png"
+    },
+    "zeus": {
+      "arc": "heroes/zeus/fx_zeus_arc.png",
+      "sky": "heroes/zeus/fx_zeus_sky.png",
+      "ball": "heroes/zeus/fx_zeus_ball.png",
+      "glow": "heroes/zeus/fx_zeus_glow.png",
+      "ring": "heroes/zeus/fx_zeus_ring.png",
+      "zap": "heroes/zeus/fx_zeus_zap.png"
+    },
+    "lich": {
+      "orb": "heroes/lich/fx_lich_orb.png",
+      "frost": "heroes/lich/fx_lich_frost.png",
+      "ring": "heroes/lich/fx_lich_ring.png",
+      "ice": "heroes/lich/fx_lich_ice.png",
+      "snow": "heroes/lich/fx_lich_snow.png",
+      "nova": "heroes/lich/fx_lich_nova.png",
+      "ghost": "heroes/lich/fx_lich_ghost.png",
+      "ritual": "heroes/lich/fx_lich_ritual.png",
+      "glow": "heroes/lich/fx_lich_glow.png",
+      "star": "heroes/lich/fx_lich_star.png"
+    },
+    "sniper": {
+      "dust": "heroes/sniper/fx_sniper_dust.png",
+      "spark": "heroes/sniper/fx_sniper_spark.png",
+      "flare": "heroes/sniper/fx_sniper_flare.png",
+      "glow": "heroes/sniper/fx_sniper_glow.png",
+      "snow": "heroes/sniper/fx_sniper_snow.png",
+      "cross": "heroes/sniper/fx_sniper_cross.png",
+      "bullet": "heroes/sniper/fx_sniper_bullet.png",
+      "ring": "heroes/sniper/fx_sniper_ring.png",
+      "magic": "heroes/sniper/fx_sniper_magic.png"
+    },
+    "phantomassassin": {
+      "blade": "heroes/phantomassassin/fx_phantomassassin_blade.png",
+      "ribbon": "heroes/phantomassassin/fx_phantomassassin_ribbon.png",
+      "glow": "heroes/phantomassassin/fx_phantomassassin_glow.png",
+      "purple": "heroes/phantomassassin/fx_phantomassassin_purple.png",
+      "star": "heroes/phantomassassin/fx_phantomassassin_star.png",
+      "ripple": "heroes/phantomassassin/fx_phantomassassin_ripple.png",
+      "blue": "heroes/phantomassassin/fx_phantomassassin_blue.png",
+      "smoke": "heroes/phantomassassin/fx_phantomassassin_smoke.png",
+      "zap": "heroes/phantomassassin/fx_phantomassassin_zap.png",
+      "blood": "heroes/phantomassassin/fx_phantomassassin_blood.png"
+    },
+    "lion": {
+      "proj": "heroes/lion/fx_lion_proj.png",
+      "spike": "heroes/lion/fx_lion_spike.png",
+      "dust": "heroes/lion/fx_lion_dust.png",
+      "blood": "heroes/lion/fx_lion_blood.png",
+      "cloud": "heroes/lion/fx_lion_cloud.png",
+      "star": "heroes/lion/fx_lion_star.png",
+      "beam": "heroes/lion/fx_lion_beam.png",
+      "out": "heroes/lion/fx_lion_out.png",
+      "rune": "heroes/lion/fx_lion_rune.png",
+      "in": "heroes/lion/fx_lion_in.png",
+      "finger": "heroes/lion/fx_lion_finger.png",
+      "glow": "heroes/lion/fx_lion_glow.png",
+      "zap": "heroes/lion/fx_lion_zap.png"
+    },
+    "vengeful": {
+      "ball": "heroes/vengeful/fx_vengeful_ball.png",
+      "glow": "heroes/vengeful/fx_vengeful_glow.png",
+      "frost": "heroes/vengeful/fx_vengeful_frost.png",
+      "ice": "heroes/vengeful/fx_vengeful_ice.png",
+      "mist": "heroes/vengeful/fx_vengeful_mist.png",
+      "star": "heroes/vengeful/fx_vengeful_star.png",
+      "howl": "heroes/vengeful/fx_vengeful_howl.png",
+      "ring": "heroes/vengeful/fx_vengeful_ring.png",
+      "skull": "heroes/vengeful/fx_vengeful_skull.png",
+      "shock": "heroes/vengeful/fx_vengeful_shock.png",
+      "link": "heroes/vengeful/fx_vengeful_link.png",
+      "pact": "heroes/vengeful/fx_vengeful_pact.png",
+      "fade": "heroes/vengeful/fx_vengeful_fade.png"
     }
   },
   "audio": {
@@ -899,7 +1276,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "juggernaut": {
       "cues": {
@@ -995,7 +1373,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "sven": {
       "cues": {
@@ -1079,7 +1458,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "ursa": {
       "cues": {
@@ -1159,7 +1539,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "lina": {
       "cues": {
@@ -1265,7 +1646,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "earthshaker": {
       "cues": {
@@ -1354,7 +1736,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "drow": {
       "cues": {
@@ -1448,7 +1831,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "mirana": {
       "cues": {
@@ -1559,7 +1943,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "crystalmaiden": {
       "cues": {
@@ -1654,7 +2039,8 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
     },
     "shadowshaman": {
       "cues": {
@@ -1761,7 +2147,1062 @@
           ],
           "gain": 1
         }
-      }
+      },
+      "bundle": "audio.bin"
+    },
+    "axe": {
+      "cues": {
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg"
+          ],
+          "gain": 0.45
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg",
+            "r_release_1.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg",
+            "vo_move_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg",
+            "vo_respawn_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "tiny": {
+      "cues": {
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg",
+            "w_cast_1.ogg"
+          ],
+          "gain": 0.8
+        },
+        "w_launch": {
+          "files": [
+            "w_launch_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "w_hit": {
+          "files": [
+            "w_hit_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg",
+            "e_hit_1.ogg",
+            "e_hit_2.ogg"
+          ],
+          "gain": 0.9
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.75
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "faceless": {
+      "cues": {
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg",
+            "e_hit_1.ogg",
+            "e_hit_2.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 0.95
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg",
+            "vo_move_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg",
+            "vo_respawn_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "skeletonking": {
+      "cues": {
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 0.95
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg",
+            "vo_move_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg",
+            "vo_attack_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg",
+            "vo_respawn_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "zeus": {
+      "cues": {
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.35
+        },
+        "w_hit": {
+          "files": [
+            "w_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg"
+          ],
+          "gain": 0.4
+        },
+        "r_charge": {
+          "files": [
+            "r_charge_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.5
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "lich": {
+      "cues": {
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "e_hit": {
+          "files": [
+            "e_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg"
+          ],
+          "gain": 0.5
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.5
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "sniper": {
+      "cues": {
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.45
+        },
+        "w_hit": {
+          "files": [
+            "w_hit_0.ogg",
+            "w_hit_1.ogg",
+            "w_hit_2.ogg"
+          ],
+          "gain": 0.7
+        },
+        "r_charge": {
+          "files": [
+            "r_charge_0.ogg"
+          ],
+          "gain": 0.55
+        },
+        "r_release": {
+          "files": [
+            "r_release_0.ogg",
+            "r_release_1.ogg",
+            "r_release_2.ogg"
+          ],
+          "gain": 0.85
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg",
+            "r_hit_1.ogg",
+            "r_hit_2.ogg"
+          ],
+          "gain": 0.85
+        },
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg",
+            "ba_launch_1.ogg"
+          ],
+          "gain": 0.55
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.5
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg",
+            "vo_attack_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "phantomassassin": {
+      "cues": {
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg",
+            "q_hit_1.ogg",
+            "q_hit_2.ogg"
+          ],
+          "gain": 0.8
+        },
+        "w_cast": {
+          "files": [
+            "w_cast_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "w_hit": {
+          "files": [
+            "w_hit_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg"
+          ],
+          "gain": 0.8
+        },
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg"
+          ],
+          "gain": 0.45
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.6
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg",
+            "vo_respawn_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "lion": {
+      "cues": {
+        "q_cast": {
+          "files": [
+            "q_cast_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "w_hit": {
+          "files": [
+            "w_hit_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "e_cast": {
+          "files": [
+            "e_cast_0.ogg"
+          ],
+          "gain": 0.6
+        },
+        "e_loop": {
+          "files": [
+            "e_loop_0.ogg"
+          ],
+          "gain": 0.45
+        },
+        "r_charge": {
+          "files": [
+            "r_charge_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg"
+          ],
+          "gain": 0.85
+        },
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg",
+            "ba_launch_1.ogg"
+          ],
+          "gain": 0.5
+        },
+        "ba_hit": {
+          "files": [
+            "ba_hit_0.ogg",
+            "ba_hit_1.ogg",
+            "ba_hit_2.ogg"
+          ],
+          "gain": 0.5
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg",
+            "vo_move_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg",
+            "vo_recall_4.ogg",
+            "vo_recall_5.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
+    },
+    "vengeful": {
+      "cues": {
+        "q_launch": {
+          "files": [
+            "q_launch_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "q_hit": {
+          "files": [
+            "q_hit_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "w_launch": {
+          "files": [
+            "w_launch_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "r_charge": {
+          "files": [
+            "r_charge_0.ogg"
+          ],
+          "gain": 0.7
+        },
+        "r_hit": {
+          "files": [
+            "r_hit_0.ogg"
+          ],
+          "gain": 0.75
+        },
+        "ba_launch": {
+          "files": [
+            "ba_launch_0.ogg"
+          ],
+          "gain": 0.35
+        },
+        "death": {
+          "files": [
+            "death_0.ogg"
+          ],
+          "gain": 0.9
+        },
+        "vo_first_move": {
+          "files": [
+            "vo_first_move_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_move": {
+          "files": [
+            "vo_move_0.ogg",
+            "vo_move_1.ogg",
+            "vo_move_2.ogg",
+            "vo_move_3.ogg",
+            "vo_move_4.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_attack": {
+          "files": [
+            "vo_attack_0.ogg",
+            "vo_attack_1.ogg",
+            "vo_attack_2.ogg",
+            "vo_attack_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_respawn": {
+          "files": [
+            "vo_respawn_0.ogg",
+            "vo_respawn_1.ogg",
+            "vo_respawn_2.ogg",
+            "vo_respawn_3.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_kill": {
+          "files": [
+            "vo_kill_0.ogg"
+          ],
+          "gain": 1
+        },
+        "vo_recall": {
+          "files": [
+            "vo_recall_0.ogg",
+            "vo_recall_1.ogg",
+            "vo_recall_2.ogg",
+            "vo_recall_3.ogg"
+          ],
+          "gain": 1
+        }
+      },
+      "bundle": "audio.bin"
     }
   },
   "heroes": {
@@ -1878,7 +3319,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Pudge",
@@ -1902,7 +3344,7 @@
           }
         }
       },
-      "bytes": 618736,
+      "bytes": 620559,
       "game": true,
       "low": {
         "model": "heroes/pudge/low/champ_pudge.glb"
@@ -2014,7 +3456,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Juggernaut",
@@ -2038,7 +3481,7 @@
           }
         }
       },
-      "bytes": 488954,
+      "bytes": 490479,
       "game": true,
       "extras": {
         "w3_healing_ward": "heroes/juggernaut/w3_healing_ward.glb"
@@ -2149,7 +3592,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Sven",
@@ -2173,7 +3617,7 @@
           }
         }
       },
-      "bytes": 558505,
+      "bytes": 559933,
       "game": true,
       "low": {
         "model": "heroes/sven/low/champ_sven.glb"
@@ -2269,7 +3713,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Ursa",
@@ -2293,7 +3738,7 @@
           }
         }
       },
-      "bytes": 360606,
+      "bytes": 361805,
       "game": true,
       "low": {
         "model": "heroes/ursa/low/champ_ursa.glb"
@@ -2415,7 +3860,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Lina",
@@ -2439,7 +3885,7 @@
           }
         }
       },
-      "bytes": 618466,
+      "bytes": 620301,
       "game": true,
       "low": {
         "model": "heroes/lina/low/champ_lina.glb"
@@ -2547,7 +3993,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Earthshaker",
@@ -2571,7 +4018,7 @@
           }
         }
       },
-      "bytes": 520587,
+      "bytes": 522013,
       "game": true,
       "extras": {
         "w3_fissure_rock": "heroes/earthshaker/w3_fissure_rock.glb"
@@ -2690,7 +4137,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Drow Ranger",
@@ -2714,7 +4162,7 @@
           }
         }
       },
-      "bytes": 572241,
+      "bytes": 573682,
       "game": true,
       "low": {
         "model": "heroes/drow/low/champ_drow.glb"
@@ -2844,7 +4292,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Mirana",
@@ -2868,7 +4317,7 @@
           }
         }
       },
-      "bytes": 642714,
+      "bytes": 644537,
       "game": true,
       "low": {
         "model": "heroes/mirana/low/champ_mirana.glb"
@@ -2984,7 +4433,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Crystal Maiden",
@@ -3008,7 +4458,7 @@
           }
         }
       },
-      "bytes": 599585,
+      "bytes": 601063,
       "game": true,
       "low": {
         "model": "heroes/crystalmaiden/low/champ_crystalmaiden.glb"
@@ -3134,7 +4584,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       },
       "names": {
         "champion": "Shadow Shaman",
@@ -3158,7 +4609,7 @@
           }
         }
       },
-      "bytes": 805149,
+      "bytes": 806757,
       "game": true,
       "extras": {
         "w3_serpent_ward": "heroes/shadowshaman/w3_serpent_ward.glb",
@@ -3171,13 +4622,1506 @@
           "w3_hex_frog": "heroes/shadowshaman/low/w3_hex_frog.glb"
         }
       }
+    },
+    "axe": {
+      "dir": "heroes/axe/",
+      "audioDir": "audio/axe/",
+      "model": "heroes/axe/champ_axe.glb",
+      "fx": {
+        "ring": "heroes/axe/fx_axe_ring.png",
+        "scream": "heroes/axe/fx_axe_scream.png",
+        "torch": "heroes/axe/fx_axe_torch.png",
+        "eyes": "heroes/axe/fx_axe_eyes.png",
+        "spin": "heroes/axe/fx_axe_spin.png",
+        "streak": "heroes/axe/fx_axe_streak.png",
+        "blood": "heroes/axe/fx_axe_blood.png",
+        "wave": "heroes/axe/fx_axe_wave.png",
+        "rune": "heroes/axe/fx_axe_rune.png"
+      },
+      "audio": {
+        "cues": {
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.45
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg",
+              "r_release_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg",
+              "vo_move_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg",
+              "vo_respawn_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Axe",
+        "passive": "Counter Helix",
+        "abilities": {
+          "ax_q": {
+            "name": "Berserker's Call",
+            "label": "Call"
+          },
+          "ax_w": {
+            "name": "Battle Hunger",
+            "label": "Hunger"
+          },
+          "ax_e": {
+            "name": "Counter Helix",
+            "label": "Helix"
+          },
+          "ax_r": {
+            "name": "Culling Blade",
+            "label": "Culling"
+          }
+        }
+      },
+      "bytes": 625723,
+      "game": true,
+      "low": {
+        "model": "heroes/axe/low/champ_axe.glb"
+      }
+    },
+    "tiny": {
+      "dir": "heroes/tiny/",
+      "audioDir": "audio/tiny/",
+      "model": "heroes/tiny/champ_tiny.glb",
+      "fx": {
+        "rock": "heroes/tiny/fx_tiny_rock.png",
+        "dust": "heroes/tiny/fx_tiny_dust.png",
+        "cloud": "heroes/tiny/fx_tiny_cloud.png",
+        "wave": "heroes/tiny/fx_tiny_wave.png",
+        "ring": "heroes/tiny/fx_tiny_ring.png",
+        "glow": "heroes/tiny/fx_tiny_glow.png"
+      },
+      "audio": {
+        "cues": {
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg",
+              "w_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg",
+              "e_hit_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.75
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Tiny",
+        "passive": "Craggy Exterior",
+        "abilities": {
+          "ti_q": {
+            "name": "Avalanche",
+            "label": "Avalanche"
+          },
+          "ti_w": {
+            "name": "Toss",
+            "label": "Toss"
+          },
+          "ti_e": {
+            "name": "Craggy Exterior",
+            "label": "Craggy"
+          },
+          "ti_r": {
+            "name": "Grow",
+            "label": "Grow"
+          }
+        }
+      },
+      "bytes": 600158,
+      "game": true,
+      "low": {
+        "model": "heroes/tiny/low/champ_tiny.glb"
+      }
+    },
+    "faceless": {
+      "dir": "heroes/faceless/",
+      "audioDir": "audio/faceless/",
+      "model": "heroes/faceless/champ_faceless.glb",
+      "fx": {
+        "star": "heroes/faceless/fx_faceless_star.png",
+        "glow": "heroes/faceless/fx_faceless_glow.png",
+        "ripple": "heroes/faceless/fx_faceless_ripple.png",
+        "dust": "heroes/faceless/fx_faceless_dust.png",
+        "energy": "heroes/faceless/fx_faceless_energy.png",
+        "band": "heroes/faceless/fx_faceless_band.png",
+        "dome": "heroes/faceless/fx_faceless_dome.png",
+        "mote": "heroes/faceless/fx_faceless_mote.png"
+      },
+      "audio": {
+        "cues": {
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg",
+              "e_hit_2.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.95
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg",
+              "vo_move_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg",
+              "vo_respawn_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Faceless Void",
+        "passive": "Backtrack",
+        "abilities": {
+          "fv_q": {
+            "name": "Time Walk",
+            "label": "Time Walk"
+          },
+          "fv_w": {
+            "name": "Backtrack",
+            "label": "Backtrack"
+          },
+          "fv_e": {
+            "name": "Time Lock",
+            "label": "Time Lock"
+          },
+          "fv_r": {
+            "name": "Chronosphere",
+            "label": "Chrono"
+          }
+        }
+      },
+      "bytes": 564128,
+      "game": true,
+      "low": {
+        "model": "heroes/faceless/low/champ_faceless.glb"
+      }
+    },
+    "skeletonking": {
+      "dir": "heroes/skeletonking/",
+      "audioDir": "audio/skeletonking/",
+      "model": "heroes/skeletonking/champ_skeletonking.glb",
+      "fx": {
+        "glow": "heroes/skeletonking/fx_skeletonking_glow.png",
+        "zap": "heroes/skeletonking/fx_skeletonking_zap.png",
+        "flame": "heroes/skeletonking/fx_skeletonking_flame.png",
+        "rune": "heroes/skeletonking/fx_skeletonking_rune.png",
+        "vamp": "heroes/skeletonking/fx_skeletonking_vamp.png",
+        "grave": "heroes/skeletonking/fx_skeletonking_grave.png",
+        "ring": "heroes/skeletonking/fx_skeletonking_ring.png",
+        "wave": "heroes/skeletonking/fx_skeletonking_wave.png",
+        "star": "heroes/skeletonking/fx_skeletonking_star.png"
+      },
+      "audio": {
+        "cues": {
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.95
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg",
+              "vo_move_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg",
+              "vo_respawn_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Skeleton King",
+        "passive": "Vampiric Aura",
+        "abilities": {
+          "sk_q": {
+            "name": "Hellfire Blast",
+            "label": "Hellfire"
+          },
+          "sk_w": {
+            "name": "Vampiric Aura",
+            "label": "Vampiric"
+          },
+          "sk_e": {
+            "name": "Critical Strike",
+            "label": "Crit"
+          },
+          "sk_r": {
+            "name": "Reincarnation",
+            "label": "Reincarnate"
+          }
+        }
+      },
+      "bytes": 638811,
+      "game": true,
+      "low": {
+        "model": "heroes/skeletonking/low/champ_skeletonking.glb"
+      }
+    },
+    "zeus": {
+      "dir": "heroes/zeus/",
+      "audioDir": "audio/zeus/",
+      "model": "heroes/zeus/champ_zeus.glb",
+      "fx": {
+        "arc": "heroes/zeus/fx_zeus_arc.png",
+        "sky": "heroes/zeus/fx_zeus_sky.png",
+        "ball": "heroes/zeus/fx_zeus_ball.png",
+        "glow": "heroes/zeus/fx_zeus_glow.png",
+        "ring": "heroes/zeus/fx_zeus_ring.png",
+        "zap": "heroes/zeus/fx_zeus_zap.png"
+      },
+      "audio": {
+        "cues": {
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.35
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.4
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.5
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Zeus",
+        "passive": "Static Field",
+        "abilities": {
+          "ze_q": {
+            "name": "Arc Lightning",
+            "label": "Arc"
+          },
+          "ze_w": {
+            "name": "Lightning Bolt",
+            "label": "Bolt"
+          },
+          "ze_e": {
+            "name": "Static Field",
+            "label": "Static"
+          },
+          "ze_r": {
+            "name": "Thundergod's Wrath",
+            "label": "Wrath"
+          }
+        }
+      },
+      "bytes": 594889,
+      "game": true,
+      "low": {
+        "model": "heroes/zeus/low/champ_zeus.glb"
+      }
+    },
+    "lich": {
+      "dir": "heroes/lich/",
+      "audioDir": "audio/lich/",
+      "model": "heroes/lich/champ_lich.glb",
+      "fx": {
+        "orb": "heroes/lich/fx_lich_orb.png",
+        "frost": "heroes/lich/fx_lich_frost.png",
+        "ring": "heroes/lich/fx_lich_ring.png",
+        "ice": "heroes/lich/fx_lich_ice.png",
+        "snow": "heroes/lich/fx_lich_snow.png",
+        "nova": "heroes/lich/fx_lich_nova.png",
+        "ghost": "heroes/lich/fx_lich_ghost.png",
+        "ritual": "heroes/lich/fx_lich_ritual.png",
+        "glow": "heroes/lich/fx_lich_glow.png",
+        "star": "heroes/lich/fx_lich_star.png"
+      },
+      "audio": {
+        "cues": {
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.5
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Lich",
+        "passive": "Ethreain",
+        "abilities": {
+          "lc_q": {
+            "name": "Frost Nova",
+            "label": "Nova"
+          },
+          "lc_w": {
+            "name": "Frost Armor",
+            "label": "Armor"
+          },
+          "lc_e": {
+            "name": "Dark Ritual",
+            "label": "Ritual"
+          },
+          "lc_r": {
+            "name": "Chain Frost",
+            "label": "Chain"
+          }
+        }
+      },
+      "bytes": 653192,
+      "game": true,
+      "low": {
+        "model": "heroes/lich/low/champ_lich.glb"
+      }
+    },
+    "sniper": {
+      "dir": "heroes/sniper/",
+      "audioDir": "audio/sniper/",
+      "model": "heroes/sniper/champ_sniper.glb",
+      "fx": {
+        "dust": "heroes/sniper/fx_sniper_dust.png",
+        "spark": "heroes/sniper/fx_sniper_spark.png",
+        "flare": "heroes/sniper/fx_sniper_flare.png",
+        "glow": "heroes/sniper/fx_sniper_glow.png",
+        "snow": "heroes/sniper/fx_sniper_snow.png",
+        "cross": "heroes/sniper/fx_sniper_cross.png",
+        "bullet": "heroes/sniper/fx_sniper_bullet.png",
+        "ring": "heroes/sniper/fx_sniper_ring.png",
+        "magic": "heroes/sniper/fx_sniper_magic.png"
+      },
+      "audio": {
+        "cues": {
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.45
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg",
+              "w_hit_1.ogg",
+              "w_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.55
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg",
+              "r_release_1.ogg",
+              "r_release_2.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg",
+              "r_hit_2.ogg"
+            ],
+            "gain": 0.85
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.5
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Sniper",
+        "passive": "Headshot",
+        "abilities": {
+          "sn_q": {
+            "name": "Shrapnel",
+            "label": "Shrapnel"
+          },
+          "sn_w": {
+            "name": "Headshot",
+            "label": "Headshot"
+          },
+          "sn_e": {
+            "name": "Take Aim",
+            "label": "Take Aim"
+          },
+          "sn_r": {
+            "name": "Assassinate",
+            "label": "Assassinate"
+          }
+        }
+      },
+      "bytes": 568211,
+      "game": true,
+      "low": {
+        "model": "heroes/sniper/low/champ_sniper.glb"
+      }
+    },
+    "phantomassassin": {
+      "dir": "heroes/phantomassassin/",
+      "audioDir": "audio/phantomassassin/",
+      "model": "heroes/phantomassassin/champ_phantomassassin.glb",
+      "fx": {
+        "blade": "heroes/phantomassassin/fx_phantomassassin_blade.png",
+        "ribbon": "heroes/phantomassassin/fx_phantomassassin_ribbon.png",
+        "glow": "heroes/phantomassassin/fx_phantomassassin_glow.png",
+        "purple": "heroes/phantomassassin/fx_phantomassassin_purple.png",
+        "star": "heroes/phantomassassin/fx_phantomassassin_star.png",
+        "ripple": "heroes/phantomassassin/fx_phantomassassin_ripple.png",
+        "blue": "heroes/phantomassassin/fx_phantomassassin_blue.png",
+        "smoke": "heroes/phantomassassin/fx_phantomassassin_smoke.png",
+        "zap": "heroes/phantomassassin/fx_phantomassassin_zap.png",
+        "blood": "heroes/phantomassassin/fx_phantomassassin_blood.png"
+      },
+      "audio": {
+        "cues": {
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg",
+              "q_hit_2.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.45
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg",
+              "vo_respawn_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Phantom Assassin",
+        "passive": "Coup de Grace",
+        "abilities": {
+          "pa_q": {
+            "name": "Stifling Dagger",
+            "label": "Dagger"
+          },
+          "pa_w": {
+            "name": "Phantom Strike",
+            "label": "Strike"
+          },
+          "pa_e": {
+            "name": "Blur",
+            "label": "Blur"
+          },
+          "pa_r": {
+            "name": "Coup de Grace",
+            "label": "Coup"
+          }
+        }
+      },
+      "bytes": 558059,
+      "game": true,
+      "low": {
+        "model": "heroes/phantomassassin/low/champ_phantomassassin.glb"
+      }
+    },
+    "lion": {
+      "dir": "heroes/lion/",
+      "audioDir": "audio/lion/",
+      "model": "heroes/lion/champ_lion.glb",
+      "fx": {
+        "proj": "heroes/lion/fx_lion_proj.png",
+        "spike": "heroes/lion/fx_lion_spike.png",
+        "dust": "heroes/lion/fx_lion_dust.png",
+        "blood": "heroes/lion/fx_lion_blood.png",
+        "cloud": "heroes/lion/fx_lion_cloud.png",
+        "star": "heroes/lion/fx_lion_star.png",
+        "beam": "heroes/lion/fx_lion_beam.png",
+        "out": "heroes/lion/fx_lion_out.png",
+        "rune": "heroes/lion/fx_lion_rune.png",
+        "in": "heroes/lion/fx_lion_in.png",
+        "finger": "heroes/lion/fx_lion_finger.png",
+        "glow": "heroes/lion/fx_lion_glow.png",
+        "zap": "heroes/lion/fx_lion_zap.png"
+      },
+      "audio": {
+        "cues": {
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "e_loop": {
+            "files": [
+              "e_loop_0.ogg"
+            ],
+            "gain": 0.45
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg"
+            ],
+            "gain": 0.5
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.5
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg",
+              "vo_move_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg",
+              "vo_recall_4.ogg",
+              "vo_recall_5.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Lion",
+        "passive": "Demon Witch",
+        "abilities": {
+          "ln_q": {
+            "name": "Earth Spike",
+            "label": "Spike"
+          },
+          "ln_w": {
+            "name": "Hex",
+            "label": "Hex"
+          },
+          "ln_e": {
+            "name": "Mana Drain",
+            "label": "Drain"
+          },
+          "ln_r": {
+            "name": "Finger of Death",
+            "label": "Finger"
+          }
+        }
+      },
+      "bytes": 726072,
+      "game": true,
+      "extras": {
+        "w3_lion_frog": "heroes/lion/w3_lion_frog.glb"
+      },
+      "low": {
+        "model": "heroes/lion/low/champ_lion.glb",
+        "extras": {
+          "w3_lion_frog": "heroes/lion/low/w3_lion_frog.glb"
+        }
+      }
+    },
+    "vengeful": {
+      "dir": "heroes/vengeful/",
+      "audioDir": "audio/vengeful/",
+      "model": "heroes/vengeful/champ_vengeful.glb",
+      "fx": {
+        "ball": "heroes/vengeful/fx_vengeful_ball.png",
+        "glow": "heroes/vengeful/fx_vengeful_glow.png",
+        "frost": "heroes/vengeful/fx_vengeful_frost.png",
+        "ice": "heroes/vengeful/fx_vengeful_ice.png",
+        "mist": "heroes/vengeful/fx_vengeful_mist.png",
+        "star": "heroes/vengeful/fx_vengeful_star.png",
+        "howl": "heroes/vengeful/fx_vengeful_howl.png",
+        "ring": "heroes/vengeful/fx_vengeful_ring.png",
+        "skull": "heroes/vengeful/fx_vengeful_skull.png",
+        "shock": "heroes/vengeful/fx_vengeful_shock.png",
+        "link": "heroes/vengeful/fx_vengeful_link.png",
+        "pact": "heroes/vengeful/fx_vengeful_pact.png",
+        "fade": "heroes/vengeful/fx_vengeful_fade.png"
+      },
+      "audio": {
+        "cues": {
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.35
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg",
+              "vo_move_4.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg",
+              "vo_respawn_2.ogg",
+              "vo_respawn_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg",
+              "vo_recall_2.ogg",
+              "vo_recall_3.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      },
+      "names": {
+        "champion": "Vengeful Spirit",
+        "passive": "Vengeance",
+        "abilities": {
+          "vs_q": {
+            "name": "Magic Missile",
+            "label": "Missile"
+          },
+          "vs_w": {
+            "name": "Wave of Terror",
+            "label": "Wave"
+          },
+          "vs_e": {
+            "name": "Command Aura",
+            "label": "Command"
+          },
+          "vs_r": {
+            "name": "Nether Swap",
+            "label": "Swap"
+          }
+        }
+      },
+      "bytes": 503506,
+      "game": true,
+      "low": {
+        "model": "heroes/vengeful/low/champ_vengeful.glb"
+      }
     }
   },
   "gpu": {
     "map": "dota",
     "shared": {
-      "high": 39234620,
-      "low": 22457084
+      "high": 39409420,
+      "low": 22631884
     },
     "heroes": {
       "pudge": {
@@ -3219,6 +6163,46 @@
       "shadowshaman": {
         "high": 868356,
         "low": 409604
+      },
+      "axe": {
+        "high": 731808,
+        "low": 469664
+      },
+      "tiny": {
+        "high": 879264,
+        "low": 354976
+      },
+      "faceless": {
+        "high": 592564,
+        "low": 330420
+      },
+      "skeletonking": {
+        "high": 617120,
+        "low": 354976
+      },
+      "zeus": {
+        "high": 824664,
+        "low": 300376
+      },
+      "lich": {
+        "high": 507892,
+        "low": 245748
+      },
+      "sniper": {
+        "high": 477856,
+        "low": 215712
+      },
+      "phantomassassin": {
+        "high": 464212,
+        "low": 202068
+      },
+      "lion": {
+        "high": 694956,
+        "low": 367276
+      },
+      "vengeful": {
+        "high": 600736,
+        "low": 338592
       }
     }
   },
@@ -3233,7 +6217,17 @@
       "crystalmaiden",
       "shadowshaman",
       "earthshaker",
-      "pudge"
+      "pudge",
+      "axe",
+      "tiny",
+      "faceless",
+      "skeletonking",
+      "zeus",
+      "lich",
+      "sniper",
+      "phantomassassin",
+      "lion",
+      "vengeful"
     ],
     "abilities": [
       "ju_q",
@@ -3275,7 +6269,47 @@
       "pu_q",
       "pu_w",
       "pu_e",
-      "pu_r"
+      "pu_r",
+      "ax_q",
+      "ax_w",
+      "ax_e",
+      "ax_r",
+      "ti_q",
+      "ti_w",
+      "ti_e",
+      "ti_r",
+      "fv_q",
+      "fv_w",
+      "fv_e",
+      "fv_r",
+      "sk_q",
+      "sk_w",
+      "sk_e",
+      "sk_r",
+      "ze_q",
+      "ze_w",
+      "ze_e",
+      "ze_r",
+      "lc_q",
+      "lc_w",
+      "lc_e",
+      "lc_r",
+      "sn_q",
+      "sn_w",
+      "sn_e",
+      "sn_r",
+      "pa_q",
+      "pa_w",
+      "pa_e",
+      "pa_r",
+      "ln_q",
+      "ln_w",
+      "ln_e",
+      "ln_r",
+      "vs_q",
+      "vs_w",
+      "vs_e",
+      "vs_r"
     ],
     "summoners": [],
     "ui": [],
@@ -3330,6 +6364,1062 @@
       "mask_of_madness",
       "force_staff",
       "euls_scepter"
+    ],
+    "atlases": [
+      {
+        "file": "icons/atlas/champ.webp",
+        "w": 680,
+        "h": 544,
+        "icons": {
+          "champs/juggernaut": [
+            4,
+            4,
+            128,
+            128
+          ],
+          "champs/sven": [
+            140,
+            4,
+            128,
+            128
+          ],
+          "champs/ursa": [
+            276,
+            4,
+            128,
+            128
+          ],
+          "champs/lina": [
+            412,
+            4,
+            128,
+            128
+          ],
+          "champs/drow": [
+            548,
+            4,
+            128,
+            128
+          ],
+          "champs/mirana": [
+            4,
+            140,
+            128,
+            128
+          ],
+          "champs/crystalmaiden": [
+            140,
+            140,
+            128,
+            128
+          ],
+          "champs/shadowshaman": [
+            276,
+            140,
+            128,
+            128
+          ],
+          "champs/earthshaker": [
+            412,
+            140,
+            128,
+            128
+          ],
+          "champs/pudge": [
+            548,
+            140,
+            128,
+            128
+          ],
+          "champs/axe": [
+            4,
+            276,
+            128,
+            128
+          ],
+          "champs/tiny": [
+            140,
+            276,
+            128,
+            128
+          ],
+          "champs/faceless": [
+            276,
+            276,
+            128,
+            128
+          ],
+          "champs/skeletonking": [
+            412,
+            276,
+            128,
+            128
+          ],
+          "champs/zeus": [
+            548,
+            276,
+            128,
+            128
+          ],
+          "champs/lich": [
+            4,
+            412,
+            128,
+            128
+          ],
+          "champs/sniper": [
+            140,
+            412,
+            128,
+            128
+          ],
+          "champs/phantomassassin": [
+            276,
+            412,
+            128,
+            128
+          ],
+          "champs/lion": [
+            412,
+            412,
+            128,
+            128
+          ],
+          "champs/vengeful": [
+            548,
+            412,
+            128,
+            128
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/item.webp",
+        "w": 832,
+        "h": 728,
+        "icons": {
+          "items/boots_of_speed": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "items/gloves_of_haste": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "items/belt_of_strength": [
+            212,
+            4,
+            96,
+            96
+          ],
+          "items/band_of_elvenskin": [
+            316,
+            4,
+            96,
+            96
+          ],
+          "items/blades_of_attack": [
+            420,
+            4,
+            96,
+            96
+          ],
+          "items/broadsword": [
+            524,
+            4,
+            96,
+            96
+          ],
+          "items/claymore": [
+            628,
+            4,
+            96,
+            96
+          ],
+          "items/mithril_hammer": [
+            732,
+            4,
+            96,
+            96
+          ],
+          "items/ogre_club": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "items/javelin": [
+            108,
+            108,
+            96,
+            96
+          ],
+          "items/quarterstaff": [
+            212,
+            108,
+            96,
+            96
+          ],
+          "items/demon_edge": [
+            316,
+            108,
+            96,
+            96
+          ],
+          "items/eaglesong": [
+            420,
+            108,
+            96,
+            96
+          ],
+          "items/talisman_of_evasion": [
+            524,
+            108,
+            96,
+            96
+          ],
+          "items/blade_of_alacrity": [
+            628,
+            108,
+            96,
+            96
+          ],
+          "items/staff_of_wizardry": [
+            732,
+            108,
+            96,
+            96
+          ],
+          "items/ring_of_health": [
+            4,
+            212,
+            96,
+            96
+          ],
+          "items/void_stone": [
+            108,
+            212,
+            96,
+            96
+          ],
+          "items/ring_of_regen": [
+            212,
+            212,
+            96,
+            96
+          ],
+          "items/sobi_mask": [
+            316,
+            212,
+            96,
+            96
+          ],
+          "items/morbid_mask": [
+            420,
+            212,
+            96,
+            96
+          ],
+          "items/vitality_booster": [
+            524,
+            212,
+            96,
+            96
+          ],
+          "items/reaver": [
+            628,
+            212,
+            96,
+            96
+          ],
+          "items/platemail": [
+            732,
+            212,
+            96,
+            96
+          ],
+          "items/chainmail": [
+            4,
+            316,
+            96,
+            96
+          ],
+          "items/hyperstone": [
+            108,
+            316,
+            96,
+            96
+          ],
+          "items/quelling_blade": [
+            212,
+            316,
+            96,
+            96
+          ],
+          "items/helm_of_iron_will": [
+            316,
+            316,
+            96,
+            96
+          ],
+          "items/blink_dagger": [
+            420,
+            316,
+            96,
+            96
+          ],
+          "items/power_treads": [
+            524,
+            316,
+            96,
+            96
+          ],
+          "items/phase_boots": [
+            628,
+            316,
+            96,
+            96
+          ],
+          "items/perseverance": [
+            732,
+            316,
+            96,
+            96
+          ],
+          "items/battle_fury": [
+            4,
+            420,
+            96,
+            96
+          ],
+          "items/black_king_bar": [
+            108,
+            420,
+            96,
+            96
+          ],
+          "items/desolator": [
+            212,
+            420,
+            96,
+            96
+          ],
+          "items/crystalys": [
+            316,
+            420,
+            96,
+            96
+          ],
+          "items/daedalus": [
+            420,
+            420,
+            96,
+            96
+          ],
+          "items/monkey_king_bar": [
+            524,
+            420,
+            96,
+            96
+          ],
+          "items/butterfly": [
+            628,
+            420,
+            96,
+            96
+          ],
+          "items/skull_basher": [
+            732,
+            420,
+            96,
+            96
+          ],
+          "items/sange": [
+            4,
+            524,
+            96,
+            96
+          ],
+          "items/yasha": [
+            108,
+            524,
+            96,
+            96
+          ],
+          "items/sange_and_yasha": [
+            212,
+            524,
+            96,
+            96
+          ],
+          "items/heart_of_tarrasque": [
+            316,
+            524,
+            96,
+            96
+          ],
+          "items/assault_cuirass": [
+            420,
+            524,
+            96,
+            96
+          ],
+          "items/helm_of_the_dominator": [
+            524,
+            524,
+            96,
+            96
+          ],
+          "items/satanic": [
+            628,
+            524,
+            96,
+            96
+          ],
+          "items/mask_of_madness": [
+            732,
+            524,
+            96,
+            96
+          ],
+          "items/force_staff": [
+            4,
+            628,
+            96,
+            96
+          ],
+          "items/euls_scepter": [
+            108,
+            628,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_juggernaut.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ju_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ju_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ju_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ju_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_sven.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/sv_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/sv_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/sv_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/sv_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_ursa.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ur_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ur_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ur_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ur_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_lina.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/li_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/li_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/li_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/li_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_drow.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/dr_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/dr_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/dr_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/dr_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_mirana.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/mi_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/mi_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/mi_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/mi_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_crystalmaiden.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/cm_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/cm_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/cm_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/cm_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_shadowshaman.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ss_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ss_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ss_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ss_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_earthshaker.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/es_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/es_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/es_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/es_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_pudge.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/pu_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/pu_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/pu_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/pu_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_axe.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ax_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ax_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ax_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ax_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_tiny.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ti_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ti_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ti_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ti_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_faceless.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/fv_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/fv_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/fv_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/fv_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_skeletonking.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/sk_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/sk_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/sk_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/sk_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_zeus.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ze_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ze_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ze_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ze_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_lich.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/lc_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/lc_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/lc_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/lc_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_sniper.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/sn_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/sn_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/sn_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/sn_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_phantomassassin.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/pa_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/pa_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/pa_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/pa_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_lion.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ln_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ln_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ln_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ln_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_vengeful.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/vs_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/vs_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/vs_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/vs_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      }
     ]
   },
   "items": {
@@ -3422,7 +7512,8 @@
           ],
           "gain": 0.7
         }
-      }
+      },
+      "bundle": "audio.bin"
     }
   }
 }

@@ -1,6 +1,6 @@
 # Sound effect credits
 
-All files in this folder are unmodified clips from four audio packs by
+The clips in `sfx.bin` (this folder) are unmodified clips from four audio packs by
 **Kenney** (www.kenney.nl), released under **Creative Commons Zero (CC0 1.0)**:
 http://creativecommons.org/publicdomain/zero/1.0/ — each pack's bundled
 `License.txt` states the CC0 license. Credit is not required; it is given here
@@ -14,7 +14,11 @@ with thanks.
 | Sci-Fi Sounds (1.0) | https://kenney.nl/assets/sci-fi-sounds | `kenney_sci-fi-sounds.zip` |
 
 Each file is renamed after the game cue that plays it (see
-`src/audio/sfxAssets.ts`). Cues without a file, or whose file fails to load or
+`src/audio/sfxAssets.ts`). Since M25c the 30 clips ship as one file,
+`sfx.bin` (a plain concatenation with a file table, `src/audio/audioBundle.ts`:
+each clip's Ogg bytes unchanged); the individual source files are kept in the
+repository under `assets/sfx/` and the bundle is rebuilt from them with
+`npm run packs:committed`. Cues without a file, or whose file fails to load or
 decode (e.g. no Ogg Vorbis support), use the procedural WebAudio recipes in
 `src/audio/recipes.ts`.
 

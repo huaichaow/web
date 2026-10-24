@@ -5,4 +5,4 @@ converted by `npm run riot` (tools/riot/) for an unlicensed trial of this projec
 project's license, are never committed, and must not be published or redistributed. Licensing is handled
 separately by the owner; without these files the game draws its primitive shapes.
 
-Built 2026-10-21. Rebuilding from scratch: RIOT_PLAN.md, "Rebuilding the Riot pack".
+Built 2026-10-24. Rebuilding from scratch: RIOT_PLAN.md, "Rebuilding the Riot pack".

@@ -1,6 +1,8 @@
 # Item icon credits
 
-The item icons in `items/` (64 px PNGs) were rendered in M10g from props of the
+The item icons in `items.webp` (64 px each; since M25c one lossless atlas built
+from the source PNGs in the repository's `assets/icons/items/` by
+`npm run packs:committed`) were rendered in M10g from props of the
 **KayKit** packs by Kay Lousberg (www.kaylousberg.com), released under
 **Creative Commons Zero (CC0 1.0)**: http://creativecommons.org/publicdomain/zero/1.0/.
 Credit is not required; it is given here with thanks. (The KayKit models and

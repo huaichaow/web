@@ -554,7 +554,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "garen": {
@@ -715,7 +716,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "darius": {
@@ -880,7 +882,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "masteryi": {
@@ -1053,7 +1056,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "warwick": {
@@ -1229,7 +1233,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "annie": {
@@ -1437,7 +1442,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "ahri": {
@@ -1684,7 +1690,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "jinx": {
@@ -1898,7 +1905,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "lux": {
@@ -2102,7 +2110,8 @@
             ],
             "gain": 1
           }
-        }
+        },
+        "bundle": "audio.bin"
       }
     },
     "thresh": {
@@ -2297,7 +2306,1669 @@
             ],
             "gain": 1
           }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "malphite": {
+      "models": {
+        "champ_malphite": {
+          "file": "champ_malphite.glb",
+          "low": "low/champ_malphite.glb"
         }
+      },
+      "vfx": {
+        "data": "vfx_malphite.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_malphite_0.ktx2",
+            "webp": "vfx_malphite_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_malphite_0.ktx2",
+            "webp": "low/vfx_malphite_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg",
+              "ba_cast_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.95
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "jax": {
+      "models": {
+        "champ_jax": {
+          "file": "champ_jax.glb",
+          "low": "low/champ_jax.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_jax.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_jax_0.ktx2",
+            "webp": "vfx_jax_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_jax_0.ktx2",
+            "webp": "low/vfx_jax_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg",
+              "w_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg",
+              "w_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.95
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg",
+              "vo_first_move_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_tower": {
+            "files": [
+              "vo_tower_0.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "leesin": {
+      "models": {
+        "champ_leesin": {
+          "file": "champ_leesin.glb",
+          "low": "low/champ_leesin.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_leesin.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_leesin_0.ktx2",
+            "webp": "vfx_leesin_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_leesin_0.ktx2",
+            "webp": "low/vfx_leesin_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "q_retract": {
+            "files": [
+              "q_retract_0.ogg",
+              "q_retract_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg",
+              "w_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_mark": {
+            "files": [
+              "w_mark_0.ogg",
+              "w_mark_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_detonate": {
+            "files": [
+              "w_detonate_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg",
+              "e_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_blink": {
+            "files": [
+              "e_blink_0.ogg",
+              "e_blink_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.95
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg",
+              "w_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg",
+              "vo_first_move_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "amumu": {
+      "models": {
+        "champ_amumu": {
+          "file": "champ_amumu.glb",
+          "low": "low/champ_amumu.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_amumu.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_amumu_0.ktx2",
+            "webp": "vfx_amumu_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_amumu_0.ktx2",
+            "webp": "low/vfx_amumu_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.65
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_loop": {
+            "files": [
+              "w_loop_0.ogg"
+            ],
+            "gain": 0.5
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "veigar": {
+      "models": {
+        "champ_veigar": {
+          "file": "champ_veigar.glb",
+          "low": "low/champ_veigar.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_veigar.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_veigar_0.ktx2",
+            "webp": "vfx_veigar_0.webp"
+          },
+          {
+            "ktx2": "vfx_veigar_1.ktx2",
+            "webp": "vfx_veigar_1.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_veigar_0.ktx2",
+            "webp": "low/vfx_veigar_0.webp"
+          },
+          {
+            "ktx2": "low/vfx_veigar_1.ktx2",
+            "webp": "low/vfx_veigar_1.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.5
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg"
+            ],
+            "gain": 0.65
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_detonate": {
+            "files": [
+              "w_detonate_0.ogg"
+            ],
+            "gain": 0.9
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg",
+              "e_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_loop": {
+            "files": [
+              "e_loop_0.ogg"
+            ],
+            "gain": 0.6
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.95
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg",
+              "vo_kill_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "katarina": {
+      "models": {
+        "champ_katarina": {
+          "file": "champ_katarina.glb",
+          "low": "low/champ_katarina.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_katarina.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_katarina_0.ktx2",
+            "webp": "vfx_katarina_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_katarina_0.ktx2",
+            "webp": "low/vfx_katarina_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg",
+              "q_hit_2.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_mark": {
+            "files": [
+              "w_mark_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "p_hit": {
+            "files": [
+              "p_hit_0.ogg",
+              "p_hit_1.ogg",
+              "p_hit_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "p_ready": {
+            "files": [
+              "p_ready_0.ogg",
+              "p_ready_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_blink": {
+            "files": [
+              "e_blink_0.ogg",
+              "e_blink_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg",
+              "r_hit_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "r_channel": {
+            "files": [
+              "r_channel_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "ashe": {
+      "models": {
+        "champ_ashe": {
+          "file": "champ_ashe.glb",
+          "low": "low/champ_ashe.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_ashe.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_ashe_0.ktx2",
+            "webp": "vfx_ashe_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_ashe_0.ktx2",
+            "webp": "low/vfx_ashe_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg"
+            ],
+            "gain": 0.65
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.6
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.65
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg",
+              "w_hit_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "e_launch": {
+            "files": [
+              "e_launch_0.ogg",
+              "e_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg"
+            ],
+            "gain": 0.95
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg",
+              "vo_kill_2.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "caitlyn": {
+      "models": {
+        "champ_caitlyn": {
+          "file": "champ_caitlyn.glb",
+          "low": "low/champ_caitlyn.glb"
+        },
+        "caitlyn_trap": {
+          "file": "caitlyn_trap.glb",
+          "low": "low/caitlyn_trap.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_caitlyn.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_caitlyn_0.ktx2",
+            "webp": "vfx_caitlyn_0.webp"
+          },
+          {
+            "ktx2": "vfx_caitlyn_1.ktx2",
+            "webp": "vfx_caitlyn_1.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_caitlyn_0.ktx2",
+            "webp": "low/vfx_caitlyn_0.webp"
+          },
+          {
+            "ktx2": "low/vfx_caitlyn_1.ktx2",
+            "webp": "low/vfx_caitlyn_1.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg",
+              "ba_launch_1.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg"
+            ],
+            "gain": 0.65
+          },
+          "p_ready": {
+            "files": [
+              "p_ready_0.ogg",
+              "p_ready_1.ogg"
+            ],
+            "gain": 0.7
+          },
+          "p_hit": {
+            "files": [
+              "p_hit_0.ogg",
+              "p_hit_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg",
+              "q_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg",
+              "w_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_mark": {
+            "files": [
+              "w_mark_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg",
+              "e_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_launch": {
+            "files": [
+              "e_launch_0.ogg",
+              "e_launch_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_release": {
+            "files": [
+              "r_release_0.ogg",
+              "r_release_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg"
+            ],
+            "gain": 0.95
+          },
+          "vo_first_move": {
+            "files": [
+              "vo_first_move_0.ogg",
+              "vo_first_move_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_w": {
+            "files": [
+              "vo_w_0.ogg",
+              "vo_w_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_respawn": {
+            "files": [
+              "vo_respawn_0.ogg",
+              "vo_respawn_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg",
+              "vo_recall_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg",
+              "vo_kill_2.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "leona": {
+      "models": {
+        "champ_leona": {
+          "file": "champ_leona.glb",
+          "low": "low/champ_leona.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_leona.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_leona_0.ktx2",
+            "webp": "vfx_leona_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_leona_0.ktx2",
+            "webp": "low/vfx_leona_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg",
+              "ba_cast_2.ogg"
+            ],
+            "gain": 0.6
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg",
+              "ba_hit_1.ogg",
+              "ba_hit_2.ogg"
+            ],
+            "gain": 0.7
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg",
+              "q_cast_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "q_hit": {
+            "files": [
+              "q_hit_0.ogg",
+              "q_hit_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg",
+              "w_cast_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg",
+              "w_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_launch": {
+            "files": [
+              "e_launch_0.ogg",
+              "e_launch_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "e_hit": {
+            "files": [
+              "e_hit_0.ogg",
+              "e_hit_1.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg",
+              "r_charge_1.ogg"
+            ],
+            "gain": 0.85
+          },
+          "r_hit": {
+            "files": [
+              "r_hit_0.ogg",
+              "r_hit_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "p_hit": {
+            "files": [
+              "p_hit_0.ogg",
+              "p_hit_1.ogg"
+            ],
+            "gain": 0.75
+          },
+          "death": {
+            "files": [
+              "death_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_q": {
+            "files": [
+              "vo_q_0.ogg",
+              "vo_q_1.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_e": {
+            "files": [
+              "vo_e_0.ogg",
+              "vo_e_1.ogg",
+              "vo_e_2.ogg"
+            ],
+            "gain": 0.9
+          },
+          "vo_r": {
+            "files": [
+              "vo_r_0.ogg",
+              "vo_r_1.ogg",
+              "vo_r_2.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
+      }
+    },
+    "janna": {
+      "models": {
+        "champ_janna": {
+          "file": "champ_janna.glb",
+          "low": "low/champ_janna.glb"
+        }
+      },
+      "vfx": {
+        "data": "vfx_janna.json",
+        "atlases": [
+          {
+            "ktx2": "vfx_janna_0.ktx2",
+            "webp": "vfx_janna_0.webp"
+          }
+        ],
+        "low": [
+          {
+            "ktx2": "low/vfx_janna_0.ktx2",
+            "webp": "low/vfx_janna_0.webp"
+          }
+        ]
+      },
+      "audio": {
+        "cues": {
+          "ba_cast": {
+            "files": [
+              "ba_cast_0.ogg",
+              "ba_cast_1.ogg"
+            ],
+            "gain": 0.5
+          },
+          "ba_launch": {
+            "files": [
+              "ba_launch_0.ogg"
+            ],
+            "gain": 0.55
+          },
+          "ba_hit": {
+            "files": [
+              "ba_hit_0.ogg"
+            ],
+            "gain": 0.65
+          },
+          "q_cast": {
+            "files": [
+              "q_cast_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "q_launch": {
+            "files": [
+              "q_launch_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "w_cast": {
+            "files": [
+              "w_cast_0.ogg"
+            ],
+            "gain": 0.7
+          },
+          "w_launch": {
+            "files": [
+              "w_launch_0.ogg"
+            ],
+            "gain": 0.75
+          },
+          "w_hit": {
+            "files": [
+              "w_hit_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "e_cast": {
+            "files": [
+              "e_cast_0.ogg"
+            ],
+            "gain": 0.8
+          },
+          "r_charge": {
+            "files": [
+              "r_charge_0.ogg"
+            ],
+            "gain": 0.85
+          },
+          "vo_move": {
+            "files": [
+              "vo_move_0.ogg",
+              "vo_move_1.ogg",
+              "vo_move_2.ogg",
+              "vo_move_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_attack": {
+            "files": [
+              "vo_attack_0.ogg",
+              "vo_attack_1.ogg",
+              "vo_attack_2.ogg",
+              "vo_attack_3.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_death": {
+            "files": [
+              "vo_death_0.ogg",
+              "vo_death_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_kill": {
+            "files": [
+              "vo_kill_0.ogg",
+              "vo_kill_1.ogg"
+            ],
+            "gain": 1
+          },
+          "vo_recall": {
+            "files": [
+              "vo_recall_0.ogg"
+            ],
+            "gain": 1
+          }
+        },
+        "bundle": "audio.bin"
       }
     }
   },
@@ -2351,6 +4022,46 @@
       "warwick": {
         "high": 2796228,
         "low": 699104
+      },
+      "malphite": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "jax": {
+        "high": 3495276,
+        "low": 873872
+      },
+      "leesin": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "amumu": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "veigar": {
+        "high": 4194356,
+        "low": 1048656
+      },
+      "katarina": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "ashe": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "caitlyn": {
+        "high": 4281736,
+        "low": 1054144
+      },
+      "leona": {
+        "high": 2796228,
+        "low": 699104
+      },
+      "janna": {
+        "high": 2796228,
+        "low": 699104
       }
     }
   },
@@ -2365,7 +4076,17 @@
       "ahri",
       "jinx",
       "lux",
-      "thresh"
+      "thresh",
+      "malphite",
+      "jax",
+      "leesin",
+      "amumu",
+      "veigar",
+      "katarina",
+      "ashe",
+      "caitlyn",
+      "leona",
+      "janna"
     ],
     "abilities": [
       "ez_q",
@@ -2407,7 +4128,47 @@
       "th_q",
       "th_w",
       "th_e",
-      "th_r"
+      "th_r",
+      "ml_q",
+      "ml_w",
+      "ml_e",
+      "ml_r",
+      "ja_q",
+      "ja_w",
+      "ja_e",
+      "ja_r",
+      "le_q",
+      "le_w",
+      "le_e",
+      "le_r",
+      "am_q",
+      "am_w",
+      "am_e",
+      "am_r",
+      "ve_q",
+      "ve_w",
+      "ve_e",
+      "ve_r",
+      "ka_q",
+      "ka_w",
+      "ka_e",
+      "ka_r",
+      "ae_q",
+      "ae_w",
+      "ae_e",
+      "ae_r",
+      "ca_q",
+      "ca_w",
+      "ca_e",
+      "ca_r",
+      "lo_q",
+      "lo_w",
+      "lo_e",
+      "lo_r",
+      "jn_q",
+      "jn_w",
+      "jn_e",
+      "jn_r"
     ],
     "summoners": [
       "flash",
@@ -2470,6 +4231,1105 @@
       "void_staff",
       "lich_bane",
       "rylais_scepter"
+    ],
+    "atlases": [
+      {
+        "file": "icons/atlas/champ.webp",
+        "w": 680,
+        "h": 544,
+        "icons": {
+          "champs/ezreal": [
+            4,
+            4,
+            128,
+            128
+          ],
+          "champs/garen": [
+            140,
+            4,
+            128,
+            128
+          ],
+          "champs/darius": [
+            276,
+            4,
+            128,
+            128
+          ],
+          "champs/masteryi": [
+            412,
+            4,
+            128,
+            128
+          ],
+          "champs/warwick": [
+            548,
+            4,
+            128,
+            128
+          ],
+          "champs/annie": [
+            4,
+            140,
+            128,
+            128
+          ],
+          "champs/ahri": [
+            140,
+            140,
+            128,
+            128
+          ],
+          "champs/jinx": [
+            276,
+            140,
+            128,
+            128
+          ],
+          "champs/lux": [
+            412,
+            140,
+            128,
+            128
+          ],
+          "champs/thresh": [
+            548,
+            140,
+            128,
+            128
+          ],
+          "champs/malphite": [
+            4,
+            276,
+            128,
+            128
+          ],
+          "champs/jax": [
+            140,
+            276,
+            128,
+            128
+          ],
+          "champs/leesin": [
+            276,
+            276,
+            128,
+            128
+          ],
+          "champs/amumu": [
+            412,
+            276,
+            128,
+            128
+          ],
+          "champs/veigar": [
+            548,
+            276,
+            128,
+            128
+          ],
+          "champs/katarina": [
+            4,
+            412,
+            128,
+            128
+          ],
+          "champs/ashe": [
+            140,
+            412,
+            128,
+            128
+          ],
+          "champs/caitlyn": [
+            276,
+            412,
+            128,
+            128
+          ],
+          "champs/leona": [
+            412,
+            412,
+            128,
+            128
+          ],
+          "champs/janna": [
+            548,
+            412,
+            128,
+            128
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/item.webp",
+        "w": 832,
+        "h": 728,
+        "icons": {
+          "items/long_sword": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "items/ruby": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "items/cloth": [
+            212,
+            4,
+            96,
+            96
+          ],
+          "items/mantle": [
+            316,
+            4,
+            96,
+            96
+          ],
+          "items/dagger": [
+            420,
+            4,
+            96,
+            96
+          ],
+          "items/tome": [
+            524,
+            4,
+            96,
+            96
+          ],
+          "items/boots": [
+            628,
+            4,
+            96,
+            96
+          ],
+          "items/pickaxe": [
+            732,
+            4,
+            96,
+            96
+          ],
+          "items/bf_sword": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "items/large_rod": [
+            108,
+            108,
+            96,
+            96
+          ],
+          "items/blasting_wand": [
+            212,
+            108,
+            96,
+            96
+          ],
+          "items/cloak_of_agility": [
+            316,
+            108,
+            96,
+            96
+          ],
+          "items/glowing_mote": [
+            420,
+            108,
+            96,
+            96
+          ],
+          "items/rejuvenation_bead": [
+            524,
+            108,
+            96,
+            96
+          ],
+          "items/vampiric_scepter": [
+            628,
+            108,
+            96,
+            96
+          ],
+          "items/serrated_dirk": [
+            732,
+            108,
+            96,
+            96
+          ],
+          "items/phage": [
+            4,
+            212,
+            96,
+            96
+          ],
+          "items/sheen": [
+            108,
+            212,
+            96,
+            96
+          ],
+          "items/kindlegem": [
+            212,
+            212,
+            96,
+            96
+          ],
+          "items/giants_belt": [
+            316,
+            212,
+            96,
+            96
+          ],
+          "items/chain_vest": [
+            420,
+            212,
+            96,
+            96
+          ],
+          "items/recurve_bow": [
+            524,
+            212,
+            96,
+            96
+          ],
+          "items/zeal": [
+            628,
+            212,
+            96,
+            96
+          ],
+          "items/bramble_vest": [
+            732,
+            212,
+            96,
+            96
+          ],
+          "items/aether_wisp": [
+            4,
+            316,
+            96,
+            96
+          ],
+          "items/seekers_armguard": [
+            108,
+            316,
+            96,
+            96
+          ],
+          "items/spectres_cowl": [
+            212,
+            316,
+            96,
+            96
+          ],
+          "items/blighting_jewel": [
+            316,
+            316,
+            96,
+            96
+          ],
+          "items/hearthbound_axe": [
+            420,
+            316,
+            96,
+            96
+          ],
+          "items/tunneler": [
+            524,
+            316,
+            96,
+            96
+          ],
+          "items/rectrix": [
+            628,
+            316,
+            96,
+            96
+          ],
+          "items/berserkers_greaves": [
+            732,
+            316,
+            96,
+            96
+          ],
+          "items/plated_steelcaps": [
+            4,
+            420,
+            96,
+            96
+          ],
+          "items/mercury_treads": [
+            108,
+            420,
+            96,
+            96
+          ],
+          "items/sorcerers_shoes": [
+            212,
+            420,
+            96,
+            96
+          ],
+          "items/infinity_edge": [
+            316,
+            420,
+            96,
+            96
+          ],
+          "items/bloodthirster": [
+            420,
+            420,
+            96,
+            96
+          ],
+          "items/botrk": [
+            524,
+            420,
+            96,
+            96
+          ],
+          "items/trinity_force": [
+            628,
+            420,
+            96,
+            96
+          ],
+          "items/black_cleaver": [
+            732,
+            420,
+            96,
+            96
+          ],
+          "items/steraks_gage": [
+            4,
+            524,
+            96,
+            96
+          ],
+          "items/youmuus_ghostblade": [
+            108,
+            524,
+            96,
+            96
+          ],
+          "items/phantom_dancer": [
+            212,
+            524,
+            96,
+            96
+          ],
+          "items/thornmail": [
+            316,
+            524,
+            96,
+            96
+          ],
+          "items/spirit_visage": [
+            420,
+            524,
+            96,
+            96
+          ],
+          "items/rabadons_deathcap": [
+            524,
+            524,
+            96,
+            96
+          ],
+          "items/zhonyas_hourglass": [
+            628,
+            524,
+            96,
+            96
+          ],
+          "items/void_staff": [
+            732,
+            524,
+            96,
+            96
+          ],
+          "items/lich_bane": [
+            4,
+            628,
+            96,
+            96
+          ],
+          "items/rylais_scepter": [
+            108,
+            628,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/hud.webp",
+        "w": 312,
+        "h": 208,
+        "icons": {
+          "summoners/flash": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "summoners/heal": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "ui/recall": [
+            212,
+            4,
+            96,
+            96
+          ],
+          "ui/attack": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "ui/minion": [
+            108,
+            108,
+            96,
+            96
+          ],
+          "ui/tower": [
+            212,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_ezreal.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ez_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ez_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ez_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ez_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_garen.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ga_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ga_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ga_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ga_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_darius.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/da_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/da_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/da_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/da_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_masteryi.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/yi_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/yi_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/yi_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/yi_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_warwick.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ww_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ww_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ww_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ww_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_annie.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/an_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/an_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/an_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/an_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_ahri.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ah_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ah_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ah_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ah_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_jinx.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/jx_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/jx_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/jx_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/jx_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_lux.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/lx_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/lx_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/lx_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/lx_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_thresh.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/th_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/th_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/th_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/th_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_malphite.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ml_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ml_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ml_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ml_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_jax.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ja_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ja_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ja_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ja_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_leesin.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/le_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/le_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/le_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/le_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_amumu.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/am_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/am_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/am_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/am_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_veigar.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ve_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ve_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ve_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ve_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_katarina.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ka_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ka_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ka_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ka_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_ashe.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ae_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ae_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ae_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ae_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_caitlyn.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/ca_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/ca_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/ca_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/ca_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_leona.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/lo_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/lo_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/lo_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/lo_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      },
+      {
+        "file": "icons/atlas/ability_janna.webp",
+        "w": 208,
+        "h": 208,
+        "icons": {
+          "abilities/jn_q": [
+            4,
+            4,
+            96,
+            96
+          ],
+          "abilities/jn_w": [
+            108,
+            4,
+            96,
+            96
+          ],
+          "abilities/jn_e": [
+            4,
+            108,
+            96,
+            96
+          ],
+          "abilities/jn_r": [
+            108,
+            108,
+            96,
+            96
+          ]
+        }
+      }
     ]
   },
   "items": {
@@ -2514,7 +5374,8 @@
           ],
           "gain": 0.7
         }
-      }
+      },
+      "bundle": "audio.bin"
     }
   }
 }
