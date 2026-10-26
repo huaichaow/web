@@ -4,9 +4,13 @@
 
 ## 关注我 / Follow Me
 
-| 抖音 / TikTok (Douyin) | 视频号 / WeChat Channels |
+| 抖音 / TikTok (Douyin) | 视频号 / WeChat Channels | 快手 / Kuaishou |
+| :---: | :---: | :---: |
+| <img src="assets/douyin-qr.png" width="240" alt="抖音二维码 / Douyin QR code" /> | <img src="assets/wechat-channels-qr.jpg" width="240" alt="视频号二维码 / WeChat Channels QR code" /> | <img src="assets/kuaishou-qr.jpg" width="240" alt="快手二维码 / Kuaishou QR code" /> |
+
+| 小红书 / RedNote | 哔哩哔哩 / Bilibili |
 | :---: | :---: |
-| <img src="assets/douyin-qr.png" width="240" alt="抖音二维码 / Douyin QR code" /> | <img src="assets/wechat-channels-qr.jpg" width="240" alt="视频号二维码 / WeChat Channels QR code" /> |
+| <img src="assets/xiaohongshu-qr.jpg" width="240" alt="小红书二维码 / RedNote QR code" /> | <img src="assets/bilibili-qr.png" width="240" alt="哔哩哔哩二维码 / Bilibili QR code" /> |
 
 ## 免责声明
 
