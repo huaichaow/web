@@ -1,78 +1,78 @@
 {
-  "v": 2,
+  "v": 3,
   "patch": "16.20",
   "models": {
     "sr_minion_order_melee": {
-      "file": "sr_minion_order_melee.glb"
+      "file": "units/sr_minion_order_melee.glb"
     },
     "sr_minion_order_caster": {
-      "file": "sr_minion_order_caster.glb"
+      "file": "units/sr_minion_order_caster.glb"
     },
     "sr_minion_order_siege": {
-      "file": "sr_minion_order_siege.glb"
+      "file": "units/sr_minion_order_siege.glb"
     },
     "sr_minion_order_super": {
-      "file": "sr_minion_order_super.glb"
+      "file": "units/sr_minion_order_super.glb"
     },
     "sr_minion_chaos_melee": {
-      "file": "sr_minion_chaos_melee.glb"
+      "file": "units/sr_minion_chaos_melee.glb"
     },
     "sr_minion_chaos_caster": {
-      "file": "sr_minion_chaos_caster.glb"
+      "file": "units/sr_minion_chaos_caster.glb"
     },
     "sr_minion_chaos_siege": {
-      "file": "sr_minion_chaos_siege.glb"
+      "file": "units/sr_minion_chaos_siege.glb"
     },
     "sr_minion_chaos_super": {
-      "file": "sr_minion_chaos_super.glb"
+      "file": "units/sr_minion_chaos_super.glb"
     },
     "sr_monster_blue": {
-      "file": "sr_monster_blue.glb"
+      "file": "jungle/sr_monster_blue.glb"
     },
     "sr_monster_bluemini": {
-      "file": "sr_monster_bluemini.glb"
+      "file": "jungle/sr_monster_bluemini.glb"
     },
     "sr_monster_red": {
-      "file": "sr_monster_red.glb"
+      "file": "jungle/sr_monster_red.glb"
     },
     "sr_monster_redmini": {
-      "file": "sr_monster_redmini.glb"
+      "file": "jungle/sr_monster_redmini.glb"
     },
     "sr_monster_murkwolf": {
-      "file": "sr_monster_murkwolf.glb"
+      "file": "jungle/sr_monster_murkwolf.glb"
     },
     "sr_monster_murkwolfmini": {
-      "file": "sr_monster_murkwolfmini.glb"
+      "file": "jungle/sr_monster_murkwolfmini.glb"
     },
     "sr_monster_razorbeak": {
-      "file": "sr_monster_razorbeak.glb"
+      "file": "jungle/sr_monster_razorbeak.glb"
     },
     "sr_monster_razorbeakmini": {
-      "file": "sr_monster_razorbeakmini.glb"
+      "file": "jungle/sr_monster_razorbeakmini.glb"
     },
     "tower": {
-      "file": "tower.glb",
-      "low": "low/tower.glb"
+      "file": "structures/tower.glb",
+      "low": "structures/low/tower.glb"
     },
     "inhibitor": {
-      "file": "inhibitor.glb",
-      "low": "low/inhibitor.glb"
+      "file": "structures/inhibitor.glb",
+      "low": "structures/low/inhibitor.glb"
     },
     "nexus": {
-      "file": "nexus.glb",
-      "low": "low/nexus.glb"
+      "file": "structures/nexus.glb",
+      "low": "structures/low/nexus.glb"
     },
     "sr_tower": {
-      "file": "tower.glb",
-      "low": "low/tower.glb"
+      "file": "structures/tower.glb",
+      "low": "structures/low/tower.glb"
     },
     "sr_inhibitor": {
-      "file": "inhibitor.glb",
-      "low": "low/inhibitor.glb"
+      "file": "structures/inhibitor.glb",
+      "low": "structures/low/inhibitor.glb"
     },
     "sr_nexus": {
-      "file": "nexus.glb",
-      "low": "low/nexus.glb"
+      "file": "structures/nexus.glb",
+      "low": "structures/low/nexus.glb"
     }
   },
   "names": {},
@@ -87,58 +87,58 @@
       "ground": {
         "tiles": 4,
         "files": [
-          "sr_ground_0_0.webp",
-          "sr_ground_1_0.webp",
-          "sr_ground_2_0.webp",
-          "sr_ground_3_0.webp",
-          "sr_ground_0_1.webp",
-          "sr_ground_1_1.webp",
-          "sr_ground_2_1.webp",
-          "sr_ground_3_1.webp",
-          "sr_ground_0_2.webp",
-          "sr_ground_1_2.webp",
-          "sr_ground_2_2.webp",
-          "sr_ground_3_2.webp",
-          "sr_ground_0_3.webp",
-          "sr_ground_1_3.webp",
-          "sr_ground_2_3.webp",
-          "sr_ground_3_3.webp"
+          "map/sr/ground_0_0.webp",
+          "map/sr/ground_1_0.webp",
+          "map/sr/ground_2_0.webp",
+          "map/sr/ground_3_0.webp",
+          "map/sr/ground_0_1.webp",
+          "map/sr/ground_1_1.webp",
+          "map/sr/ground_2_1.webp",
+          "map/sr/ground_3_1.webp",
+          "map/sr/ground_0_2.webp",
+          "map/sr/ground_1_2.webp",
+          "map/sr/ground_2_2.webp",
+          "map/sr/ground_3_2.webp",
+          "map/sr/ground_0_3.webp",
+          "map/sr/ground_1_3.webp",
+          "map/sr/ground_2_3.webp",
+          "map/sr/ground_3_3.webp"
         ],
         "ktx2": [
-          "sr_ground_0_0.ktx2",
-          "sr_ground_1_0.ktx2",
-          "sr_ground_2_0.ktx2",
-          "sr_ground_3_0.ktx2",
-          "sr_ground_0_1.ktx2",
-          "sr_ground_1_1.ktx2",
-          "sr_ground_2_1.ktx2",
-          "sr_ground_3_1.ktx2",
-          "sr_ground_0_2.ktx2",
-          "sr_ground_1_2.ktx2",
-          "sr_ground_2_2.ktx2",
-          "sr_ground_3_2.ktx2",
-          "sr_ground_0_3.ktx2",
-          "sr_ground_1_3.ktx2",
-          "sr_ground_2_3.ktx2",
-          "sr_ground_3_3.ktx2"
+          "map/sr/ground_0_0.ktx2",
+          "map/sr/ground_1_0.ktx2",
+          "map/sr/ground_2_0.ktx2",
+          "map/sr/ground_3_0.ktx2",
+          "map/sr/ground_0_1.ktx2",
+          "map/sr/ground_1_1.ktx2",
+          "map/sr/ground_2_1.ktx2",
+          "map/sr/ground_3_1.ktx2",
+          "map/sr/ground_0_2.ktx2",
+          "map/sr/ground_1_2.ktx2",
+          "map/sr/ground_2_2.ktx2",
+          "map/sr/ground_3_2.ktx2",
+          "map/sr/ground_0_3.ktx2",
+          "map/sr/ground_1_3.ktx2",
+          "map/sr/ground_2_3.ktx2",
+          "map/sr/ground_3_3.ktx2"
         ]
       },
       "groundLow": {
         "tiles": 2,
         "files": [
-          "sr_ground_low_0_0.webp",
-          "sr_ground_low_1_0.webp",
-          "sr_ground_low_0_1.webp",
-          "sr_ground_low_1_1.webp"
+          "map/sr/low/ground_0_0.webp",
+          "map/sr/low/ground_1_0.webp",
+          "map/sr/low/ground_0_1.webp",
+          "map/sr/low/ground_1_1.webp"
         ],
         "ktx2": [
-          "sr_ground_low_0_0.ktx2",
-          "sr_ground_low_1_0.ktx2",
-          "sr_ground_low_0_1.ktx2",
-          "sr_ground_low_1_1.ktx2"
+          "map/sr/low/ground_0_0.ktx2",
+          "map/sr/low/ground_1_0.ktx2",
+          "map/sr/low/ground_0_1.ktx2",
+          "map/sr/low/ground_1_1.ktx2"
         ]
       },
-      "tall": "sr_tall.glb",
+      "tall": "map/sr/sr_tall.glb",
       "structures": [
         {
           "x": 58.844,

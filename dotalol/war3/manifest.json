@@ -1,5 +1,5 @@
 {
-  "v": 1,
+  "v": 2,
   "source": "DotA Allstars 6.85m + Warcraft III 1.2x MPQs",
   "maps": {
     "dota": {
@@ -12,62 +12,62 @@
       "ground": {
         "tiles": 4,
         "files": [
-          "dota_ground_0_0.webp",
-          "dota_ground_1_0.webp",
-          "dota_ground_2_0.webp",
-          "dota_ground_3_0.webp",
-          "dota_ground_0_1.webp",
-          "dota_ground_1_1.webp",
-          "dota_ground_2_1.webp",
-          "dota_ground_3_1.webp",
-          "dota_ground_0_2.webp",
-          "dota_ground_1_2.webp",
-          "dota_ground_2_2.webp",
-          "dota_ground_3_2.webp",
-          "dota_ground_0_3.webp",
-          "dota_ground_1_3.webp",
-          "dota_ground_2_3.webp",
-          "dota_ground_3_3.webp"
+          "map/dota/ground_0_0.webp",
+          "map/dota/ground_1_0.webp",
+          "map/dota/ground_2_0.webp",
+          "map/dota/ground_3_0.webp",
+          "map/dota/ground_0_1.webp",
+          "map/dota/ground_1_1.webp",
+          "map/dota/ground_2_1.webp",
+          "map/dota/ground_3_1.webp",
+          "map/dota/ground_0_2.webp",
+          "map/dota/ground_1_2.webp",
+          "map/dota/ground_2_2.webp",
+          "map/dota/ground_3_2.webp",
+          "map/dota/ground_0_3.webp",
+          "map/dota/ground_1_3.webp",
+          "map/dota/ground_2_3.webp",
+          "map/dota/ground_3_3.webp"
         ],
         "ktx2": [
-          "dota_ground_0_0.ktx2",
-          "dota_ground_1_0.ktx2",
-          "dota_ground_2_0.ktx2",
-          "dota_ground_3_0.ktx2",
-          "dota_ground_0_1.ktx2",
-          "dota_ground_1_1.ktx2",
-          "dota_ground_2_1.ktx2",
-          "dota_ground_3_1.ktx2",
-          "dota_ground_0_2.ktx2",
-          "dota_ground_1_2.ktx2",
-          "dota_ground_2_2.ktx2",
-          "dota_ground_3_2.ktx2",
-          "dota_ground_0_3.ktx2",
-          "dota_ground_1_3.ktx2",
-          "dota_ground_2_3.ktx2",
-          "dota_ground_3_3.ktx2"
+          "map/dota/ground_0_0.ktx2",
+          "map/dota/ground_1_0.ktx2",
+          "map/dota/ground_2_0.ktx2",
+          "map/dota/ground_3_0.ktx2",
+          "map/dota/ground_0_1.ktx2",
+          "map/dota/ground_1_1.ktx2",
+          "map/dota/ground_2_1.ktx2",
+          "map/dota/ground_3_1.ktx2",
+          "map/dota/ground_0_2.ktx2",
+          "map/dota/ground_1_2.ktx2",
+          "map/dota/ground_2_2.ktx2",
+          "map/dota/ground_3_2.ktx2",
+          "map/dota/ground_0_3.ktx2",
+          "map/dota/ground_1_3.ktx2",
+          "map/dota/ground_2_3.ktx2",
+          "map/dota/ground_3_3.ktx2"
         ]
       },
       "groundLow": {
         "tiles": 2,
         "files": [
-          "dota_ground_low_0_0.webp",
-          "dota_ground_low_1_0.webp",
-          "dota_ground_low_0_1.webp",
-          "dota_ground_low_1_1.webp"
+          "map/dota/low/ground_0_0.webp",
+          "map/dota/low/ground_1_0.webp",
+          "map/dota/low/ground_0_1.webp",
+          "map/dota/low/ground_1_1.webp"
         ],
         "ktx2": [
-          "dota_ground_low_0_0.ktx2",
-          "dota_ground_low_1_0.ktx2",
-          "dota_ground_low_0_1.ktx2",
-          "dota_ground_low_1_1.ktx2"
+          "map/dota/low/ground_0_0.ktx2",
+          "map/dota/low/ground_1_0.ktx2",
+          "map/dota/low/ground_0_1.ktx2",
+          "map/dota/low/ground_1_1.ktx2"
         ]
       },
-      "tall": "dota_trees.glb",
-      "cliffs": "dota_cliffs.glb",
+      "tall": "map/dota/dota_trees.glb",
+      "cliffs": "map/dota/dota_cliffs.glb",
       "structures": [],
       "height": {
-        "file": "dota_height.bin",
+        "file": "map/dota/dota_height.bin",
         "cols": 257,
         "rows": 257,
         "minX": -81.92,
@@ -620,109 +620,109 @@
       "low": "heroes/lion/low/w3_lion_frog.glb"
     },
     "w3_creep_sentinel_melee": {
-      "file": "w3_creep_sentinel_melee.glb"
+      "file": "units/w3_creep_sentinel_melee.glb"
     },
     "w3_creep_sentinel_caster": {
-      "file": "w3_creep_sentinel_caster.glb"
+      "file": "units/w3_creep_sentinel_caster.glb"
     },
     "w3_creep_sentinel_siege": {
-      "file": "w3_creep_sentinel_siege.glb"
+      "file": "units/w3_creep_sentinel_siege.glb"
     },
     "w3_creep_scourge_melee": {
-      "file": "w3_creep_scourge_melee.glb"
+      "file": "units/w3_creep_scourge_melee.glb"
     },
     "w3_creep_scourge_caster": {
-      "file": "w3_creep_scourge_caster.glb"
+      "file": "units/w3_creep_scourge_caster.glb"
     },
     "w3_creep_scourge_siege": {
-      "file": "w3_creep_scourge_siege.glb"
+      "file": "units/w3_creep_scourge_siege.glb"
     },
     "w3_tower_sentinel": {
-      "file": "w3_tower_sentinel.glb"
+      "file": "structures/w3_tower_sentinel.glb"
     },
     "w3_tower_scourge": {
-      "file": "w3_tower_scourge.glb"
+      "file": "structures/w3_tower_scourge.glb"
     },
     "w3_inhibitor_sentinel": {
-      "file": "w3_inhibitor_sentinel.glb"
+      "file": "structures/w3_inhibitor_sentinel.glb"
     },
     "w3_inhibitor_scourge": {
-      "file": "w3_inhibitor_scourge.glb"
+      "file": "structures/w3_inhibitor_scourge.glb"
     },
     "w3_nexus_sentinel": {
-      "file": "w3_nexus_sentinel.glb"
+      "file": "structures/w3_nexus_sentinel.glb"
     },
     "w3_nexus_scourge": {
-      "file": "w3_nexus_scourge.glb"
+      "file": "structures/w3_nexus_scourge.glb"
     },
     "w3_barracks_sentinel": {
-      "file": "w3_barracks_sentinel.glb"
+      "file": "structures/w3_barracks_sentinel.glb"
     },
     "w3_barracks_scourge": {
-      "file": "w3_barracks_scourge.glb"
+      "file": "structures/w3_barracks_scourge.glb"
     },
     "w3_fountain_sentinel": {
-      "file": "w3_fountain_sentinel.glb"
+      "file": "structures/w3_fountain_sentinel.glb"
     },
     "w3_fountain_scourge": {
-      "file": "w3_fountain_scourge.glb"
+      "file": "structures/w3_fountain_scourge.glb"
     },
     "w3_moonwell": {
-      "file": "w3_moonwell.glb"
+      "file": "structures/w3_moonwell.glb"
     },
     "w3_ancientofwind": {
-      "file": "w3_ancientofwind.glb"
+      "file": "structures/w3_ancientofwind.glb"
     },
     "w3_huntershall": {
-      "file": "w3_huntershall.glb"
+      "file": "structures/w3_huntershall.glb"
     },
     "w3_ziggurat": {
-      "file": "w3_ziggurat.glb"
+      "file": "structures/w3_ziggurat.glb"
     },
     "w3_sacrificialpit": {
-      "file": "w3_sacrificialpit.glb"
+      "file": "structures/w3_sacrificialpit.glb"
     },
     "w3_boneyard": {
-      "file": "w3_boneyard.glb"
+      "file": "structures/w3_boneyard.glb"
     },
     "w3_jungle_beast": {
-      "file": "w3_jungle_beast.glb"
+      "file": "jungle/w3_jungle_beast.glb"
     },
     "w3_black_dragon": {
-      "file": "w3_black_dragon.glb"
+      "file": "jungle/w3_black_dragon.glb"
     },
     "w3_dark_troll_trapper": {
-      "file": "w3_dark_troll_trapper.glb"
+      "file": "jungle/w3_dark_troll_trapper.glb"
     },
     "w3_dark_troll": {
-      "file": "w3_dark_troll.glb"
+      "file": "jungle/w3_dark_troll.glb"
     },
     "w3_polar_furbolg": {
-      "file": "w3_polar_furbolg.glb"
+      "file": "jungle/w3_polar_furbolg.glb"
     },
     "w3_ogre_magi": {
-      "file": "w3_ogre_magi.glb"
+      "file": "jungle/w3_ogre_magi.glb"
     },
     "w3_ogre": {
-      "file": "w3_ogre.glb"
+      "file": "jungle/w3_ogre.glb"
     },
     "w3_satyr_hellcaller": {
-      "file": "w3_satyr_hellcaller.glb"
+      "file": "jungle/w3_satyr_hellcaller.glb"
     },
     "w3_satyr": {
-      "file": "w3_satyr.glb"
+      "file": "jungle/w3_satyr.glb"
     },
     "w3_satyr_trickster": {
-      "file": "w3_satyr_trickster.glb"
+      "file": "jungle/w3_satyr_trickster.glb"
     },
     "w3_timber_wolf": {
-      "file": "w3_timber_wolf.glb"
+      "file": "jungle/w3_timber_wolf.glb"
     },
     "w3_centaur_khan": {
-      "file": "w3_centaur_khan.glb"
+      "file": "jungle/w3_centaur_khan.glb"
     },
     "w3_centaur": {
-      "file": "w3_centaur.glb"
+      "file": "jungle/w3_centaur.glb"
     }
   },
   "scenery": {
@@ -3208,7 +3208,7 @@
   "heroes": {
     "pudge": {
       "dir": "heroes/pudge/",
-      "audioDir": "audio/pudge/",
+      "audioDir": "heroes/pudge/audio/",
       "model": "heroes/pudge/champ_pudge.glb",
       "fx": {
         "chain": "heroes/pudge/fx_pudge_chain.png",
@@ -3352,7 +3352,7 @@
     },
     "juggernaut": {
       "dir": "heroes/juggernaut/",
-      "audioDir": "audio/juggernaut/",
+      "audioDir": "heroes/juggernaut/audio/",
       "model": "heroes/juggernaut/champ_juggernaut.glb",
       "fx": {
         "spin": "heroes/juggernaut/fx_juggernaut_spin.png",
@@ -3495,7 +3495,7 @@
     },
     "sven": {
       "dir": "heroes/sven/",
-      "audioDir": "audio/sven/",
+      "audioDir": "heroes/sven/audio/",
       "model": "heroes/sven/champ_sven.glb",
       "fx": {
         "skin": "heroes/sven/fx_sven_skin.webp",
@@ -3625,7 +3625,7 @@
     },
     "ursa": {
       "dir": "heroes/ursa/",
-      "audioDir": "audio/ursa/",
+      "audioDir": "heroes/ursa/audio/",
       "model": "heroes/ursa/champ_ursa.glb",
       "fx": {
         "ring": "heroes/ursa/fx_ursa_ring.png",
@@ -3746,7 +3746,7 @@
     },
     "lina": {
       "dir": "heroes/lina/",
-      "audioDir": "audio/lina/",
+      "audioDir": "heroes/lina/audio/",
       "model": "heroes/lina/champ_lina.glb",
       "fx": {
         "flame": "heroes/lina/fx_lina_flame.png",
@@ -3893,7 +3893,7 @@
     },
     "earthshaker": {
       "dir": "heroes/earthshaker/",
-      "audioDir": "audio/earthshaker/",
+      "audioDir": "heroes/earthshaker/audio/",
       "model": "heroes/earthshaker/champ_earthshaker.glb",
       "fx": {
         "dust": "heroes/earthshaker/fx_earthshaker_dust.png",
@@ -4032,7 +4032,7 @@
     },
     "drow": {
       "dir": "heroes/drow/",
-      "audioDir": "audio/drow/",
+      "audioDir": "heroes/drow/audio/",
       "model": "heroes/drow/champ_drow.glb",
       "fx": {
         "arrow": "heroes/drow/fx_drow_arrow.png",
@@ -4170,7 +4170,7 @@
     },
     "mirana": {
       "dir": "heroes/mirana/",
-      "audioDir": "audio/mirana/",
+      "audioDir": "heroes/mirana/audio/",
       "model": "heroes/mirana/champ_mirana.glb",
       "fx": {
         "arrow": "heroes/mirana/fx_mirana_arrow.png",
@@ -4325,7 +4325,7 @@
     },
     "crystalmaiden": {
       "dir": "heroes/crystalmaiden/",
-      "audioDir": "audio/crystalmaiden/",
+      "audioDir": "heroes/crystalmaiden/audio/",
       "model": "heroes/crystalmaiden/champ_crystalmaiden.glb",
       "fx": {
         "orb": "heroes/crystalmaiden/fx_cm_orb.png",
@@ -4466,7 +4466,7 @@
     },
     "shadowshaman": {
       "dir": "heroes/shadowshaman/",
-      "audioDir": "audio/shadowshaman/",
+      "audioDir": "heroes/shadowshaman/audio/",
       "model": "heroes/shadowshaman/champ_shadowshaman.glb",
       "fx": {
         "forked": "heroes/shadowshaman/fx_shadowshaman_forked.png",
@@ -4625,7 +4625,7 @@
     },
     "axe": {
       "dir": "heroes/axe/",
-      "audioDir": "audio/axe/",
+      "audioDir": "heroes/axe/audio/",
       "model": "heroes/axe/champ_axe.glb",
       "fx": {
         "ring": "heroes/axe/fx_axe_ring.png",
@@ -4767,7 +4767,7 @@
     },
     "tiny": {
       "dir": "heroes/tiny/",
-      "audioDir": "audio/tiny/",
+      "audioDir": "heroes/tiny/audio/",
       "model": "heroes/tiny/champ_tiny.glb",
       "fx": {
         "rock": "heroes/tiny/fx_tiny_rock.png",
@@ -4907,7 +4907,7 @@
     },
     "faceless": {
       "dir": "heroes/faceless/",
-      "audioDir": "audio/faceless/",
+      "audioDir": "heroes/faceless/audio/",
       "model": "heroes/faceless/champ_faceless.glb",
       "fx": {
         "star": "heroes/faceless/fx_faceless_star.png",
@@ -5045,7 +5045,7 @@
     },
     "skeletonking": {
       "dir": "heroes/skeletonking/",
-      "audioDir": "audio/skeletonking/",
+      "audioDir": "heroes/skeletonking/audio/",
       "model": "heroes/skeletonking/champ_skeletonking.glb",
       "fx": {
         "glow": "heroes/skeletonking/fx_skeletonking_glow.png",
@@ -5189,7 +5189,7 @@
     },
     "zeus": {
       "dir": "heroes/zeus/",
-      "audioDir": "audio/zeus/",
+      "audioDir": "heroes/zeus/audio/",
       "model": "heroes/zeus/champ_zeus.glb",
       "fx": {
         "arc": "heroes/zeus/fx_zeus_arc.png",
@@ -5339,7 +5339,7 @@
     },
     "lich": {
       "dir": "heroes/lich/",
-      "audioDir": "audio/lich/",
+      "audioDir": "heroes/lich/audio/",
       "model": "heroes/lich/champ_lich.glb",
       "fx": {
         "orb": "heroes/lich/fx_lich_orb.png",
@@ -5486,7 +5486,7 @@
     },
     "sniper": {
       "dir": "heroes/sniper/",
-      "audioDir": "audio/sniper/",
+      "audioDir": "heroes/sniper/audio/",
       "model": "heroes/sniper/champ_sniper.glb",
       "fx": {
         "dust": "heroes/sniper/fx_sniper_dust.png",
@@ -5647,7 +5647,7 @@
     },
     "phantomassassin": {
       "dir": "heroes/phantomassassin/",
-      "audioDir": "audio/phantomassassin/",
+      "audioDir": "heroes/phantomassassin/audio/",
       "model": "heroes/phantomassassin/champ_phantomassassin.glb",
       "fx": {
         "blade": "heroes/phantomassassin/fx_phantomassassin_blade.png",
@@ -5798,7 +5798,7 @@
     },
     "lion": {
       "dir": "heroes/lion/",
-      "audioDir": "audio/lion/",
+      "audioDir": "heroes/lion/audio/",
       "model": "heroes/lion/champ_lion.glb",
       "fx": {
         "proj": "heroes/lion/fx_lion_proj.png",
@@ -5975,7 +5975,7 @@
     },
     "vengeful": {
       "dir": "heroes/vengeful/",
-      "audioDir": "audio/vengeful/",
+      "audioDir": "heroes/vengeful/audio/",
       "model": "heroes/vengeful/champ_vengeful.glb",
       "fx": {
         "ball": "heroes/vengeful/fx_vengeful_ball.png",
