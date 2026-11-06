@@ -2,6 +2,17 @@
 
 各类 Web 小项目与游戏示例合集。
 
+## 健康游戏忠告 / Healthy Gaming Advisory
+
+> 抵制不良游戏，拒绝盗版游戏。<br>
+> 注意自我保护，谨防受骗上当。<br>
+> 适度游戏益脑，沉迷游戏伤身。<br>
+> 合理安排时间，享受健康生活。
+>
+> Reject harmful and pirated games. Protect yourself and beware of scams.<br>
+> Gaming in moderation is good for the mind; addiction harms the body.<br>
+> Plan your time wisely and enjoy a healthy life.
+
 ## 关注我 / Follow Me
 
 | 抖音 / TikTok (Douyin) | 视频号 / WeChat Channels | 快手 / Kuaishou |
